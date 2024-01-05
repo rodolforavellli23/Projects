@@ -1,0 +1,50 @@
+{
+    "people" : [
+
+        {
+            "name": "Brad",
+            "age": 35,            
+            "address": {
+                "street": "5 main st",
+                "city": "Boston"
+            },
+            "children": [
+                "Brianna",
+                "Nicholas"
+            ] 
+        },
+        {
+            "name": "John",
+            "age": 40,            
+            "address": {
+                "street": "",
+               "city": ""
+            },
+            "children": [
+                ""
+            ] 
+        },
+        {
+            "name": "Sarah",
+            "age": 25,            
+            "address": {
+                "street": "",
+                "city": ""
+            },
+            "children": [
+                ""
+            ] 
+        },
+        {
+            "name": "Jeff",
+            "age": 20,            
+            "address": {
+                "street": "",
+                "city": ""
+            },
+            "children": [
+                ""
+            ] 
+        }
+    ]
+}

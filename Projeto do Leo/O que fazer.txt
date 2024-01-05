@@ -1,0 +1,18 @@
+O aplicativo deve pegar o formulário preenchido pelo usuário (exemplo no PDF fornecido pelo Leo), imprimir um relatório, e guardar os dados numa 
+planilha SQL na nuvem, cuja estrutura será:
+
+DB do app:
+          =>pacientes_table(id:
+                            name:
+                            email:
+                            telefone:
+                            relatorios_pacienteId:
+                            PK: id
+                            FK: relatorios_pacienteId REFERENCES relatorios_paciente(id_paciente)),
+
+          =>relatorios_paciente_table(id:
+                                      id_paciente:
+                                      relatorio: TEXT
+                                      PK: id)
+
+WORK IN PROGRESS ( O modelo do formulário está na pasta como um aquivo tipo pdf ).

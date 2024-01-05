@@ -1,0 +1,25 @@
+----------------
+Java formatting
+----------------
+
+*Escape Sequences when inside a String text
+===========================================
+
+\b - backspace
+
+\t - tab
+
+\n - new line
+
+\f - form feed
+
+\r - carriage return
+
+\* - carriage return
+
+\" - double quotes
+
+\' - single quotes
+
+\\ - backslash
+
