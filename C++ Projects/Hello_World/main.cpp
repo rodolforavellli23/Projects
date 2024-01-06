@@ -6,28 +6,27 @@ using namespace std;
 string version(int a){
     string b = "";
     switch(a){
-        case 202101:
+        case 202101L:
             b = "C++23";
             break;
-        case 202002:
+        case 202002L:
             b = "C++20";
             break;
-        case 201703:
+        case 201703L:
             b = "C++17";
             break;
-        case 201402:
+        case 201402L:
             b = "C++14";
             break;
-        case 201103:
+        case 201103L:
             b = "C++11";
             break;
-        case 199711:
+        case 199711L:
             b = "C++98";
             break;
         default:
             b = "pre-standard C++";
     }
-
     return b;
 }
 
