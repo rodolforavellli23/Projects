@@ -1,0 +1,5 @@
+{
+    "files.autoSave": "onWindowChange",
+    "python.autoComplete.extraPaths":
+         ["/home/rodolfo/Documentos/Projetos/Python/.venv/lib/python3.10/site-packages","/home/rodolfo/Documentos/Projetos/Python/.venv/lib/python3.10/site-packages/numpy"]
+}
