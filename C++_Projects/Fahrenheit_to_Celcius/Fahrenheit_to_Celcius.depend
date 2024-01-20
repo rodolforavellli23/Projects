@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1705529877 source:/home/rodolfo/Documentos/Projetos/C++_Projects/Fahrenheit_to_Celcius/main.cpp
+	<iostream>
+	<string>
+

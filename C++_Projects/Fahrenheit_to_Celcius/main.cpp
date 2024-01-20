@@ -19,20 +19,28 @@ int main() {
     int c = 0;
     int d = 0;
     double e = 0;
-    cout << "Convert from Farenheit to Celsius, or the other way around? \n\nType 0 for °F to °C, 1 for the other way around: ";
-    cin >> c;
-    cout << "\nWhat is the value to be converted? ";
-    cin >> e;
+    string exit = "";
 
-    if( c == 0 ) {
-        d = convertFromF(e);
-    } else {
-        d = convertFromC(e);
+    while(exit != "e") {
+        cout << "Convert from Farenheit to Celsius, or the other way around? \n\nType 0 for °F to °C, 1 for the other way around: ";
+        cin >> c;
+        cout << "\nWhat is the value to be converted? ";
+        cin >> e;
+
+        if( c == 0 ) {
+            d = convertFromF(e);
+        } else {
+            d = convertFromC(e);
+        }
+
+        string sign = (c == 0)?"°C":"°F";
+
+        cout << "\nResult: " << d << sign << " \n";
+
+        cout << "\nExit Program? Type \"e\" to exit: ";
+        cin >> exit;
+        cout << " ";
     }
-
-    string sign = (c == 0)?"°C":"°F";
-
-    cout << "\nResult: " << d << sign << " \n";
 
     return 0;
 }
