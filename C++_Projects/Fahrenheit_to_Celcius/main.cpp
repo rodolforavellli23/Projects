@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// [(t_F - 32)/9] = (t_C)/5
+// [(t_F - 32)/9] = (t_C)/5 ; where t_F is a given temperature in the Farenheit scale, and t_C is a given temperature in the Celcius scale.
 
 double convertFromF(double a) {
     double result = ((a-32)*5)/9;
