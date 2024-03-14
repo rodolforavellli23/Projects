@@ -1,0 +1,17 @@
+# Things I learned to use with lua
+
+//Glossary:
+//
+// To recall(1): '*' stands for characters that may come before or after this symbol.
+// ==================================================================================
+//
+// *jit - Just-In-Time, int this context refers to interpreters such as 'luajit' for exemple.
+//
+// repl - Read, Evaluate, Print and then Loop : Is a command line mode where one may execute commands from
+//        a programming language in an interactive environment. Most new programming languages support this feature.
+//
+
+1) In order for the lua repl to interpret a escape character such as '!' as a printable one, it must be inside a 
+   single quotes string.
+
+   Ex_1:  ~$ luajit -e 'print("Hello World!")'
