@@ -26,7 +26,7 @@ N200 G01 X 78, R 15;
 N210 G03 X 43 I -17.5 J -9.682458366;
 N220 G01 X 10;
 N230 G01 Y 10 , C 10;
-(Irregular cut - rotataded)
+(Irregular internal cut - rotataded)
 N240 G01 Z -15;
 N250 G00 X 20 Y 30;
 
