@@ -28,7 +28,7 @@ N220 G01 X 10;
 N230 G01 Y 10 , C 10;
 (Irregular cut - rotataded)
 N240 G01 Z -15;
-N250 G00 
+N250 G00 X 20 Y 30;
 
 
 (End of Program)
