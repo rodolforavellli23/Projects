@@ -15,7 +15,7 @@ last = "ravelli"
 
 # 2) Constructor Function
 
-pizza = str("pepperoni")
+# pizza = str("pepperoni")
 # print(pizza)
 # print(type(pizza))
 # print(type(pizza) == str )
@@ -23,12 +23,35 @@ pizza = str("pepperoni")
 
 # 3) Concatenation
 fullname = first.capitalize() + " " + last.capitalize()
-# print(fullname)
 
 # fullname += "!"
 # print(fullname)
 
 # 4) Casting a number to a string
 decade = str(1980)
-print(type(decade)) 
-print(decade)
+# print(type(decade)) 
+# print(decade)
+
+# statement = "Music from the " + decade + "'s."
+# print(statement)
+
+# 5) Multi-Line Arguments & String Methods
+
+# multiline = ''' 
+# Roses are red   
+
+# Violets are blue    
+
+# I'm coding in Python    
+
+# And so are you  
+# '''
+# print(multiline.title() + "\n" + str(len(multiline)))
+
+# 6) Escape character sequences
+
+sentence = 'I\'m back!\tBack Again!\n\nTell a Friend! \\'
+# print(sentence)
+
+# 7) Build a menu
+
