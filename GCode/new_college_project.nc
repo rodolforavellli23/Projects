@@ -1,11 +1,11 @@
 %(New File - College Project)
 O0001
 (Setup Mill n°13)
-N10 G40 G49 G17 G21 G90;
+N10 G40 G49 G17 G21 G90 ;
 N20 G53 G00 Z -110; (This is the Z 0 position for the machine targeted by this program)
-N30 T13 S 2500 F 1000 M06 M3;
+N30 T13 S 2500 F 1000 M06 M3 M6;
 N40 G43 H__;
-N50 G54 G41 D 16 G00 X 0 Y 0;
+N50 G54 G41 D 16 G00 X 0 Y 0;l
 (Routine)
 (External Outline)
 N60 G00 Z -15;
