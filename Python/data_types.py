@@ -50,8 +50,15 @@ decade = str(1980)
 
 # 6) Escape character sequences
 
-sentence = 'I\'m back!\tBack Again!\n\nTell a Friend! \\'
+# sentence = 'I\'m back!\tBack Again!\n\nTell a Friend! \\'
 # print(sentence)
 
 # 7) Build a menu
 
+title = " menu ".upper()
+print('')
+print(title.center(22, "="))
+print("Coffee".ljust(16,".") + "$ 1.00".rjust(4))
+print("Muffin".ljust(16,".") + "$ 1.00".rjust(4))
+print("Cheesecake".ljust(16,".") + "$ 1.00".rjust(4))
+print('')
