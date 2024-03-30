@@ -1,7 +1,5 @@
 Python course notes
 
-Last stop was at the timestamp: 1:05:45
-
 # Notes
 
 / {normal division operator, will return a float value if needed}
