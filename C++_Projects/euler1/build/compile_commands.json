@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/rodolfo/Documentos/GitHub/Projects/C++_Projects/euler1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/euler.dir/euler.cpp.o -c /home/rodolfo/Documentos/GitHub/Projects/C++_Projects/euler1/src/euler.cpp",
+  "file": "/home/rodolfo/Documentos/GitHub/Projects/C++_Projects/euler1/src/euler.cpp"
+}
+]

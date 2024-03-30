@@ -2,9 +2,11 @@
 #include <math.h>
 
 /*
-	The sum of all integers that are multiples of 3 & 5, without repetition, that are smaller than 1000, is equal to
-	the sum of all multiples of 3 and 5 up to the element immediately before 1000, minus the multiples of '3 x 5' to
-	avoid double counting.
+*	The sum of all integers that are multiples of 3 & 5, without repetition, that are smaller than 1000, 
+*	is equal to the sum of all multiples of 3 and 5 up to the element immediately before 1000, minus the *	 multiples of '3 x 5' to avoid double counting.
+*
+*	Arithmetic sum: sum = ((a_1 + a_n)*n)/2; where a_1 is the first element of the series, which goes to 
+*	a_n, the last element in the series being summed.
 */ 
 
 using namespace std;
