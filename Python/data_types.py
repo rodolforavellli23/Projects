@@ -1,13 +1,13 @@
-# Data types lesson from Dave Gray
-
 import math
+
+# Data types lesson from Dave Gray
 
 # String data type
 
 # 1) Literal Assigment
 
-first = "rodolfo"
-last = "ravelli"
+# first = "rodolfo"
+# last = "ravelli"
 
 # print(type(first))
 # print(type(first) == str )
@@ -22,13 +22,13 @@ last = "ravelli"
 # print(isinstance(pizza, str))
 
 # 3) Concatenation
-fullname = first.capitalize() + " " + last.capitalize()
+# fullname = first.capitalize() + " " + last.capitalize()
 
 # fullname += "!"
 # print(fullname)
 
 # 4) Casting a number to a string
-decade = str(1980)
+# decade = str(1980)
 # print(type(decade)) 
 # print(decade)
 
@@ -55,10 +55,41 @@ decade = str(1980)
 
 # 7) Build a menu
 
-title = " menu ".upper()
-print('')
-print(title.center(22, "="))
-print("Coffee".ljust(16,".") + "$ 1.00".rjust(4))
-print("Muffin".ljust(16,".") + "$ 1.00".rjust(4))
-print("Cheesecake".ljust(16,".") + "$ 1.00".rjust(4))
-print('')
+# title = " menu ".upper()
+# print('')
+# print(title.center(22, "="))
+# print("Coffee".ljust(16,".") + "$ 1.00".rjust(4))
+# print("Muffin".ljust(16,".") + "$ 1.00".rjust(4))
+# print("Cheesecake".ljust(16,".") + "$ 1.00".rjust(4))
+# print('')
+
+# 8) String Index Values
+
+# print("")
+# print(first[0:2].upper())
+# print(first[0:].upper())
+# print("")
+
+# 9) Mthods that ruturn boolean data
+
+# print(first.startswith("r"))
+# print(first.endswith("l"))
+
+# 10) Boolean data type
+
+# mybool = True
+# x = bool(False)
+# print(type(x))
+# print(isinstance(mybool, bool))
+
+# 11) Numeric Types
+
+#   11.a) Integers('int')
+
+#         price = 100
+#         best_price = int(80)
+#         print(type(best_price))
+#         print(isinstance(price, int))
+
+#   11.b) Floating Point numbers('float')    
+
