@@ -1,3 +1,17 @@
 Study folder for my C++ projects
 
+Notes:
+
+1) For cmake:
+
+   Create a new directory, put the following lines inside a 'CMakeList.txt' 
+   	
+	cmake_minimum_required(VERSION 3.10)
+	project(APP_NAME)
+	add_executable(APP_NAME main.cpp)
+
+   Then input on the command line: cmake -S src -B build,
+   following this 'cd' into 'build' and input: make,
+
+   To conclude, run your new binary: $ ./APP_NAME
 
