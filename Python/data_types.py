@@ -42,7 +42,7 @@ import math
 
 # Violets are blue    
 
-# I'm coding in Python    
+# I am coding in Python    
 
 # And so are you  
 # '''
@@ -93,3 +93,25 @@ import math
 
 #   11.b) Floating Point numbers('float')    
 
+#         gpa = 3.28
+#         y = float("3.28")
+#         print(type(gpa))
+#         print(isinstance(gpa, float))
+
+# 12) Complex type variables
+
+# comp_num = 5+3j
+# z = complex(5)
+# print(type(comp_num))
+# print(isinstance(z, complex))
+# print(comp_num.imag)
+
+# 13) Built-in functions for numbers
+
+# print(abs(gpa))
+# print(round(gpa))
+# print(round(gpa, 1))
+# print(math.pi)
+# print(math.sqrt(2))
+# print(math.ceil(gpa))
+# print(math.floor(gpa))
