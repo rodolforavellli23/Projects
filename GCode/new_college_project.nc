@@ -81,6 +81,16 @@ N710 G01 Z -15;
 (End cylindrical milling)
 (Rotating drilling 8 diameter 5mm around the 'B' cylinder)
 (settup for drill T11 - with a diameter == 5mm)
+     G53 G00 H0 Z -110 M05;
+     T11;
+     M06;
+     G54 S 1500 F 800 M03;
+     G43 H 11 D 11 Z -15;
+(routine 'B') 
+     G52 X 70 Y 70;
+     G01 X 0 Y 0;
+     
+
 
 (End of Program)
 G53 H0 G00 Z -110 M05;
