@@ -37,7 +37,11 @@ N290 G54 S2000 M03;
 N300 G43 H12 D12 Z -15;
 (routine)
 N310 G00 X 20 Y 30;
-
+N320 G52 X 20 Y 30;
+N330 G01 X 0 Y 0;
+N340 G68 R 45;
+     G01 X -7.5;
+     G02 
 
 (End of Program)
 G53 H0 G00 Z -110 M05;
