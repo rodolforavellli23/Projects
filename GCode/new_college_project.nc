@@ -87,16 +87,16 @@ N740 M06;
 N750 G54 S 1500 F 800 M03;
 N760 G43 H 11 D 11 Z -15;
 (routine 'B') 
-     G52 X 70 Y 70;
-     G01 X 0 Y 0;
-     G68 R 45;
-     (drilling routine)
-				 G01 X 20;
-					G01 Z 5;
-					G01 Z -5;
-					G01 X 0;
-					(end drilling routine)
-					G68 X 0 Y 0 R 90;
+ G52 X 70 Y 70;
+ G01 X 0 Y 0;
+ G68 R 45;
+ (drilling routine)
+ G01 X 20;
+ G01 Z 5;
+ G01 Z -5;
+ G01 X 0;
+ (end drilling routine)
+ G68 X 0 Y 0 R 90;
 
 (End of Program)
 G53 H0 G00 Z -110 M05;
