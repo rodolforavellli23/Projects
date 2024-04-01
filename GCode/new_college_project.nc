@@ -91,7 +91,7 @@ N760 G43 H 11 D 11 Z -15;
      G01 X 0 Y 0;
      G68 R 45;
      (drilling routine)
-				 G01 X 20;'
+				 G01 X 20;
 					G01 Z 5;
 					G01 Z -5;
 					G01 X 0;
