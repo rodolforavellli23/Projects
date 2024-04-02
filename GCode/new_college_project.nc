@@ -32,7 +32,7 @@ N240 G01 X 10;
 N250 G01 Y 10 , C 10;
 (Irregular internal cut 'A' - rotated 45º)
 N260 G01 Z 15;
-(Settup for Mill nº12)
+(Setup for Mill nº12)
 N270 G53 G00 H0 Z -110 M05;
 N280 T12;
 N290 M06;
@@ -80,19 +80,26 @@ N700 G01 Z 5;
 N710 G01 Z 15;
 (End cylindrical milling)
 (Rotating drilling 8 diameter 5mm around the 'B' cylinder)
-(settup for drill T11 - with a diameter == 5mm)
+(setup for drill T11 - with a diameter == 5mm)
 N720 G53 G00 H0 Z -110 M05;
 N730 T11;
 N740 M06;
 N750 G54 S 1500 M03;
 N760 G43 H 11 D 11 Z 15;
-(routine 'B') ;Implement the changes sugested by the professor bellow
+(routine 'B') ; Implement the changes suggested by the professor bellow - DONE
 N770 G52 X 70 Y 70;
 N780 G01 X 0 Y 0;
 N790 G16 G1 X 20 Y 0;
-
-
+N800 G98 G81 X 20 G91 Y 45 G90 R 5 Z -5 F 800 K 8;
+N810 G80 G15 G1 Z 5;
+(End Routine 'B')
+(Five Consecutive drills on the bottom right section - Feature 'C')
+N820 G54 G01 X 80 Y 32;
+N830 G98 G81 X 80 G91 Y -10 G90 R 5 Z -5 F 800 K 3;
+N840 G80 G15 G1 Z 5;
+N850 G98 G81 X 90 G91 Y -10 G90 R 5 Z -5 F 800 K 2;
+(End Routine 'C')
 (End of Program)
-G53 H0 G00 Z -110 M05;
-M30;
+N860 G53 H0 G00 Z -110 M05;
+N870 M30;
 %
