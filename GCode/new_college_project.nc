@@ -89,18 +89,19 @@ N710 G43 H 11 D 11 Z 15;
 (routine 'B') ; Implement the changes suggested by the professor bellow - DONE
 N720 G52 X 70 Y 70;
 N730 G01 X 0 Y 0;
-N740 G16 G1 X 20 Y 0;
+N740 G16 G01 X 20 Y 0;
 N750 G98 G81 X 20 G91 Y 45 G90 R 5 Z -5 F 800 K 8;
-N760 G80 G15 G1 Z 5;
+N760 G80 G15 G01 Z 5;
 (End Routine 'B')
 (Five Consecutive drills on the bottom right section - Feature 'C')
 N770 G54 G01 X 80 Y 32;
 N780 G98 G81 X 80 G91 Y -10 G90 R 5 Z -5 F 800 K 3;
-N790 G80 G15 G1 Z 5;
-N800 G98 G81 X 90 G91 Y -10 G90 R 5 Z -5 F 800 K 2;
-N810 G80 G15 G1 Z 5;
+N790 G80 G01 Z 5;
+N800 G01 Y 32;
+N810 G98 G81 X 90 G91 Y -10 G90 R 5 Z -5 F 800 K 2;
+N820 G80 G01 Z 5;
 (End Routine 'C')
 (End of Program)
-N820 G53 H0 G00 Z -110 M05;
-N830 M30;
+N830 G53 H0 G00 Z -110 M05;
+N840 M30;
 %
