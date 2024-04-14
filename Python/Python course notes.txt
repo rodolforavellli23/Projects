@@ -22,4 +22,7 @@ and {p -> q ^ r}
 
 or {p -> q v r}
 
+// Tuples:
+
+They're like lists, but they do not allow change to the data that is already present in the tuple, and their order will not change as well. 
 
