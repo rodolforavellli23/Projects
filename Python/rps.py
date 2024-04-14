@@ -5,7 +5,7 @@ import numpy as np
 randint = np.random.randint(1,3)
 
 print('')
-value = input('Enter... \nnumber key 1 for Rock,\n2 for Paper\nand 3 for Scissors: ')
+value = input('Enter...\n\nNumber key 1 for Rock, 2 for Paper and 3 for Scissors: ')
 print('')
 print("Computer's choice: {}".format(randint))
 print('')
