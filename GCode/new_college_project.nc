@@ -3,17 +3,17 @@
 (Fanuc CNC)
 O0001
 (Setup Mill n°13)
-N10 G17 G21 G90 G94;
-N20 G53 G00 H0 Z -110 M05; (This is the Z 0 position for the machine targeted by this program)
-N30 T13;
-N40 M06;
-N50 G54 S 2500 M03;
-N60 G43 H13 D13 Z 15;
+N010 G17 G21 G90 G94;
+N020 G53 G00 H0 Z -110 M05; (This is the Z 0 position for the machine targeted by this program)
+N030 T13;
+N040 M06;
+N050 G54 S 2500 M03;
+N060 G43 H13 D13 Z 15;
 (Routine)
 (External Outline)
-N70 G00 X 0 Y 0;
-N80 G01 Z 5;
-N90 G01 Z -3 F 1000;
+N070 G00 X 0 Y 0;
+N080 G01 Z 5;
+N090 G01 Z -3 F 1000;
 N100 G01 G41 Y 70;
 N110 G01 X 5;
 N120 G03 X 15 Y 80 I 0 J 10
