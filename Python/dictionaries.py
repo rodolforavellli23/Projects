@@ -109,10 +109,35 @@ nums = {1, 2, 3, 4}
 
 nums2 = set((1,2,3,4))
 
-print(nums)
-print(nums2)
-print(type(nums))
-print("There are {} items in this set.".format(len(nums)))
+# print(nums)
+# print(nums2)
+# print(type(nums))
+# print("There are {} items in this set.".format(len(nums)))
 
 nums3 = {0,False,1,True}
-print("{} , Note: sets don't allow for dublicate elements to be inside them".format(nums3))
+# print("{} , Note: sets don't allow for dublicate elements to be inside them".format(nums3))
+
+# Check if a value is in a set
+
+a = 2 in nums
+print("2 in nums = {}".format(a))
+
+# Add elements to a set
+
+nums.add(8)
+print(nums)
+
+# Add elements from another set
+
+morenums = {5, 6, 7}
+nums.update(morenums)
+print(nums)
+
+# Merge sets
+
+one = {1,2,3}
+two = {4,5,6}
+
+newMerged = one.union(two)
+
+print(newMerged)
