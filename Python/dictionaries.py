@@ -1,11 +1,11 @@
 # Chapter 7 - Dictionaries and Sets
 
-bands = {
-    "vocals": "Plant",
-    "guitar": "Page"
-}
+# bands = {
+#     "vocals": "Plant",
+#     "guitar": "Page"
+# }
 
-bands2 = dict(vocals="Plant", guitar="Page")
+# bands2 = dict(vocals="Plant", guitar="Page")
 
 # print(bands2)
 # print(bands)
@@ -36,7 +36,7 @@ bands2 = dict(vocals="Plant", guitar="Page")
 
 # Change or add values in a dict
 
-bands["vocals"] = "Coverdale"
+# bands["vocals"] = "Coverdale"
 # bands.update({"bass": "JPJ"})
 # print(bands)
 
@@ -45,7 +45,7 @@ bands["vocals"] = "Coverdale"
 # print(bands.pop("bass"))
 # print(bands)
 
-bands["drums"] = "Bonham"
+# bands["drums"] = "Bonham"
 
 # print(bands)
 # print(bands.popitem()) # Tuple
@@ -59,7 +59,7 @@ bands["drums"] = "Bonham"
 
 # print(bands)
 
-bands2.clear()
+# bands2.clear()
 
 # print(bands2)
 
@@ -67,37 +67,52 @@ bands2.clear()
 
 # Copying dictionaries
 
-bands2 = bands.copy()
+# bands2 = bands.copy()
 
-bands2["drums"] = "Dave"
+# bands2["drums"] = "Dave"
 
 # print(bands2)
 
 # Copying using the contructor function
 
-bands3 = dict(bands)    
+# bands3 = dict(bands)    
 
 # print(bands3)
 
 # Nested dictionaries
 
-member1 = {
-    "name": "Plant",
-    "instrument": "vocals"
-}
-member2 = {
-    "name": "Page",
-    "instrument": "guitar"
-}
-member3 = {
-    "name": "Bonham",
-    "instrument": "drums"
-}
+# member1 = {
+#     "name": "Plant",
+#     "instrument": "vocals"
+# }
+# member2 = {
+#     "name": "Page",
+#     "instrument": "guitar"
+# }
+# member3 = {
+#     "name": "Bonham",
+#     "instrument": "drums"
+# }
 
-band = {
-    "first member": member1, 
-    "second member": member2, 
-    "third member": member3
-}
+# band = {
+#     "first member": member1, 
+#     "second member": member2, 
+#     "third member": member3
+# }
 
-print(band)
+# print(band["first member"]["name"])
+
+
+# Sets in python
+
+nums = {1, 2, 3, 4} 
+
+nums2 = set((1,2,3,4))
+
+print(nums)
+print(nums2)
+print(type(nums))
+print("There are {} items in this set.".format(len(nums)))
+
+nums3 = {0,False,1,True}
+print("{} , Note: sets don't allow for dublicate elements to be inside them".format(nums3))
