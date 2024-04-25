@@ -4,3 +4,7 @@ sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercont
 
 
 Also make sure to have git installed in your machine as well. And copy the dotfiles to your home directory.
+
+Add the plugin name to the ~/.vimrc.plug file on ``` Plug <plugin name goes here> ´´´ 
+
+Afterwards, inside vim invoke :PlugInstall

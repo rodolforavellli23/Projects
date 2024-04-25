@@ -3,4 +3,6 @@
 sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-Also make sure to have git installed in your machine as well.
+Also make sure to have git installed in your machine as well. And copy the dotfiles to your home directory.
+
+Afterwards, inside vim invoke :PlugInstall
