@@ -3,5 +3,8 @@ call plug#begin('~/.vim/plugged')
 " Fugitive vim Github Wrapper
 Plug 'tpope/vim-fugitive'
 
+" Monokai theme for Vim
+Plug 'sickill/vim-monokai'
+
 call plug#end()
 
