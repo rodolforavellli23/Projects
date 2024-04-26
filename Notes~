@@ -128,7 +128,3 @@ AT THE TERMINAL EMULATOR:
 $ pulseaudio -k
 $ pulseaudio --start (to see if you didn't break your configs)
 $ systemctl restart --now (to verify if the fix hopefully resolved the problem)
-
-11) System source repos
-
-/etc/apt/sources.list.d/official-package-repositories.list
