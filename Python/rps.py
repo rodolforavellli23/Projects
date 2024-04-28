@@ -20,7 +20,7 @@ while repeat == True:
     print('')
     print("Computer's choice: {}".format(randint))
     print('')
-    
+
     playerChoice = int(value)
 
     if playerChoice == randint:
@@ -53,5 +53,3 @@ while repeat == True:
     elif playRepeat != "1" and playRepeat != "0":
         print("\nInvalid input! Exiting game!\n")
         break
-
-
