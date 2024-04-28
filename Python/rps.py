@@ -1,7 +1,8 @@
 # Chapter 5 - User input
 
-import numpy as np
+# Rock, Paper & Scissors game
 
+import numpy as np
 
 repeat = True
 
