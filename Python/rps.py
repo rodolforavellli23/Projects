@@ -37,8 +37,6 @@ while repeat == True:
         print('Scissors loses to Rock! Computer wins!')
     elif playerChoice == 3 and randint == 2:
         print('Scissors defeat Paper! Player wins!')
-    else:
-        print('Invalid input!') 
 
     print('')
     
