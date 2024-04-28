@@ -47,7 +47,6 @@ while repeat == True:
         continue
     elif playRepeat != "1" and playRepeat != "0":
         print("\nInvalid input! Exiting game!\n")
-        repeat = False
         break
 
 
