@@ -10,16 +10,13 @@ while repeat == True:
 
     randint = np.random.randint(1,3)
 
-    print('')
-    value = input('Enter...\n\nNumber key 1 for Rock, 2 for Paper and 3 for Scissors: ')
+    value = input('\nEnter...\n\nNumber key 1 for Rock, 2 for Paper and 3 for Scissors: ')
 
     if value != "1" and value != "2" and value != "3":
         print("\nInvalid input! Exiting game!\n")
         break
 
-    print('')
-    print("Computer's choice: {}".format(randint))
-    print('')
+    print("\nComputer's choice: {} \n".format(randint))
 
     playerChoice = int(value)
 
@@ -37,16 +34,13 @@ while repeat == True:
         print('Scissors loses to Rock! Computer wins!')
     elif playerChoice == 3 and randint == 2:
         print('Scissors defeat Paper! Player wins!')
-
-    print('')
     
-    playRepeat = input("Play Again? 1 to continue, 0 to exit: ")
+    playRepeat = input("\nPlay Again? 1 to continue, 0 to exit: ")
 
-    if playRepeat == "0": 
+    if playRepeat == "0":
         print("")
         break
     elif playRepeat == "1":
-        print("")
         continue
     elif playRepeat != "1" and playRepeat != "0":
         print("\nInvalid input! Exiting game!\n")
