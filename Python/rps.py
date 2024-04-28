@@ -12,10 +12,15 @@ while repeat == True:
 
     print('')
     value = input('Enter...\n\nNumber key 1 for Rock, 2 for Paper and 3 for Scissors: ')
+
+    if value != "1" and value != "2" and value != "3":
+        print("\nInvalid input! Exiting game!\n")
+        break
+
     print('')
     print("Computer's choice: {}".format(randint))
     print('')
-
+    
     playerChoice = int(value)
 
     if playerChoice == randint:
