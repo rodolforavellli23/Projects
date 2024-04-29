@@ -132,3 +132,7 @@ $ systemctl restart --now (to verify if the fix hopefully resolved the problem)
 11) System source repos
 
 /etc/apt/sources.list.d/official-package-repositories.list
+
+12) Set system editor
+
+sudo /usr/bin/select-editor
