@@ -6,12 +6,13 @@ import subprocess
 def hello():
     print("\nHello {}!".format(getpass.getuser().capitalize()))
 
-def callUptime():
-    try:
-        subprocess.run(["/home/rodolfo/Documentos/GitHub/Projects/Scripts/firstFunction.sh"], check=True)
-    except subprocess.CalledProcessError as e:
-        print("\n{}".format(e))
-        subprocess.run(["/home/rodolfo/Documentos/Projetos/Projects/Scripts/firstFunction.sh"])
+def callUptime(): 
+#    value = subprocess.run(["/home/rodolfo/Documentos/GitHub/Projects/Scripts/firstFunction.sh"], capture_output=True, text=True)
+#    print('stdout: ', value.stdout)
+#    print('stderr: ', value.stderr)
+    value = subprocess.run(["/home/rodolfo/Documentos/Projetos/Projects/Scripts/firstFunction.sh"], capture_output=True, text=True)
+    print('\nstdout: \n', value.stdout)
+    print('\nstderr: \n', value.stderr)   
 
 hello()
 
