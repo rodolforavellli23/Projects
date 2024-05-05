@@ -1,4 +1,4 @@
-# Lesson 9 - Python Functions
+# Lesson 9 - Python Functions, exercise 1
 
 import getpass
 import subprocess
