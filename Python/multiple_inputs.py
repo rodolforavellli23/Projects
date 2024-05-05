@@ -4,7 +4,7 @@ def multiple_inputs(*args):
     print("\n{}".format(args))
     print("\n{}".format(type(args)))
 
-# multiple_inputs("Julian",34)
+multiple_inputs("Julian",34)
 # The line above always returns a tuple
 
 def mult_named_inputs(**kwargs):
