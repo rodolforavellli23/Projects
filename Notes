@@ -136,3 +136,7 @@ $ systemctl restart --now (to verify if the fix hopefully resolved the problem)
 12) Set system editor
 
 sudo /usr/bin/select-editor
+
+13) An example of the 'bc' basic calculator util
+
+echo 'scale=10; x=((sqrt(5)+1)/2); print(x)' | bc -l; echo " "
