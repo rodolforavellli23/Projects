@@ -7,12 +7,8 @@ def hello():
     print("\nHello {}!".format(getpass.getuser().capitalize()))
 
 def callUptime(): 
-#    value = subprocess.run(["/home/rodolfo/Documentos/GitHub/Projects/Scripts/firstFunction.sh"], capture_output=True, text=True)
-#    print('stdout: ', value.stdout)
-#    print('stderr: ', value.stderr)
-    value = subprocess.run(["/home/rodolfo/Documentos/Projetos/Projects/Scripts/firstFunction.sh"], capture_output=True, text=True)
-    print('\nstdout: \n', value.stdout)
-    print('\nstderr: \n', value.stderr)   
+    subprocess.run(["/home/rodolfo/Documentos/GitHub/Projects/Scripts/firstFunction.sh"])
+    print("")
 
 hello()
 
