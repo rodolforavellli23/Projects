@@ -4,9 +4,9 @@
 
 import numpy as np
 
-repeat = True
+playRepeat = True
 
-while repeat == True:
+while playRepeat:
 
     randint = np.random.randint(1,3)
 
@@ -38,7 +38,7 @@ while repeat == True:
     playRepeat = input("\nPlay Again? 1 to continue, 0 to exit: ")
 
     if playRepeat == "0":
-        print("")
+        print("\nOK\n")
         break
     elif playRepeat == "1":
         continue
