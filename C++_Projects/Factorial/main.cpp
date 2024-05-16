@@ -5,10 +5,9 @@
 using namespace std;
 
 int factorial(int a) {
-
     if (a == 0 || a == 1){
         return 1;
-    } else {
+    } else if (a >= 2){
         return a * factorial(a - 1);
     }
 }
