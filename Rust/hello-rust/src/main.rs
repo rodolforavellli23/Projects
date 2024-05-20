@@ -12,7 +12,7 @@ fn build() -> String{
 }
 
 fn main() {
-    //Retrive the rustc version from the environment variable set by build()
+    //Retrieve the rustc version from the variable set by build()
     
     let rustc_version = build();
     println!("\n\tHello World! From rustc version: {}\n", rustc_version);
