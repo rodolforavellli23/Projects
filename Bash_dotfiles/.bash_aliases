@@ -9,4 +9,4 @@ alias pip='function _pip(){
         pip_search "$2";
     else pip "$@";
     fi;
-};_pip'
+};_pip' # If you install pip on a new machine, be sure to also install 'pip_search'
