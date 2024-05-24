@@ -2,6 +2,7 @@
 
 # Factorial function in bash
 
+echo " "
 read -p "Compute the factorial of: " input
 
 input2=$input
@@ -12,5 +13,6 @@ while [ "$input2" -gt 0 ] ; do
 	input2=$[ $input2 - 1 ]
 done
 
+echo " "
 echo "The factorial of $input is $result"
-
+echo " "
