@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.19)  25 JAN 2024 03:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.10)  28 MAY 2024 05:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -146,19 +146,19 @@ LaTeX Font Info:    ... okay on input line 9.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 (./matrices.aux) ) 
 Here is how much of TeX's memory you used:
- 1260 strings out of 478287
- 18889 string characters out of 5849289
- 313652 words of memory out of 5000000
- 19513 multiletter control sequences out of 15000+600000
- 474642 words of font info for 47 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 1263 strings out of 480204
+ 18934 string characters out of 5895010
+ 308756 words of memory out of 5000000
+ 19270 multiletter control sequences out of 15000+600000
+ 475481 words of font info for 50 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
  69i,8n,76p,238b,191s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on matrices.pdf (1 page, 49256 bytes).
+Output written on matrices.pdf (1 page, 48474 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
