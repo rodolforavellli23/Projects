@@ -148,3 +148,11 @@ systemctl reboot --firmware-setup
 15) Return the factorial of a number 'n'
 
 echo 'define f(x) {if (x>1){return x*f(x-1)}; return 1} ; f(n)' | bc
+
+16) Grub
+
+sudo nano /etc/default/grub
+
+And then replace 'quiet' with 'nosplash'
+
+17)
