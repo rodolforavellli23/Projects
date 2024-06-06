@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class showRoom {
     public static void main(String args[]) throws IOException {
-        Room rooms[] = new Room[10];
-        Scanner diskScanner = new Scanner(new File("/home/rodolfo/Documentos/Projetos/java projects/demo/src/Text/guestsList.txt"));
+        final Room rooms[] = new Room[10];
+        Scanner diskScanner = new Scanner(new File("/home/greenshoots/Documentos/GitHub/Projects/java projects/demo/src/Text/guestsList.txt"));
 
         for (int numRoom = 0; numRoom < 10; numRoom++) {
             rooms[numRoom] = new Room();
