@@ -19,7 +19,7 @@ public class GameFrame extends JFrame implements ActionListener {
     //components for the GameFrame window
     JTextField textField = new JTextField(5);
     JButton button = new JButton("Guess");
-    JLabel label = new JLabel(guessNum + "guesses");
+    JLabel label = new JLabel(guessNum + " kguesses");
     //Declaration of the window layout
     public GameFrame() {
         setTitle("Guessing Game");
