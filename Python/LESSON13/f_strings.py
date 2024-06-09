@@ -19,4 +19,12 @@ print(message2)
 
 num = float(player['coins'])
 
-print(f"\n2.5 times {num} is roughly equal to {2.5 * num:.2f}\n")
+print(f"\n2.5 times {num} is equal to {2.5 * num:.1f}\n")
+
+for nums in range(1,11):
+    print(f"2.5 times {float(nums):.1f} is equal to {2.5 * nums:.1f}")
+
+print("\n")
+
+for nums in range(1,11):
+    print(f"2.5 divided by {float(nums):.1f} is equal to {2.5 / nums}")
