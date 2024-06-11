@@ -8,6 +8,7 @@ showUptime(){
 This machine has been up for ${up}
 
 It has been running since ${since}
+
 EOF
 }
 
