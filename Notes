@@ -155,4 +155,14 @@ sudo nano /etc/default/grub
 
 And then replace 'quiet' with 'nosplash'
 
-17)
+17) lsblk
+
+sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
+
+18) Create a swap partition inside a LVM VolumeGroup
+
+sudo lvcreate -C y -L <size of LogicalVolume here>G <name of VolumeGroup> -n swap
+
+-C , enforces continuity of memory block in the physical device
+ y , enforces confirmation of choice
+-L <size><unit data size>, enforces the size of the new LogicalVolume
