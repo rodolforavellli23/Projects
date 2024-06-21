@@ -1,0 +1,27 @@
+Python course notes
+
+# Notes
+
+/ {normal division operator, will return a float value if needed}
+
+// {rounds to floor the result of a division operation}
+
+round() {rounds to ceiling the division operation or a given float point value within}
+
+% {will return the remainder of a given division operation}
+
+** {powers operation}
+
++= , -= , *= , /= {will operate on the value stored on the variable given}
+
+== , != , >=, <= {comparison operators}
+
+not {p -> !q}
+
+and {p -> q ^ r}
+
+or {p -> q v r}
+
+// Tuples:
+
+They're like lists, but they do not allow change to the data that is already present in the tuple, and their order will not change as well. 
