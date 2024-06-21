@@ -166,3 +166,19 @@ sudo lvcreate -C y -L <size of LogicalVolume here>G <name of VolumeGroup> -n swa
 -C , enforces continuity of memory block in the physical device
  y , enforces confirmation of choice
 -L <size><unit data size>, enforces the size of the new LogicalVolume
+
+19) Format the new swap space
+
+sudo mkswap /dev/VolGroup00/LogVol02 
+
+20) Add the following entry to the /etc/fstab
+
+/dev/VolGroup00/LogVol02 swap swap defaults 0 0 
+ 
+21) Enable swap
+
+sudo swapon -0 pri=<priority of the new swap> /dev/VolGroup00/LogVol02 
+
+22)Test that the logical volume has been extended properly
+
+cat /proc/swaps # free
