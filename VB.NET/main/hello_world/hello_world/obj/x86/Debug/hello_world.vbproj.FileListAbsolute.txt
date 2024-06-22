@@ -1,0 +1,6 @@
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/main/hello_world/hello_world/bin/Debug/hello_world.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/main/hello_world/hello_world/bin/Debug/hello_world.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/main/hello_world/hello_world/obj/x86/Debug/hello_world.vbproj.AssemblyReference.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/main/hello_world/hello_world/obj/x86/Debug/hello_world.vbproj.CoreCompileInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/main/hello_world/hello_world/obj/x86/Debug/hello_world.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/main/hello_world/hello_world/obj/x86/Debug/hello_world.pdb

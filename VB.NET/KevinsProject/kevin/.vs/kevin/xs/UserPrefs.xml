@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{77D8FEB7-3E01-4DAB-9A8C-1BA9E69E65ED}|Default">
+  <MonoDevelop.Ide.ItemProperties.kevin PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="kevin/Main.vb">
+    <Files>
+      <File FileName="kevin/Main.vb" Line="7" Column="9" />
+      <File FileName="kevin/MyWindow.vb" Line="16" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="kevin" expanded="True">
+            <Node name="kevin" expanded="True">
+              <Node name="References" expanded="True">
+                <Node name="From Packages" expanded="True" />
+              </Node>
+              <Node name="Main.vb" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,11 @@
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/obj/x86/Debug/kevin.vbproj.AssemblyReference.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/obj/x86/Debug/kevin.vbproj.CoreCompileInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/obj/x86/Debug/kevin.exe.config
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/bin/Debug/kevin.exe.config
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/bin/Debug/kevin.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/bin/Debug/kevin.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/bin/Debug/GioSharp.dll
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/bin/Debug/GLibSharp.dll
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/obj/x86/Debug/kevin.vbproj.CopyComplete
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/obj/x86/Debug/kevin.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/KevinsProject/kevin/kevin/obj/x86/Debug/kevin.pdb

@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{BEEB3F37-2F36-46D9-A736-0C1CEAB55562}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="hello_world/Application.vb">
+    <Files>
+      <File FileName="hello_world/Application.vb" Line="8" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="hello_world" expanded="True">
+            <Node name="hello_world" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Application.vb" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.hello__world PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
