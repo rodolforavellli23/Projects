@@ -1,0 +1,6 @@
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/test/firstAtempt/firstAtempt/bin/Debug/firstAtempt.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/test/firstAtempt/firstAtempt/bin/Debug/firstAtempt.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/test/firstAtempt/firstAtempt/obj/x86/Debug/firstAtempt.csproj.CoreCompileInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/test/firstAtempt/firstAtempt/obj/x86/Debug/firstAtempt.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/test/firstAtempt/firstAtempt/obj/x86/Debug/firstAtempt.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/test/firstAtempt/firstAtempt/obj/x86/Debug/firstAtempt.csproj.AssemblyReference.cache

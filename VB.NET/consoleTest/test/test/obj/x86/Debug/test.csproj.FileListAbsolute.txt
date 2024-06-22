@@ -1,0 +1,6 @@
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/consoleTest/test/test/bin/Debug/test.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/consoleTest/test/test/bin/Debug/test.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/consoleTest/test/test/obj/x86/Debug/test.csproj.AssemblyReference.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/consoleTest/test/test/obj/x86/Debug/test.csproj.CoreCompileInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/consoleTest/test/test/obj/x86/Debug/test.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/consoleTest/test/test/obj/x86/Debug/test.pdb

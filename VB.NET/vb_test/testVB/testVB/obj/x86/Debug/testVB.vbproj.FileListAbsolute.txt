@@ -1,0 +1,8 @@
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/obj/x86/Debug/testVB.vbproj.AssemblyReference.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/obj/x86/Debug/testVB.vbproj.CoreCompileInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/obj/x86/Debug/testVB.exe.config
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/bin/Debug/testVB.exe.config
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/bin/Debug/testVB.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/bin/Debug/testVB.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/obj/x86/Debug/testVB.exe
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vb_test/testVB/testVB/obj/x86/Debug/testVB.pdb

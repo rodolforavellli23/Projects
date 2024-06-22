@@ -1,17 +1,15 @@
-﻿<Properties StartupConfiguration="{77D8FEB7-3E01-4DAB-9A8C-1BA9E69E65ED}|Default">
-  <MonoDevelop.Ide.ItemProperties.kevin PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="kevin/MyWindow.vb">
+﻿<Properties StartupConfiguration="{BEEB3F37-2F36-46D9-A736-0C1CEAB55562}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Application.vb">
     <Files>
-      <File FileName="kevin/Main.vb" Line="7" Column="9" />
-      <File FileName="kevin/MyWindow.vb" Line="21" Column="1" />
+      <File FileName="Application.vb" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="kevin" expanded="True">
-            <Node name="kevin" expanded="True">
+          <Node name="hello_world" expanded="True">
+            <Node name="hello_world" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="MyWindow.vb" selected="True" />
+              <Node name="Application.vb" selected="True" />
             </Node>
           </Node>
         </State>
@@ -19,6 +17,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.hello__world PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
