@@ -15,12 +15,13 @@ import argparse
 parser = argparse.ArgumentParser(description="Provides a personal greeting.") # Creates the parser
 
 parser.add_argument(
-    "-n", "--name", metavar="name",
+    "-n", "--name", metavar="name", nargs='+',
     required="True", help="The name of the person to be greeted"
 ) # Adds the argument
 
 args = parser.parse_args() # Parses arguments
 
-msg = f"Hello {args.name}" # message to be given to the user
+for arg in vars(args):
+    list_as_string = " ".join(map(str,(getattr(args,arg))))
 
-print(msg)
+print(f"Hello {list_as_string.capitalize()}!")
