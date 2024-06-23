@@ -22,3 +22,5 @@ parser.add_argument(
 args = parser.parse_args() # Parses arguments
 
 msg = f"Hello {args.name}" # message to be given to the user
+
+print(msg)
