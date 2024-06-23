@@ -15,7 +15,7 @@ import argparse
 parser = argparse.ArgumentParser(description="Provides a personal greeting.") # Creates the parser
 
 parser.add_argument(
-    "-n", "--name", metavar="name"
+    "-n", "--name", metavar="name",
     required="True", help="The name of the person to be greeted"
 ) # Adds the argument
 
