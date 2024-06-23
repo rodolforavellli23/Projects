@@ -12,9 +12,13 @@ import argparse
 # args = parser.parse_args()
 # print(args.accumulate(args.integers))
 
-parser = argparse.ArgumentParser(description="Provides a personal greeting.")
+parser = argparse.ArgumentParser(description="Provides a personal greeting.") # Creates the parser
 
 parser.add_argument(
     "-n", "--name", metavar="name"
-    required="True"
-)
+    required="True", help="The name of the person to be greeted"
+) # Adds the argument
+
+args = parser.parse_args() # Parses arguments
+
+msg = f"Hello {args.name}" # message to be given to the user
