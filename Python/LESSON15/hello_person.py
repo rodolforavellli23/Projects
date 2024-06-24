@@ -15,7 +15,7 @@ for arg in vars(args):
     list_as_string = " ".join(map(str,(getattr(args,arg))))
 
 # The above loop will parse through the Namespace object created by the 'parse_args()' function, then it will join
-# into the 'list_as_string' variable the arguments stored in 'vars(args)' that have been retrieved by the 'getattr(*obj, *str)' 
-# function. Each atribute will be iteratively cast into a 'str'.
+# into the 'list_as_string' variable the arguments stored in the 'vars(args)' list, each of which have been retrieved by the 
+# 'getattr(*obj, *str)' function. Each atribute will be iteratively cast into a 'str'.
 
 print(f"Hello {list_as_string}!")
