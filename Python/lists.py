@@ -54,6 +54,6 @@ anotherTuple = (1,2,3,4,5)
 
 # Tuples
 
-print(type(myTuple))
-print(type(anotherTuple))
+print((myTuple))
+print((anotherTuple))
 
