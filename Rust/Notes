@@ -6,5 +6,5 @@ cargo-update
     
 lsd 
 
-tealdeer ( for the 'tldr' program )
+(the tldr application now must be installed via npm for Nodejs 
 
