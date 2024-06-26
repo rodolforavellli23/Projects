@@ -8,3 +8,5 @@ lsd
 
 (the tldr application now must be installed via npm for Nodejs 
 
+Also, rustc and rustup must be installed from the official website instead of the distro repo.
+
