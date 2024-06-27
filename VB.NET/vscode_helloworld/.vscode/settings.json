@@ -1,3 +1,6 @@
 {
-    "dotnet.defaultSolution": "helloworld.sln"
+    "dotnet.defaultSolution": "helloworld.sln",
+    "cSpell.words": [
+        "Helloworld"
+    ]
 }
