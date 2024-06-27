@@ -2,7 +2,7 @@
 
 using System.Runtime.InteropServices;
 
-class Sample
+class Hclearelloworld
 {
     public static void Main()
     {
