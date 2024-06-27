@@ -1,0 +1,15 @@
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/bin/Debug/net8.0/helloworld
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/bin/Debug/net8.0/helloworld.deps.json
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/bin/Debug/net8.0/helloworld.runtimeconfig.json
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/bin/Debug/net8.0/helloworld.dll
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/bin/Debug/net8.0/helloworld.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.GeneratedMSBuildEditorConfig.editorconfig
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.AssemblyInfoInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.AssemblyInfo.cs
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.csproj.CoreCompileInputs.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.sourcelink.json
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.dll
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/refint/helloworld.dll
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.pdb
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/helloworld.genruntimeconfig.cache
+/home/greenshoots/Documentos/GitHub/Projects/VB.NET/vscode_helloworld/helloworld/obj/Debug/net8.0/ref/helloworld.dll
