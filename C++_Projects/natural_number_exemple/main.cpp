@@ -24,7 +24,7 @@ int main() {
     std::cin >> terms;
 
     double euler = calculateEuler(terms);
-    std::cout << "Approximate value of Euler's number with " << terms << " terms is " << euler << std::endl;
+    std::cout << "\nApproximate value of Euler's number with " << terms << " terms is " << euler << std::endl;
 
     return 0;
 }
