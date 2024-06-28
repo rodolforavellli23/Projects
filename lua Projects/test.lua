@@ -1,6 +1,5 @@
 -- test version programm
 
-io.write
-(
+io.write(
    "Hello world, from ",_VERSION,"!\n"
 )
