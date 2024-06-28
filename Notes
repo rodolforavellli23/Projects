@@ -181,3 +181,9 @@ sudo swapon -0 pri=<priority of the new swap> /dev/VolGroup00/LogVol02
 22)Test that the logical volume has been extended properly
 
 cat /proc/swaps # free
+
+23) To restart Cinnamon if the graphical user has crashed, but the operating system is still running
+
+Ctrl + Alt + F1, to enter the text mode user 1
+
+then: $ sudo telinit 5 , this will restart the graphical user mode.
