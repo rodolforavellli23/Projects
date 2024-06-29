@@ -25,3 +25,8 @@ or {p -> q v r}
 // Tuples:
 
 They're like lists, but they do not allow change to the data that is already present in the tuple, and their order will not change as well. 
+
+
+// Lambdas
+
+Also known as anonymous functions, so far I understand them as a way to write inline functions.
