@@ -16,5 +16,7 @@ odd_nums = filter((lambda num : num % 2 != 0), numbers)
 
 # This lambda func returns the bool 'True' every time it detects an odd number,
 # as it checks if the remainder of it's division by 2 is different from '0'.
+# The filter func will then return every element of the iterable that passed as true 
+# by the lambda function.
 
 print(f"\nThe odd numbers in the list {numbers} are {list(odd_nums)}\n")
