@@ -14,7 +14,12 @@ value1 = input("\nType number to be squared: ")
 list1 = []
 
 for r in range(2):
-    value2 = input("\nType two numbers to be summed: ")
+    
+    if(r == 0):
+        value2 = input("\nType two numbers to be summed: ")
+    elif(r == 1):
+        value2 = input("\nType the second number: ")
+    
     list1.append(int(value2)) # Using the 'append()' method is the correct way to add elements to a list object
 
 print(f"\n{squared(int(value1))}")
