@@ -10,13 +10,12 @@ def funcBuilder(x):
 # ===========================================
 
 value1 = input("\nType number to be squared: ")
-# value2 = input("\nType two numbers to be summed: ")
 
 list1 = []
 
 for r in range(2):
     value2 = input("\nType two numbers to be summed: ")
-    list1.append(int(value2))
+    list1.append(int(value2)) # Using the 'append()' method is the correct way to add elements to a list object
 
 print(f"\n{squared(int(value1))}")
 
