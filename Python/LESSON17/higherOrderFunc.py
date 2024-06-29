@@ -17,10 +17,10 @@ repeated = lambda lst : list(dict.fromkeys(lst))
 
 # -------------------------------------------------------------------
 
-print(f"\nThe square of the list {numbers} is {list(squared)}")
-
 odd_nums = filter((lambda num : num % 2 != 0), numbers)
 
 repeated_nums = repeated(list(odd_nums))
+
+print(f"\nThe square of the list {numbers} is {list(squared)}")
 
 print(f"\nThe odd numbers in the list {numbers} are {repeated_nums}\n")
