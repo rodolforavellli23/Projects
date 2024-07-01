@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.10)  29 MAY 2024 02:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.6.1)  30 JUN 2024 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21>
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-16>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -19,23 +19,23 @@ File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \c@subparagraph=\count190
 \c@figure=\count191
 \c@table=\count192
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
 )
 (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip49
+\FP@margin=\skip50
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
@@ -46,10 +46,10 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen139
-\Gin@req@width=\dimen140
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -64,18 +64,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
 \FV@CodeLineNo=\count193
 \FV@InFile=\read2
-\FV@TabBox=\box50
+\FV@TabBox=\box51
 \c@FancyVerbLine=\count194
 \FV@StepNumber=\count195
 \FV@OutFile=\write3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count196
-\l__pdf_internal_box=\box51
+\l__pdf_internal_box=\box52
 )
 (./main.aux)
 \openout1 = `main.aux'.
@@ -97,13 +97,13 @@ LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count197
-\scratchdimen=\dimen141
-\scratchbox=\box52
+\scratchdimen=\dimen143
+\scratchbox=\box53
 \nofMPsegments=\count198
 \nofMParguments=\count199
 \everyMPshowfont=\toks18
 \MPscratchCnt=\count266
-\MPscratchDim=\dimen142
+\MPscratchDim=\dimen144
 \MPnumerator=\count267
 \makeMPintoPDFobject=\count268
 \everyMPtoPDFconversion=\toks19
@@ -131,13 +131,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2254 strings out of 480204
- 34394 string characters out of 5895010
- 317770 words of memory out of 5000000
- 20215 multiletter control sequences out of 15000+600000
- 477577 words of font info for 61 fonts, out of 8000000 for 9000
+ 2278 strings out of 478008
+ 35126 string characters out of 5839803
+ 1855330 words of memory out of 5000000
+ 22425 multiletter control sequences out of 15000+600000
+ 520605 words of font info for 65 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,8n,62p,201b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,8n,62p,201b,212s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
@@ -147,7 +147,7 @@ ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb>
-Output written on main.pdf (1 page, 73830 bytes).
+Output written on main.pdf (1 page, 73992 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
