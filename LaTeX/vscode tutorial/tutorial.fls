@@ -39,6 +39,7 @@ INPUT tutorial.aux
 OUTPUT tutorial.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 OUTPUT tutorial.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
