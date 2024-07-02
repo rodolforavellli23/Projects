@@ -12,7 +12,7 @@ repeated = lambda lst : list(dict.fromkeys(lst))
 
 # This lambda function will take the keys from an iterable and remove all repeated items.
 # 
-# This works by taking a list turning it into a dictionary object( as those mantains insertion order)
+# This works by taking a list and turning it into a dictionary object( as those mantains insertion order)
 # and casts it back into a list again. 
 
 # -------------------------------------------------------------------
