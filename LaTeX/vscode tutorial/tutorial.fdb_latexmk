@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1719900100.26732 "/home/greenshoots/Documentos/GitHub/Projects/LaTeX/vscode tutorial/tutorial.tex" "tutorial.pdf" "tutorial" 1719900100.50311 0
+["pdflatex"] 1719901301.07687 "/home/greenshoots/Documentos/GitHub/Projects/LaTeX/vscode tutorial/tutorial.tex" "tutorial.pdf" "tutorial" 1719901301.31554 0
   "/etc/texmf/web2c/texmf.cnf" 1717218351.82073 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/greenshoots/Documentos/GitHub/Projects/LaTeX/vscode tutorial/tutorial.tex" 1719900099.95084 210 32a32834477ae8ec499aefd20379212f ""
+  "/home/greenshoots/Documentos/GitHub/Projects/LaTeX/vscode tutorial/tutorial.tex" 1719901300.72942 210 32a32834477ae8ec499aefd20379212f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -15,8 +15,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1717218367.24838 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1719890206 6476178 83175350a4506c5e6fe423d393517ebf ""
-  "tutorial.aux" 1719900100.47482 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "tutorial.tex" 1719900099.95084 210 32a32834477ae8ec499aefd20379212f ""
+  "tutorial.aux" 1719901301.28541 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "tutorial.tex" 1719901300.72942 210 32a32834477ae8ec499aefd20379212f ""
   (generated)
   "tutorial.aux"
   "tutorial.log"
