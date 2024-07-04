@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------
+On Windows PowerShell use the following steps:
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Step 1: Generate and output the checksum for the file/files.
+
+PS "$"> Set-Content .\Output.txt  (Get-FileHash "__your_file_name_here__" -Algorithm "__algo_name_here__" ); (Get-Content .\Output.txt).ToLower()
+
+Step 2: Compare if the checksum generated matches the expected value.
+
+PS "$"> $a = "__your_first_hash_value__"; $b = "__your_second_hash_value__"; if($a -eq $b){return "TRUE"}else{return "FALSE"}
+
+== + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == +
+
+Note_1: The "$" sign stands for the directory where the file is stored.
+Note_2: Text inside quotation marks (ex: " " , ' ') is to be replaced by the value being requested. 
+
+== + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == + == +
+
+PowerShell’s Get-FileHash cmdlet supports a variety of algorithms as listed below.
+
+PowerShell Core (version 6 and 7): MD5, SHA1, SHA256, SHA384, and SHA512
+Windows PowerShell (version 4 through 5.1): MACTripleDES, MD5, RIPEMD160, SHA1, SHA256, SHA384, and SHA512
