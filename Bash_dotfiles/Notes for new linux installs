@@ -10,4 +10,13 @@ fi
 
 Note: Whats inside <> brackets are to be replaced by the values being requested.
 
+Example: 
+
+if [ -d /home/greenshoots/Documentos/GitHub ]; then
+
+	PATH=$PATH:'/home/greenshoots/Documentos/GitHub':'/home/greenshoots/Documentos/GitHub/Projects/Scripts':'/var/lib/flatpak/exports/share':'/home/greenshoots/Documentos/GitHub/Projects/"lua Projects"':'/usr/local/texlive/2023/bin/x86_64-linux':'/home/greenshoots/.local/bin/tldr':'/home/greenshoots/.cargo/bin'
+
+fi
+
+===========================================================================
 Install the python program 'pip_search', for the respective functionality.
