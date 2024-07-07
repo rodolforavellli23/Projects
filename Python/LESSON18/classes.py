@@ -5,12 +5,24 @@ import sys # Python built-in functions.
 
 # A class example
 class Vehicle:
-    # Atributes
+    # Attributes
     def __init__(self, make, model):
         self.make = make
         self.model = model
+    # Methods:
+    #  
+    # First add the set and set mehods for any attribute given to the class, then follow with any other methods you wish the objects inheriting from this class to have.
 
-    # Methods
+    def set_make(self):
+        self.make = self
+    def get_make(self):
+        return self.make
+    
+    def set_model(self):
+        self.model = self
+    def get_model(self):
+        return self.model
+
     def moves(self):
         print("Moves along...")
 
@@ -39,4 +51,4 @@ captured_output.close()
 
 # -------------------------------------------------------------------------------------
 
-print(f"\nMy car's model: {my_car.model}\n\nMy car's maker: {my_car.make}\n\nIt {var.lower()}")
+print(f"\nMy car's model: {my_car.get_model()}\n\nMy car's maker: {my_car.get_make()}\n\nIt {var.lower()}")
