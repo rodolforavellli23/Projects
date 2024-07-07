@@ -13,7 +13,9 @@ captured_output = io.StringIO()
 # This will set the stdout to the previously set variable
 sys.stdout = captured_output
 
-# Using a method inherited from the example class
+# Here will follow the method's output we wish to capture:
+
+# Using a method inherited from the example 'classes.py'
 my_car.moves()
 
 # Reseting stdout to it's original config
