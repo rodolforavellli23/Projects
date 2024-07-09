@@ -13,6 +13,7 @@ var
   procedure Goodbye;
   begin
     writeln('Press ''enter'' to end the program');
+    readln;
   end;
 
   procedure Add(num1,num2: integer);
@@ -27,6 +28,7 @@ var
     num := num1 * num2;
     Result := num;
   end;
+
 begin
   Add(5, 10);
   sum := Multiply(5, 10);

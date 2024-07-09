@@ -8,7 +8,8 @@
         <Filename Value="pascalsyntax.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos Y="21"/>
+        <TopLine Value="5"/>
+        <CursorPos X="12" Y="16"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
