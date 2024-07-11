@@ -189,3 +189,8 @@ Ctrl + Alt + F1, to enter the text mode user 1
 then: $ sudo telinit 5 , this will restart the graphical user mode.
 
 24) Should the Gnome Store update manager fail, use Synaptic to update your system.
+
+25) A fast way to get pi or euler's number
+
+python3 -c "import math; print(f"{math.pi:.9}")
+python3 -c 'import math; print(f"{math.e:.9}")'
