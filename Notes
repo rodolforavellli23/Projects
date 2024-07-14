@@ -196,3 +196,5 @@ then: $ sudo telinit 5 , this will restart the graphical user mode.
 
 python3 -c "import math; print(f"{math.pi:.9}")
 python3 -c 'import math; print(f"{math.e:.9}")'
+
+26) The 'groups' command lists all gruops in your current session, use 'getent group' to list all system users
