@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1720666745 source:/home/greenshoots/Documentos/GitHub/Projects/C++_Projects/leibnitzPi/main.cpp
+	<iostream>
+	<cmath>
+
