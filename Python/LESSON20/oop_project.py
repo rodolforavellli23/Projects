@@ -12,3 +12,9 @@ Dave.withdrawal(100)
 Sarah.withdrawal(100)
 
 Dave.withdrawal(10000)
+
+Dave.transfer(500, Sarah)
+Dave.transfer(5000, Sarah)
+
+Sarah_savings = InterestRewards(Sarah.get_initialAmmount(), "Sarah")
+Sarah_savings.deposit(500)
