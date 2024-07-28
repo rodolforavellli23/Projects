@@ -14,10 +14,7 @@ Ensures that a given package or programm location in the file directory is added
   tar -tvf archive.tar         # List all files in archive.tar verbosely.
   tar -xf archive.tar          # Extract all files from archive.tar.
 
-3) My mom's IPTU/DAS-MEI
-
-home: 328905
-pau_brasil: 326327
+3) 
 
 4) If a system crashes:
 
