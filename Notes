@@ -14,7 +14,10 @@ Ensures that a given package or programm location in the file directory is added
   tar -tvf archive.tar         # List all files in archive.tar verbosely.
   tar -xf archive.tar          # Extract all files from archive.tar.
 
-3) 
+3) Creating a python vitual environment:
+
+PS1 $ python3 -m venv .venv
+PS1 $ source .venv/bin/activate
 
 4) If a system crashes:
 
@@ -195,3 +198,5 @@ python3 -c "import math; print(f"{math.pi:.9}")
 python3 -c 'import math; print(f"{math.e:.9}")'
 
 26) The 'groups' command lists all gruops in your current session, use 'getent group' to list all system users
+
+27) Remember to add the '.gitignore' files from the 'https://github.com/github/gitignore/tree/main' repo to the apropriate directories.
