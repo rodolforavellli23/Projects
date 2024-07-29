@@ -1,4 +1,4 @@
-# Lesson 21 - the python pip package manager 
+# Lesson 21 - python pip package manager introduction
 
 import requests
 from dotenv import load_dotenv
