@@ -1,1 +1,1 @@
-console.log("Hello World! From " + navigator.userAgent);
+console.log(`Hello World! From ${navigator.userAgent}!`)
