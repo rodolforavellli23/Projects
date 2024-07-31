@@ -200,3 +200,6 @@ python3 -c 'import math; print(f"{math.e:.9}")'
 26) The 'groups' command lists all gruops in your current session, use 'getent group' to list all system users
 
 27) Remember to add the '.gitignore' files from the 'https://github.com/github/gitignore/tree/main' repo to the apropriate directories.
+
+28) To wipe a disk and reuse it as if it were a new disk, you can use the 'wipefs' shell command
+
