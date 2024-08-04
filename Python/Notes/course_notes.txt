@@ -30,3 +30,11 @@ They're like lists, but they do not allow change to the data that is already pre
 // Lambdas
 
 Also known as anonymous functions, so far I understand them as a way to write inline functions.
+
+// File operations
+
+r - Read
+a - Access
+w - Write
+x - Create
+
