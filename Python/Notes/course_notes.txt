@@ -31,10 +31,10 @@ They're like lists, but they do not allow change to the data that is already pre
 
 Also known as anonymous functions, so far I understand them as a way to write inline functions.
 
-// File operations
+// File operations that can be done with the '.open()' method
 
-r - .read() - will return the contents of the file.
-a - .access() - creates a file if one doesn't exit, if it does it will append any new contents to it.
-w - .write() -
-x - .create() -
+r - .read() - Will return the contents of the file.
+a - .append() - Creates a file if one doesn't exit, if it does it will append any new contents to it.
+w - .write() - Will overwrite the contents of a given file.
+x - .create() - Will create a file if it does not yet exist.
 
