@@ -203,3 +203,6 @@ python3 -c 'import math; print(f"{math.e:.9}")'
 
 28) To wipe a disk and reuse it as if it were a new disk, you can use the 'wipefs' shell command
 
+29) show the machine IP address
+
+hostname --all-ip-addresses
