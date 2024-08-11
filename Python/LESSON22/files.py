@@ -58,8 +58,8 @@ file.close()
 
 print("") # Spacing printed content
 
-file = open("name_list.txt", "x")
-file.close()
+# file = open("name_list.txt", "x")
+# file.close()
 
 file = open("name_list.txt", "w")
 file.write("Names List")
