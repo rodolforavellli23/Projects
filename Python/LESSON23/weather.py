@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-def get_current_weather(city="3451190"):
+def get_current_weather(city="Rio de Janeiro"):
     
     request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric'
 
@@ -18,12 +18,17 @@ if __name__ == "__main__":
     print("\n***Get Current Weather Conditions***\n")
     
     city = input("Please enter a city name:\n")
+
+    # Check for when 'city' is a empty string or contains only the SPACE character
+    if not bool(city.strip()):
+        city = "Rio de Janeiro"
+
     weather_data = get_current_weather(city)
 
     print("\n")
     pprint(weather_data)
 
-    print(f'\nCurrent weather for {weather_data["name"]}:')
-    print(f'\nThe temp is {weather_data["main"]["temp"]:.1f}°C')
-    print(
-        f'\n{weather_data["weather"][0]["description"].capitalize()} and feels like {weather_data["main"]["feels_like"]:.1f}°C\n')
+    # print(f'\nCurrent weather for {weather_data["name"]}:')
+    # print(f'\nThe temp is {weather_data["main"]["temp"]:.1f}°C')
+    # print(
+    #     f'\n{weather_data["weather"][0]["description"].capitalize()} and feels like {weather_data["main"]["feels_like"]:.1f}°C\n')
