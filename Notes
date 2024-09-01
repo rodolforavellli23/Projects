@@ -206,3 +206,15 @@ python3 -c 'import math; print(f"{math.e:.9}")'
 29) show the machine IP address
 
 hostname --all-ip-addresses
+
+30) Show all logged human users
+
+sudo w
+
+31) Do this whenever apt has problems updating a package
+
+sudo dpkg --configure -a
+
+sudo apt --fix-broken install
+
+sudo dpkg --force depends -P <troubled-package-name-here>

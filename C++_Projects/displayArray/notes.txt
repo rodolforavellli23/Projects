@@ -1,0 +1,30 @@
+### ChatGPT explaing how the main function args work ###
+
+Good evening! Let's break down the arguments of the `main` function in C++:
+
+### `int main(int nNumberofArgs, char* pszArgs[])`
+
+1. **`int nNumberofArgs`**:
+   - This argument represents the number of command-line arguments passed to the program.
+   - `nNumberofArgs` includes the program's name itself, so it's always at least 1.
+   - For example, if you run the program as `./program arg1 arg2`, `nNumberofArgs` will be 3 (one for the program's name and two for the arguments).
+
+2. **`char* pszArgs[]`**:
+   - This is an array of C-style strings (null-terminated character arrays), where each element is one of the command-line arguments.
+   - `pszArgs[0]` is the program's name (or the path to the executable), and `pszArgs[1]`, `pszArgs[2]`, etc., are the additional command-line arguments.
+   - `char*` means that each element in the array is a pointer to a `char` (character), so `pszArgs[]` is an array of pointers.
+
+### Example
+If you run a program with the following command:
+
+```bash
+./myProgram firstArg secondArg
+```
+
+Then:
+- `nNumberofArgs` will be `3`.
+- `pszArgs[0]` will be `"./myProgram"`.
+- `pszArgs[1]` will be `"firstArg"`.
+- `pszArgs[2]` will be `"secondArg"`.
+
+This allows you to process and work with the command-line arguments within your program.
