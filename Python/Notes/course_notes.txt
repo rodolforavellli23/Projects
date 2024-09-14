@@ -36,3 +36,7 @@ r - .read() - Will return the contents of the file.
 a - .append() - Creates a file if one doesn't exit, if it does it will append any new contents to it.
 w - .write() - Will overwrite the contents of a given file.
 x - .create() - Will create a file if it does not yet exist.
+
+// the 'self' keyword
+
+This keyword in Python references the currently instantiated object in the Object Oriented Program paradigm implemented in this scripting language.
