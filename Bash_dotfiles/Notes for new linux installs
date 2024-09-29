@@ -20,3 +20,8 @@ fi
 
 ===========================================================================
 Install the python program 'pip_search', for the respective functionality.
+
+
+===========================================================================
+
+mint calendar : %A | %B %d | %H:%M
