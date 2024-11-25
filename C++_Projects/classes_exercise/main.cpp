@@ -20,7 +20,7 @@ int main(int nNumberofArgs, char* pszArgs[]){
     cout << "\n\tAccount name: " << myAccount.name;
     cout << "\n\tAccount number: " << myAccount.accNumber;
     // cout << "\tAccount balance: " << myAccount.balance << "\n";
-    printf("\n\tAccount balance: %.2f", myAccount.balance);
+    printf("\n\tAccount balance: $ %.2f", myAccount.balance);
     cout << "\n" << endl;
 
     return 0;
