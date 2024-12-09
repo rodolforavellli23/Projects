@@ -192,8 +192,9 @@ then: $ sudo telinit 5 , this will restart the graphical user mode.
 
 24) Should the Gnome Store update manager fail, use Synaptic to update your system.
 
-25) A fast way to get pi or euler's number
+25) Using Python as a calculator:
 
+python3 -c 'import math; x = math.sqrt(869.2) ; print(f"{x:.4}")'
 python3 -c "import math; print(f"{math.pi:.9}")
 python3 -c 'import math; print(f"{math.e:.9}")'
 
