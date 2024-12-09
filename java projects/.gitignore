@@ -10,6 +10,22 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Build directories (Maven/Gradle)
+target/
+build/
+
+# VS Code files
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*~
+
 # Package Files #
 *.jar
 *.war
