@@ -3,19 +3,21 @@
 
 using namespace std;
 
-class savingsAccount{
-    public:
-        unsigned accNumber;
-        double balance;
-        string name;
+class savingsAccount
+{
+public:
+    unsigned accNumber;
+    double balance;
+    string name;
+    double deposit(savingsAccount &s, double amount)
+    {
+        s.balance += amount;
+        return s.balance;
+    }
 };
 
-double deposit (savingsAccount& s, double amount){
-    s.balance += amount;
-    return s.balance;
-}
-
-int main(int nNumberofArgs, char* pszArgs[]){
+int main(int nNumberofArgs, char *pszArgs[])
+{
     // My User
     savingsAccount myAccount;
     myAccount.accNumber = 1234;
@@ -32,8 +34,9 @@ int main(int nNumberofArgs, char* pszArgs[]){
     cin >> confirm;
     cout << "\n\tAmount total of deposit: ";
     cin >> amount;
-    if(confirm){
-        deposit(myAccount, amount);
+    if (confirm)
+    {
+        myAccount.deposit(myAccount, amount);
     }
     printf("\n\tAccount balance: $ %.2f", myAccount.balance);
     cout << "\n" << endl;
