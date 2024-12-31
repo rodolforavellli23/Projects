@@ -220,3 +220,16 @@ sudo apt --fix-broken install
 
 sudo dpkg --force depends -P <troubled-package-name-here>
 
+32) chmod
+---------------
+  421 421 421 |
+- rwx rwx rwx | ('r' for read, 'w' for write and 'x' for execute)
+  \|/ \|/ \|/ |
+   7   7   7  | Binary representation of permissions (for -rw-r--r-- the number would be 644)
+---------------                                            \|/\|/\|/
+                                                            6  4  4
+
+First character indicates whether the entry is for a file '-' or a directory 'd'
+Second group of characters indicates your users permissions 
+Third for the users in the group this file belongs to
+Fourth for all other users in the system
