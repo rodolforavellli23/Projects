@@ -25,3 +25,9 @@ Then run 'pipx ensurepath' and 'pipx ccompletions'
 ===========================================================================
 
 mint calendar : %A | %B %d | %H:%M
+
+===========================================================================
+
+To make the bash shell 'locate' command useful update it's database with:
+
+$ sudo updatedb
