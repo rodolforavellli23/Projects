@@ -233,3 +233,9 @@ First character indicates whether the entry is for a file '-' or a directory 'd'
 Second group of characters indicates your users permissions 
 Third for the users in the group this file belongs to
 Fourth for all other users in the system
+
+33) Compiling programs for Windows on Linux:
+
+Using the command "x86_64-w64-mingw32-g++ -o <Your executable name here>.exe <Your C++ sources here>.cpp", you may then compile an executable from C++ sources that can run on Windows.
+
+
