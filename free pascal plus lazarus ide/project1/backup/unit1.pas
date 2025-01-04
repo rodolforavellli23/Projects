@@ -13,6 +13,7 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    Edit1: TEdit;
     procedure Button1Click(Sender: TObject);
   private
 
@@ -30,8 +31,11 @@ implementation
 { TForm1 }
 
 procedure TForm1.Button1Click(Sender: TObject);
+var
+  aname:string;
 begin
-  ShowMessage('Hello World!');
+  aname := Edit1.Text;
+  ShowMessage('Hello World! User: ' + aname);
 end;
 
 end.

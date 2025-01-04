@@ -1,0 +1,5 @@
+program myproject;
+
+begin
+end.
+
