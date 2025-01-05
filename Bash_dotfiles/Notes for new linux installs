@@ -26,13 +26,12 @@ Then run 'pipx ensurepath' and 'pipx ccompletions'
 
 mint calendar : %A | %B %d | %H:%M
 
-<<<<<<< Updated upstream
 ===========================================================================
 
 To make the bash shell 'locate' command useful update it's database with:
 
 $ sudo updatedb
-=======
+
 ---------------------------------------------------------------
 
 GRUB_DEFAULT=0
@@ -45,4 +44,3 @@ GRUB_DEFAULT=0
 
 Prefered defaults for GRUB
 
->>>>>>> Stashed changes
