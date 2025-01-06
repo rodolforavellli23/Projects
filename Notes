@@ -53,7 +53,7 @@ cat "<checksum-provided-by-the-distro-maintainer-here> <distro-image-name-here>.
 
 sudo netstat --tcp --udp --listening --programs --numeric
 ifconfig -a
-ping -c 3 baeldung.com
+kping -c 3 baeldung.com
 
 5) Micro text editor tips:
 
@@ -195,8 +195,9 @@ then: $ sudo telinit 5 , this will restart the graphical user mode.
 25) Using Python as a calculator:
 
 python3 -c 'import math; x = math.sqrt(869.2) ; print(f"{x:.4}")'
-python3 -c "import math; print(f"{math.pi:.9}")
+python3 -c 'import math; print(f"{math.pi:.9}")'
 python3 -c 'import math; print(f"{math.e:.9}")'
+python3 -c 'import math; print(f"{((212-32)*(5/9)):.4}");'
 
 26) The 'groups' command lists all gruops in your current session, use 'getent group' to list all system users
 
