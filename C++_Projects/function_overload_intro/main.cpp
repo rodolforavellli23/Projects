@@ -24,6 +24,9 @@ int main(){
      * method in the Student class since we declared the '.calcTuition()' method
      * of the class as a virtual method, and vice versa for the method in the
      * 'gradStudent' class.
+     *
+     * By default C++ is a statically compiled language, but using the 'virtual'
+     * reserved keyword, we can use the polymorphic property of OOP.
      */
 
     fn(s);
