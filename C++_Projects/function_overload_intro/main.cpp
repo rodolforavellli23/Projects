@@ -3,6 +3,12 @@
 #include <string.h>
 #include "gradStudent.h"
 
+/**
+ * Since the class inside the header file "gradStudent.h" inherits the class
+ * inside the "Student.h" header file, we only need to call the one header file
+ * that inherits its parent class.
+ */
+
 using namespace std;
 
 void fn(Student& x){
