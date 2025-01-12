@@ -7,7 +7,7 @@
  * Since the class inside the header file "gradStudent.h" inherits the class
  * inside the "Student.h" header file, we only need to call the one header file
  * that inherits its parent class.
- */
+*/
 
 using namespace std;
 
@@ -27,7 +27,7 @@ int main(){
      *
      * By default C++ is a statically compiled language, but using the 'virtual'
      * reserved keyword, we can use the polymorphic property of OOP.
-     */
+    */
 
     fn(s);
     fn(gS);

@@ -9,7 +9,7 @@ using namespace std;
  * Signing a function as virtual adds polymorfism to that function, which allows
  * for that function to determine to which class the overloaded method belongs
  * to.
- */
+*/
 class Student
 {
     public:
