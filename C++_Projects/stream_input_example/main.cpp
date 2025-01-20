@@ -55,7 +55,7 @@ int main(int nNumberofArgs, char *pszArg[])
      * Note: the getline() function will read a stream of characters until
      *       it gets to read some kind of new line, eof or any delimiter is
      *       found.
-     */
+    */
 
     cout << "\n\tPress Enter to Continue." << endl;
     cin.ignore(10, '\n');
