@@ -1,0 +1,3 @@
+# Ignore the example text files
+*.txt
+*.txt.backup
