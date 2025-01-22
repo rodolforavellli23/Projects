@@ -13,7 +13,7 @@ int main(int nNumberofArgs, char *pszArgs[])
 
     for (int i = 1; i < nNumberofArgs; i++)
     {
-        // Create a variable to store the archive name, plus a '.backup'
+        // Create a variable to store the file, plus a '.backup'
         string szSource(pszArgs[i]);
         string szTarget = szSource + ".backup";
 
