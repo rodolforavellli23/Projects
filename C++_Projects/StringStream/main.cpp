@@ -32,5 +32,18 @@ bool parseString(const char *pString, char *pName, int arraySize, long &accountN
 int main(int nNumberofArgs, char*  pszArgs[])
 {
     // File name
+    char szFileName[128];
+    cout << "\n\tInput the name of the file to be parsed: ";
+    cin.getline(szFileName, 128);
+
+    // Catches file stream
+    ifstream* pFileStream = new ifstream(szFileName);
+    if (!pFileStream->good())
+    {
+        cerr << "\n\tCan't open " << pszArgs[1] << endl;
+        return 0;
+    }
     
+    
+
 }
