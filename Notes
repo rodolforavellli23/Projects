@@ -53,7 +53,7 @@ cat "<checksum-provided-by-the-distro-maintainer-here> <distro-image-name-here>.
 
 sudo netstat --tcp --udp --listening --programs --numeric
 ifconfig -a
-kping -c 3 baeldung.com
+ping -c 3 baeldung.com
 
 5) Micro text editor tips:
 
