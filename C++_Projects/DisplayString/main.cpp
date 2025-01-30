@@ -6,14 +6,18 @@ using namespace std;
 int main(int nNumberofArgs, char* pszArgs[])
 {
     // String Declation
-    const char* szString = "Rodolfo";
+    const char* szString = "Hello World!";
     string s = szString;
-    cout << "\nThe given array was: '" << szString << "'" << endl;
+    cout << "\n\tThe given array was: '" << szString << "'" << endl;
 
     // String displayed as array
-    cout << "Displaying the given string as an array: \n\n";
+    cout << "\tDisplaying the given string as an array: \n\n";
     for(int i = 0; i < s.length(); i++){
-        cout << "\t(" << i <<  "): " << szString[i] << ";\n";
+        if(i < 10){
+            cout << "\t(" << i <<  "):  " << szString[i] << ";\n";
+        } else {
+            cout << "\t(" << i <<  "): " << szString[i] << ";\n";
+        }
     }
     cout << endl;
 
