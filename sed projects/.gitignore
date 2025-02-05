@@ -1,1 +1,49 @@
+# Ignore all .txt files
 *.txt
+
+# Ignore common binary file extensions
+*.bin
+*.exe
+*.o
+*.a
+*.so
+*.dll
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+*.pyd
+*.ko
+*.obj
+*.lib
+*.dylib
+*.ncb
+*.suo
+*.ilk
+*.pdb
+*.cache
+*.app
+*.dmg
+*.iso
+*.img
+*.msi
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Linux/Unix specific files
+*~
+*.swp
+*.swo
+
+# Ignore Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
