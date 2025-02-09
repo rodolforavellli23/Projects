@@ -1,13 +1,13 @@
 #pragma once
 
 #include <iostream>
+#include "Furniture.h"
 
 using namespace std;
 
-class Sofa
+class Sofa : virtual public Furniture
 {
 public:
-    Sofa() {}
+    Sofa(int w = 0) : Furniture(w) {}
     void watchTV() { cout << "\n\tWatchTV" << endl; }
-    int weight;
 };
