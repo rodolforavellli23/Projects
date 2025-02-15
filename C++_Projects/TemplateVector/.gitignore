@@ -57,6 +57,11 @@ third_party/
 # Ignore macOS specific files
 .DS_Store
 
+# Ignore Linux executables (files without extensions that are executable)
+/[^/]*$
+!/[^/]*/.*
+!/[^/]*/*.*
+
 # Ignore user-specific files
 *.user
 *.suo
