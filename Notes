@@ -94,61 +94,27 @@ awk 'END {print NR}' sample_data.txt
 
 sudo fdisk -l /dev/sda /dev/sdb
 
-11) In case audio on LinuxMint stops dectecting headphones on boot
-
-Edit: /usr/share/pulseaudio/alsa-mixer/paths/analog-output-lineout.conf
-
-FIND(or create, should a kernel update force a scrip refresh that wipes this fix):
-obs¹: the '...' are used to represent an unknown amount of lines in between the text blocks being mentioned.
-
-[Jack Headphone]
-
-state.plugged = no (--->Change no to yes)
-state.unplugged = unknown
-
-...
-[Jack Front Headphone]
-state.plugged = no (--->Change no to yes)
-state.unplugged = unknown
-
-...
-[Element Headphone]
-switch = off (--->Change off to on)
-volume = off
-
-...
-[Element Headphone2]
-switch = off (--->Change off to on)
-volume = off
-SAVE FILE AND restart pulseaudio:
-
-AT THE TERMINAL EMULATOR:
-
-$ pulseaudio -k
-$ pulseaudio --start (to see if you didn't break your configs)
-$ systemctl restart --now (to verify if the fix hopefully resolved the problem)
-
-11) System source repos
+12) System source repos
 
 /etc/apt/sources.list.d/official-package-repositories.list
 
-12) Set system editor
+13) Set system editor
 
 sudo /usr/bin/select-editor
 
-13) An example of the 'bc' basic calculator util
+14) An example of the 'bc' basic calculator util
 
 echo 'scale=10; x=((sqrt(5)+1)/2); print(x)' | bc -l; echo " "
 
-14) Go into the BIOS
+15) Go into the BIOS
 
 systemctl reboot --firmware-setup
 
-15) Return the factorial of a number 'n'
+16) Return the factorial of a number 'n'
 
 echo 'define f(x) {if (x>1){return x*f(x-1)}; return 1} ; f(n)' | bc
 
-16) Grub
+17) Grub
 
 sudo nano /etc/default/grub
 
@@ -156,11 +122,11 @@ And then replace 'quiet' with 'nosplash'
 
 then run 'update-grub'
 
-17) lsblk
+18) lsblk
 
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 
-18) Create a swap partition inside a LVM VolumeGroup
+19) Create a swap partition inside a LVM VolumeGroup
 
 sudo lvcreate -C y -L <size of LogicalVolume here><unit data size> <name of VolumeGroup> -n swap
 
@@ -168,52 +134,52 @@ sudo lvcreate -C y -L <size of LogicalVolume here><unit data size> <name of Volu
  y , enforces confirmation of choice
 -L <size><unit data size>, enforces the size of the new LogicalVolume
 
-19) Format the new swap space
+20) Format the new swap space
 
 sudo mkswap /dev/VolGroup00/LogVol02 
 
-20) Add the following entry to the /etc/fstab
+21) Add the following entry to the /etc/fstab
 
 /dev/VolGroup00/LogVol02 swap swap defaults 0 0 
  
-21) Enable swap
+22) Enable swap
 
 sudo swapon -0 pri=<priority of the new swap> /dev/VolGroup00/LogVol02 
 
-22)Test that the logical volume has been extended properly
+23)Test that the logical volume has been extended properly
 
 cat /proc/swaps # free
 
-23) To restart Cinnamon if the graphical user has crashed, but the operating system is still running
+24) To restart Cinnamon if the graphical user has crashed, but the operating system is still running
 
 Ctrl + Alt + F1, to enter the text mode user 1
 
 then: $ sudo telinit 5 , this will restart the graphical user mode.
 
-24) Should the Gnome Store update manager fail, use Synaptic to update your system.
+25) Should the Gnome Store update manager fail, use Synaptic to update your system.
 
-25) Using Python as a calculator:
+26) Using Python as a calculator:
 
 python3 -c 'import math; x = math.sqrt(869.2) ; print(f"{x:.4}")'
 python3 -c 'import math; print(f"{math.pi:.9}")'
 python3 -c 'import math; print(f"{math.e:.9}")'
 python3 -c 'import math; print(f"{((212-32)*(5/9)):.4}");'
 
-26) The 'groups' command lists all gruops in your current session, use 'getent group' to list all system users
+27) The 'groups' command lists all gruops in your current session, use 'getent group' to list all system users
 
-27) Remember to add the '.gitignore' files from the 'https://github.com/github/gitignore/tree/main' repo to the apropriate directories.
+28) Remember to add the '.gitignore' files from the 'https://github.com/github/gitignore/tree/main' repo to the apropriate directories.
 
-28) To wipe a disk and reuse it as if it were a new disk, you can use the 'wipefs' shell command
+29) To wipe a disk and reuse it as if it were a new disk, you can use the 'wipefs' shell command
 
-29) show the machine IP address
+30) show the machine IP address
 
 hostname --all-ip-addresses
 
-30) Show all logged human users
+31) Show all logged human users
 
 sudo w
 
-31) Do this whenever apt has problems updating a broken package
+32) Do this whenever apt has problems updating a broken package
 
 sudo dpkg --configure -a
 
@@ -221,7 +187,7 @@ sudo apt --fix-broken install
 
 sudo dpkg --force depends -P <troubled-package-name-here>
 
-32) chmod
+33) chmod
 ---------------
   421 421 421 |
 - rwx rwx rwx | ('r' for read, 'w' for write and 'x' for execute)
@@ -238,5 +204,4 @@ Fourth for all other users in the system
 33) Compiling programs for Windows on Linux:
 
 Using the command "x86_64-w64-mingw32-g++ -o <Your executable name here>.exe <Your C++ sources here>.cpp", you may then compile an executable from C++ sources that can run on Windows.
-
 
