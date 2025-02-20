@@ -27,7 +27,6 @@ int main(void)
     {
         if (arr[num] & 1)
         {
-
             oddArr[j] = arr[num];
 
             if (j < 5)
