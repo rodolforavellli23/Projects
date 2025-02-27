@@ -3,3 +3,11 @@
 	<iostream>
 	<string>
 
+1740282478 source:/home/greenshoots/Documentos/GitHub/Projects/C++_Projects/Fahrenheit_to_Celcius/main.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<stdexcept>
+	<iomanip>
+	<limits>
+
