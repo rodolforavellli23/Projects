@@ -17,7 +17,7 @@ define euler(n) {
     return e
 }
 
-print "\n"; 
+print "\n";
 
 "	Pi: 		"; pi();
 
