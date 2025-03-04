@@ -1,0 +1,29 @@
+#!/usr/bin/bc
+
+scale=10;
+
+define pi() {
+    return 4*a(1)
+}
+
+define euler(n) {
+    auto i, fact, e
+    fact = 1
+    e = 1
+    for (i = 1; i <= n; i++) {
+        fact *= i
+        e += 1 / fact
+    }
+    return e
+}
+
+print "\n"; 
+
+"	Pi: 		"; pi();
+
+"	Euler's number: "; euler(20);
+
+print "\n";
+
+quit();
+
