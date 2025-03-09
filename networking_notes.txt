@@ -1,0 +1,21 @@
+// Networking Notes
+
+1) Network information:
+
+$ ip a 
+
+$ ip link
+
+$ ifconfig -a
+
+$ sudo ethtool <network device name>
+
+2) Network path
+
+$ traceroute < website or ip adress >
+
+$ sudo netstat -tulnp
+
+$ sudo ss -tulnp
+
+3)
