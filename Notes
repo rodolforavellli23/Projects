@@ -203,7 +203,7 @@ Fourth for all other users in the system
 
 33) Compiling programs for Windows on Linux:
 
-Using the command "x86_64-w64-mingw32-g++ -o <Your executable name here>.exe <Your C++ sources here>.cpp", you may then compile an executable from C++ sources that can run on Windows.
+Using the command "x86_64-w64-mingw32-g++ -static -o <Your executable name here>.exe <Your C++ sources here>.cpp", you may then compile an executable from C++ sources that can run on Windows.
 
 34) User management
 
@@ -217,6 +217,4 @@ sudo usermod -rG group_name username
 35) List group members
 
 getent group group_name
-
-
 
