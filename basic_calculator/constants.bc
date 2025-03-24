@@ -1,5 +1,7 @@
 #!/usr/bin/bc
 
+# Use with the -l and -q options
+
 scale=10;
 
 define pi() {
