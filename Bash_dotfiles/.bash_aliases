@@ -7,4 +7,6 @@ alias pipx='function _pipx(){
     else pipx "$@";
     fi;
 };_pipx' # If you install pip on a new machine, be sure to also install 'pip_search' & 'pipx'
-
+alias prepend='function _prepend(){
+     { echo "$1"; cat "$2"; } | tee "$2" > /dev/null
+};_prepend'
