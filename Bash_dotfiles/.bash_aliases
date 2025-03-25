@@ -1,7 +1,6 @@
 # User made aliases
 
 alias lsactive='systemctl --user list-units --type service'
-alias cargoup='cargo install $(cargo install --list | egrep "^[a-z0-9_-]+ v[0-9.]+:$" | cut -f1 -d " ")'
 alias pipx='function _pipx(){
     if [ $1 = "search" ]; then
         pip_search "$2";
