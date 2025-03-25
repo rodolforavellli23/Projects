@@ -220,7 +220,7 @@ getent group group_name
 
 36) add a string to the beginning of a text file
 
-{ echo "Your new first line"; cat file.txt; } | tee file.txt > /dev/null
+{ echo 'Your new first line'; cat file.txt; } | tee file.txt > /dev/null
 
 37)
 
