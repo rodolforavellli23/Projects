@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>150</y>
+      <x>210</x>
+      <y>130</y>
       <width>281</width>
       <height>121</height>
      </rect>
@@ -48,7 +48,11 @@
      <height>23</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuNew_Window"/>
+   <widget class="QMenu" name="menuNew_Window">
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
    <addaction name="menuNew_Window"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
