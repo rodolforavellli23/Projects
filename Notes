@@ -1,5 +1,3 @@
-Current study topic for self learning: Python (project folder: /home/rodolfo/Documentos/Projetos/Python)
-
 Notes
 
 1) Bash Tips
@@ -10,9 +8,9 @@ Ensures that a given package or programm location in the file directory is added
 
 2) tar [OPTIONS] [ARCHIVED TARBALL] [FILES]
 
-  tar -cf archive.tar foo bar  # Create archive.tar from files foo and bar.
-  tar -tvf archive.tar         # List all files in archive.tar verbosely.
-  tar -xf archive.tar          # Extract all files from archive.tar.
+  tar -cf archive.tar foo bar  # Create 'archive.tar" from files 'foo' and 'bar'.
+  tar -tvf archive.tar         # List all files in "archive.tar" verbosely.
+  tar -xf archive.tar          # Extract all files from "archive.tar".
 
 3) Creating a python vitual environment:
 
@@ -222,5 +220,13 @@ getent group group_name
 
 { echo 'Your new first line'; cat file.txt; } | tee file.txt > /dev/null
 
-37)
+37) Make a copy of an HD
+
+sudo dd if=/dev/sda of=/dev/sdb bs=4M status=progress
+         ^          ^           ^
+         |          |           |
+        Input       Output      Block
+        File        File        Size
+
+
 
