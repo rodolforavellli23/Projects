@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # put math constants here
 import math;
 

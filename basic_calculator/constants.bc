@@ -1,4 +1,4 @@
-#!/usr/bin/bc
+#!/usr/bin/bc -lq
 
 # Use with the -l and -q options
 
