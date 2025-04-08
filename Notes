@@ -228,5 +228,5 @@ sudo dd if=/dev/sda of=/dev/sdb bs=4M status=progress
         Input       Output      Block
         File        File        Size
 
-
+Note: the input file and output file can both be whole partitions of a hard drive (HDD or NVMe)
 
