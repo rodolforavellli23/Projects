@@ -6,7 +6,7 @@ def calculate_grades(**kwargs):
         return
 
     total = 0
-    print("\n\tGrades Received:")
+    print("\n\tGrades Received:\n")
     for subject, grade in kwargs.items():
         print(f"\t{subject}: {grade}")
         total += grade
