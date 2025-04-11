@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Lesson 9 - Python Functions, Exercise 2
 
 def multiple_inputs(*args):
