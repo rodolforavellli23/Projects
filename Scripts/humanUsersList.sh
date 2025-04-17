@@ -8,6 +8,6 @@ logged_in_users=$(who | awk '{print $1}' | sort | uniq)
 
 # Display the results
 echo -e "\n\tAll Human Users In This System:"
-echo -e "\t$all_users"
+echo -e "\t$all_users\t"
 echo -e "\n\tCurrently Logged-In Human Users:"
 echo -e "\t$logged_in_users\n"
