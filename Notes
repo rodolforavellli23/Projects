@@ -14,8 +14,8 @@ Ensures that a given package or programm location in the file directory is added
 
 3) Creating a python vitual environment:
 
-PS1 $ python3 -m venv .venv
-PS1 $ source .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 
 4) If a system crashes:
 
@@ -228,5 +228,10 @@ sudo dd if=/dev/sda of=/dev/sdb bs=4M status=progress
         Input       Output      Block
         File        File        Size
 
+Note: the input file and output file can both be whole partitions of a hard drive (HDD or NVMe)
+
+38) Select from ./Endereço.txt only the CEP number using regex:
+
+CEP=$(cat ./Endereço.txt | grep -oP '[0-9]{5}[-][0-9]{3}'); echo -e "\n\tCEP: ${CEP}\n"
 
 
