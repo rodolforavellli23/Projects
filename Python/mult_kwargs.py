@@ -6,9 +6,9 @@ def calculate_grades(**kwargs):
         return
 
     total = 0
-    print("\n\tGrades Received:\n")
+    print("\n\tGrades Received:")
     for subject, grade in kwargs.items():
-        print(f"\t{subject}: {grade}")
+        print(f"\t\t{subject}: {grade}")
         total += grade
 
     average = total / len(kwargs)
