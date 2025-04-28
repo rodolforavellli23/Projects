@@ -1,18 +1,25 @@
 #!/usr/bin/python3
 
+# In Python, formating strings follow the given order:
+# :[the fill character][the alignment sign][precision]
+
 def calculate_grades(**kwargs):
     if not kwargs:
         print("\n\tNo grades provided!")
         return
 
+    max_length = max(len(subject) for subject in kwargs)
+
     total = 0
-    print("\n\tGrades Received:")
-    for subject, grade in kwargs.items():
-        print(f"\t\t{subject}: {grade}")
+    print(f"\n\t{'Grades Received':<{max_length + 8}} : ")
+
+
+    for subject, grade in kwargs.items():        
+        print(f"\t\t{subject:<{max_length}} : {grade:>8.2f}")
         total += grade
 
     average = total / len(kwargs)
-    print(f"\n\tAverage Grade: {average:.2f}\n")
+    print(f"\n\t{'Average Grade':<{max_length + 8}} : {average:>8.2f}\n")
 
 # Ask user to enter subjects and grades in a single line
 print("\n\tEnter subjects and grades like this: math=85 english=90 science=78")
