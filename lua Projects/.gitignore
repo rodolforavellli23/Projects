@@ -39,3 +39,10 @@ luac.out
 *.x86_64
 *.hex
 
+# Build Directories
+build/
+Debug/
+Release/
+bin/
+obj/
+.vscode/
