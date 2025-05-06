@@ -1,96 +1,40 @@
-# Ignore all .txt files
-*.txt
+# Prerequisites
+*.d
 
-# Ignore common binary files
-*.exe
-*.out
-*.app
+# Compiled Object files
+*.slo
+*.lo
 *.o
-*.a
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
-*.lib
-*.obj
-*.pdb
-*.ilk
-*.exp
-*.suo
-*.sdf
-*.idb
-*.ipch
-*.pch
-*.cache
-*.class
-*.jar
-*.war
-*.ear
-*.db
-*.sqlite
-*.log
 
-# Ignore build directories
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build Directories
 build/
-bin/
-obj/
-out/
 Debug/
 Release/
-x64/
-x86/
-.vs/
-.idea/
+bin/
+obj/
 .vscode/
-
-# Ignore CMake build files
-CMakeCache.txt
-CMakeFiles/
-CMakeScripts/
-cmake_install.cmake
-Makefile
-*.cmake
-
-# Ignore dependency directories
-deps/
-third_party/
-
-# Ignore macOS specific files
-.DS_Store
-
-# Ignore user-specific files
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-
-# Ignore temporary files
-*.swp
-*.swo
-*~
-*.bak
-*.tmp
-
-# Ignore other common files
-*.log
-*.pid
-*.seed
-*.pid.lock
-*.env
-*.pot
-*.pyc
-*.pyo
-*.pyd
-*.db
-*.sqlite3
-*.sql
-*.sqlite
-*.dump
-*.stackdump
-*.core
-*.coredump
-*.stack
-*.stackdump
-*.core.*
-*.coredump.*
-*.stack.*
-*.stackdump.*

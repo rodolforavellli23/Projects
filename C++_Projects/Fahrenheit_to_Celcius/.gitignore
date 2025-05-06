@@ -31,5 +31,10 @@
 *.out
 *.app
 
-# Other
-*.layout
+# Build Directories
+build/
+Debug/
+Release/
+bin/
+obj/
+.vscode/
