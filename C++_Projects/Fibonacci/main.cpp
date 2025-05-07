@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -19,19 +18,19 @@ void fib(int i) {
 		}
 	}
 
-    for(int index = 0; index < i; index++) {
-        if(arr[index] < 10) {
-    		cout << "\n\tElement (" << index + 1 << "):  "  << arr[index] << ";";
-        } else {
-            cout << "\n\tElement (" << index + 1 << "): "  << arr[index] << ";";
-        }
+    // for(int index = 0; index < i; index++) {
+    //     if(arr[index] < 10) {
+    // 		cout << "\n\tElement (" << index + 1 << "):  "  << arr[index] << ";";
+    //     } else {
+    //         cout << "\n\tElement (" << index + 1 << "): "  << arr[index] << ";";
+    //     }
+	// }
+
+	cout << "\n\n\tFibonacci numbers up to element number \"" << i << "\": ";
+
+	for(int element = 0; element < i; element++) {
+		cout << arr[element] << " ";
 	}
-
-//	cout << "\n\n\tFibonacci numbers up to element number \"" << i << "\": ";
-
-//	for(int element = 0; element < i; element++) {
-//		cout << arr[element] << " ";
-//	}
 
 	cout << "\n\n";
 }
