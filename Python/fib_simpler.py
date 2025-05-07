@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def fib_generator(n: int) -> int:
+def fib_generator(n: int):
     a, b = 0, 1
     for _ in range(int(n)):
         yield a
