@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+# Fibonacci generator
 def fib(n: int) -> list[int]:
     try:
         sequence = [0]
@@ -16,6 +17,37 @@ def fib(n: int) -> list[int]:
     except Exception as e:
         print(f"\n\tError: {e}\n\n")
 
+# User input
 a = input("\n\tHow many elements of the Fibonacci sequence do you wish to print? \n\n\t")
 
-print(f"\n\t{fib(int(a))}\n")
+# Try to create the array to be printed
+try:
+    arr = fib(int(a))
+except ValueError:
+    print(f"\n\tOnly input positive integer numbers!\n\n")
+except Exception as e:
+    print(f"\n\tError: {e}\n\n")
+
+# Array Logic
+index_width = len(str(a))
+
+last_value = arr[int(a) - 1]
+str_of_lv = str(last_value)
+num_width = len(str_of_lv)
+
+print(f"")
+
+for element in range(0,len(arr)):
+    print(f"\tElement {element:<{index_width}}{': '}{arr[element]:>{num_width}}")
+
+#for element in range(0,len(arr)):
+#    if element == 0:
+#        print(f"\t{arr[element]} , ", end="")
+#    if element == (len(arr) - 1):
+#        print(f"{arr[element]}", end="")
+#    else:
+#        print(f"{arr[element]} , ", end="")
+
+print("\n")
+
+# END

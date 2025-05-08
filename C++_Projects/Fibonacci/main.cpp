@@ -1,10 +1,15 @@
 #include <iostream>
+#include <iomanip>
+#include <vector>       // For dynamic arrays
+#include <cstdint>      // For uint64_t
+#include <boost/multiprecision/cpp_int.hpp>
 
+using namespace boost::multiprecision;
 using namespace std;
 
 void fib(int i) {
-    // Create array.
-	int arr[i];
+	// Create array.
+	vector<cpp_int> arr(i);
 	arr[0] = 0;
 	
 	// Fibonacci logic.
@@ -18,21 +23,18 @@ void fib(int i) {
 		}
 	}
 
-    // for(int index = 0; index < i; index++) {
-    //     if(arr[index] < 10) {
-    // 		cout << "\n\tElement (" << index + 1 << "):  "  << arr[index] << ";";
-    //     } else {
-    //         cout << "\n\tElement (" << index + 1 << "): "  << arr[index] << ";";
-    //     }
-	// }
+	int max_index_width = to_string(i).length(); 	// Width for the largest index
+	int max_num_width = to_string(arr.back()).length();	 // Width for the largest Fibonacci number
 
-	cout << "\n\n\tFibonacci numbers up to element number \"" << i << "\": ";
+	cout << "\n";
 
-	for(int element = 0; element < i; element++) {
-		cout << arr[element] << " ";
+ 	for(int index = 0; index < i; index++) {
+        	cout << "\tElement (" 
+             	     << setfill('0') << setw(max_index_width) << right << (index + 1) << "):  " 
+             	     << setfill(' ') << setw(max_num_width) << right << arr[index] << ";\n";
 	}
 
-	cout << "\n\n";
+	cout << "\n";
 }
 
 int main(void) {
