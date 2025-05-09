@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+# START
 # Fibonacci generator
 def fib(n: int) -> list[int]:
     try:
