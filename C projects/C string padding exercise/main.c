@@ -16,7 +16,7 @@ int main()
 
     ////////////////////////////////////////////////////////////////////////////
     // Padding with specific character (requires extra steps)
-    memset(str, 0, sizeof(str));
+    memset(str, 0, sizeof(str)); // Clears the content of str by wiping the array
     const char *original = "Hello";
     char pad_char = '*';
     int total_width = 10;
