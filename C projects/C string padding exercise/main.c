@@ -31,6 +31,6 @@ int main()
     
     snprintf(str, sizeof(str), "%s%.*s", original, pad_len, padding);
     printf("\t'%s'\n\n", str);  // 'Hello*****'
-
+    
     return 0;
 }
