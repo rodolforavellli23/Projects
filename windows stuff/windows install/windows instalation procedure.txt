@@ -1,0 +1,19 @@
+While on the language settings page of the installation process:
+
+    Under \Setup on the system registry, create:
+
+      KEY: \LabConfig
+
+    DWORD: BypassTPMCheck ;
+    DWORD: BypassSecureBootCheck ;
+    DWORD: BypassRAMCheck ;
+
+Add value 1 after double clicking on the created DWORD values.
+
+Bypass user account creation: 
+
+    start ms-cxh:localonly
+
+Use the following command to debloat windows:
+
+    irm "https://christitus.com/win" | iex
