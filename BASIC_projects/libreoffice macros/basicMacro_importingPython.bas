@@ -11,9 +11,6 @@ function Greeting(sName As String) As String
 	pyParams = Array(sName)
 	
 	' Get script provider through document context
-	'ctx = GetDefaultContext()
-    'spf = ctx.getValueByName("/singletons/com.sun.star.script.provider.theMasterScriptProviderFactory")	
-	'ScriptProvider = spf.createScriptProvider("")
 	ScriptProvider = CreateUnoService("com.sun.star.script.provider.MasterScriptProvider")
 	
 	' Construct script URI
