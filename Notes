@@ -234,4 +234,4 @@ Note: the input file and output file can both be whole partitions of a hard driv
 
 CEP=$(cat ./Endereço.txt | grep -oP '[0-9]{5}[-][0-9]{3}'); echo -e "\n\tCEP: ${CEP}\n"
 
-39) Xed themes can be cobied to /usr/share/gtksourceview-3.0/ , also works with gedit
+39) Xed themes can be copied to "/usr/share/gtksourceview-3.0/"; it also works with gedit.
