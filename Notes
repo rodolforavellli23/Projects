@@ -234,4 +234,17 @@ Note: the input file and output file can both be whole partitions of a hard driv
 
 CEP=$(cat ./Endereço.txt | grep -oP '[0-9]{5}[-][0-9]{3}'); echo -e "\n\tCEP: ${CEP}\n"
 
+<<<<<<< Updated upstream
 39) Xed themes can be copied to "/usr/share/gtksourceview-3.0/"; it also works with gedit.
+=======
+39) Xed themes can be copied to /usr/share/gtksourceview-3.0/ , also works with gedit
+
+40) An example on how to locate a file while excluding certain directories:
+
+locate -i octave | grep -viE 'flatpak|/var/lib/flatpak|'"$HOME"'/\.local/share/flatpak'
+
+obs_1:. "locate -i" is case insensitive
+	the grep flags: "-v", excludes matching lines
+			"-i", makes the search case insensitive
+			"-E", enables extended regex search for multiple patterns
+>>>>>>> Stashed changes
