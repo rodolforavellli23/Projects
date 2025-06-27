@@ -1,9 +1,11 @@
-# ignore images
-*.jpeg
-
-# ignore text files
+# Ignore .docx files
 *.docx
 
-*.[doc|docx]
-*.jpg
+# Ignore .jpeg files
 *.jpeg
+*.jpg  # (Optional: if you also want to ignore .jpg files)
+
+# Optional: Ignore other common temporary/ignored files
+*.log
+*.tmp
+*.bak
