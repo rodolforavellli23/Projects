@@ -3,3 +3,7 @@
 
 # ignore text files
 *.docx
+
+*.[doc|docx]
+*.jpg
+*.jpeg
