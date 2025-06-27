@@ -1,0 +1,5 @@
+# ignore images
+.jpeg
+
+# ignore text files
+.docx
