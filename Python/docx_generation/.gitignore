@@ -1,5 +1,5 @@
 # ignore images
-.jpeg
+*.jpeg
 
 # ignore text files
-.docx
+*.docx
