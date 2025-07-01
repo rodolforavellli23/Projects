@@ -243,3 +243,8 @@ obs_1:. "locate -i" is case insensitive
 	    the grep flags: "-v", excludes matching lines
 			            "-i", makes the search case insensitive
 			            "-E", enables extended regex search for multiple patterns
+
+41) Checking the local weather on the command line:
+
+$ curl wttr.in?format=3 
+

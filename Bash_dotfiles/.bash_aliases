@@ -20,3 +20,5 @@ alias gimp3='flatpak run org.gimp.GIMP' # invokes Gimp 3
 alias find_locate_exclusive='function _find_locate_exclusive(){
      locate -i "$1" | grep -viE "$2"
 };_find_locate_exclusive' # case insensitive search for $something while excluding $other_thing from the search results
+
+alias weather="curl wttr.in?format=3" # a cool way to see the local weather on the cli
