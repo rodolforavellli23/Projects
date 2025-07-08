@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void version(char* c, size_t size) {
+void version(char* c, size_t size) { 
+    // This version of the function is more verbose, but provides safer explicit
+    // buffer handling and also works for any array size.
     const char* ver_string;
 #ifdef __STDC_VERSION__
     switch(__STDC_VERSION__) {
