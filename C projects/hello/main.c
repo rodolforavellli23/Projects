@@ -27,7 +27,7 @@ void version(char* c, size_t size) {
 #else
     ver_string = "C89/C90 (or non-compliant)";
 #endif
-    strncpy(c, ver_string, size -1); // Prevent Buffer Overflow
+    strncpy(c, ver_string, size - 1); // Prevent Buffer Overflow
     c[size - 1] = '\0'; // Ensure Null Termination
 }
 
