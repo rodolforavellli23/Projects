@@ -1,32 +1,40 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main(){
- 
-	char ver[16] = {};
+void version(char c[8]) {
+#ifdef __STDC_VERSION__
+    switch(__STDC_VERSION__) {
+        case 199409L: 
+			strcpy(c, "C95"); 
+			break;
+        case 199901L: 
+			strcpy(c, "C99"); 
+			break;
+        case 201112L: 
+			strcpy(c, "C11"); 
+			break;
+        case 201710L: 
+			strcpy(c, "C17"); 
+			break;
+        case 202311L: 
+			strcpy(c, "C23"); 
+			break;
+        default:      
+			strcpy(c, "Unknown C standard");
+    }
+#else
+    strcpy(c, "C89/C90 (or non-compliant)");
+#endif
+}
 
-	switch(__STDC_VERSION__){
-		case 199409L:
-			strcat(ver, "C95");
-			break;
-		case 199901L:
-			strcat(ver, "C99");
-			break;
-		case 201112L:
-			strcat(ver, "C11");
-			break;
-		case 201710L:
-			strcat(ver, "C17");
-			break;
-		case 202311L:
-			strcat(ver, "C23");
-			break;
-		default:
-			strcat(ver, "C89/C90");	
-		}
-
-	printf("\n\tHello World! From C version: %s \n\n", ver);
-	
-	return 0;
+int main() {
+    char ver[8] = {0};
+    version(ver);
+    
+    printf("\n\tHello World! From C version: %s\n", ver);
+#ifdef __STDC_VERSION__
+    printf("\t__STDC_VERSION__ = %ld\n\n", __STDC_VERSION__);
+#endif
+    return 0;
 }
