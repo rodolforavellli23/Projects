@@ -2,36 +2,38 @@
 #include <stdlib.h>
 #include <string.h>
 
-void version(char c[8]) {
+void version(char* c, size_t size) {
+    const char* ver_string;
 #ifdef __STDC_VERSION__
     switch(__STDC_VERSION__) {
         case 199409L: 
-			strcpy(c, "C95"); 
+			ver_string = "C95";
 			break;
         case 199901L: 
-			strcpy(c, "C99"); 
+			ver_string = "C99";
 			break;
         case 201112L: 
-			strcpy(c, "C11"); 
+			ver_string = "C11";
 			break;
         case 201710L: 
-			strcpy(c, "C17"); 
+			ver_string = "C17";
 			break;
         case 202311L: 
-			strcpy(c, "C23"); 
+			ver_string = "C23";
 			break;
         default:      
-			strcpy(c, "Unknown C standard");
+			ver_string = "Unknown C standard";
     }
 #else
-    strcpy(c, "C89/C90 (or non-compliant)");
+    ver_string = "C89/C90 (or non-compliant)";
 #endif
+    strncpy(c, ver_string, size -1); // Prevent Buffer Overflow
+    c[size - 1] = '\0'; // Ensure Null Termination
 }
 
 int main() {
-    char ver[8] = {0};
-    version(ver);
-    
+    char ver[26] = {0};
+    version(ver, sizeof(ver));    
     printf("\n\tHello World! From C version: %s\n", ver);
 #ifdef __STDC_VERSION__
     printf("\t__STDC_VERSION__ = %ld\n\n", __STDC_VERSION__);
