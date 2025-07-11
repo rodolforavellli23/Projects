@@ -248,3 +248,10 @@ obs_1:. "locate -i" is case insensitive
 
 $ curl wttr.in?format=3 
 
+42) Splicing strings in bash
+
+my_string="Hello, Bash Splicing!"
+substring1=${my_string:7:4}  # Extracts "Bash" (offset 7, length 4)
+substring2=${my_string:13}   # Extracts "Splicing!" (offset 13 to end)
+substring3=${my_string: -8}  # Extracts "Splicing!" (negative offset counts from end)
+
