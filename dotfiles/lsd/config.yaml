@@ -1,0 +1,38 @@
+# Copy to, or create: ~/.config/lsd/config.yaml
+
+# Icon settings
+icons:
+  when: always
+  theme: unicode
+  separator: " "
+
+# Blocks (order of fields)
+
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+# Color scheme for dark mode
+color:
+  dir: "bold 034"        # Bright blue directories
+  file: "0"              # Default text color
+  symlink: "bold 36"     # Bright cyan symlinks
+  executable: "bold 32"  # Bright green executables
+  special: "bold 33"     # Bright yellow for special files
+
+# Metadata (subdued for dark backgrounds)
+  user: "38;5;245"       # Light gray
+  group: "38;5;245"      # Light gray
+  date: "38;5;246"       # Medium gray
+  size: "38;5;244"       # Darker gray
+  permission: "bold 37"  # Bright white
+
+# Display settings
+header: true             # Enable header row 
+layout: grid             # Enable grid lines
+sorting:
+  dir-grouping: "first"  # Directories first
