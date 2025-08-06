@@ -1,0 +1,10 @@
+Note that in order to build a new project with the dotnet runtime you must first use the following command:
+
+dotnet new console -n HelloWorldApp
+
+This will create a new project directory, where you can use
+
+dotnet build
+
+dotnet run
+
