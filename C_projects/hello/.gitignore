@@ -36,6 +36,7 @@
 *.i*86
 *.x86_64
 *.hex
+*.gpr
 
 # Debug files
 *.dSYM/
@@ -58,6 +59,7 @@ Debug/
 Release/
 bin/
 obj/
+*.rep/
 
 # Autotools
 autom4te.cache/
