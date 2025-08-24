@@ -1,7 +1,8 @@
-#include<iostream>
-#include<iomanip>
-#include<string>
-#include<cmath>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <numbers>
 
 double pi(int n){
 	// Local Variables
@@ -19,7 +20,8 @@ double pi(int n){
 
 int main(void){
 	// Text Output
-	std::cout << "\n" << std::setw(51) << "π from <cmath>: " << std::fixed << std::setprecision(8) << (acos(-1)) << "\n";
-	std::cout << "π from 100 interactions of the Nilakantha series: " << std::fixed << std::setprecision(8) << pi(100) << "\n\n";
+	std::cout << "\n" << std::setw(51) << "π from <cmath>: " << std::fixed << std::setprecision(8) << (acos(-1));
+	std::cout << "\n" << "π from <numbers>: " << std::fixed << std::setprecision(8) << std::numbers::pi;
+	std::cout << "\n" << "π from 100 interactions of the Nilakantha series: " << std::fixed << std::setprecision(8) << pi(100) << "\n\n";
 	return 0;
 }
