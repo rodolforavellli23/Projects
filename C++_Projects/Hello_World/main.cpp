@@ -27,13 +27,12 @@ string version(int a){
         default:
             b = "pre-standard C++";
     }
-
     return b;
 }
 
-int main() {
+int main(void) {
 
-    cout << "Hello World! from version " << version(__cplusplus) << ".\n";
+    cout << "\n\tHello World! from version " << version(__cplusplus) << ".\n\n";
 
     return 0;
 }

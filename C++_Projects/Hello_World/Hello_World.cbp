@@ -30,9 +30,9 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++20" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="farenheit_to_celsius" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
