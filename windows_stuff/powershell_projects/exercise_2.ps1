@@ -1,5 +1,5 @@
 #!/usr/bin/pwsh -f
 
-Write-Host "What is your name? " -NoNewLine
+Write-Host "`nWhat is your name? " -NoNewLine
 $a = Read-Host
-Write-Host "Hello, $a!"
+Write-Host "`nHello, $a!"

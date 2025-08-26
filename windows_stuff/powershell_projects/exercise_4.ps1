@@ -9,4 +9,4 @@ $sum = 0
 for ($i = 1; $i -le 100; $i++) {
     $sum += $i
 }
-Write-Host $sum
+Write-Host("`n$sum")
