@@ -25,7 +25,4 @@ print "\n";
 
 "	Euler's number: "; euler(20);
 
-print "\n";
-
 quit();
-
