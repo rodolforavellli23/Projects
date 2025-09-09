@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Notes: 'The while read user; do' construction works like a 'for each' loop, but in BASH script syntax. 
+# Notes: The 'while read user; do' construction works like a 'for each' loop, but in BASH script syntax. 
 
 # Color definitions - alternative scheme
 
