@@ -19,7 +19,7 @@ def fib(n: int) -> list[int]:
         print(f"\n\tError: {e}\n\n")
 
 # User input
-a = input("\n\tHow many elements of the Fibonacci sequence do you wish to print? \n\n\t")
+a = input("\n\tHow many numbers of the Fibonacci sequence do you wish to print? \n\n\t")
 
 # Try to create the array to be printed
 try:
@@ -39,7 +39,11 @@ num_width = len(str_of_lv)
 print(f"")
 
 for element in range(0,len(arr)):
-    print(f"\tElement {element:<{index_width}}{': '}{arr[element]:>{num_width}}")
+    print(f"\tFib N°. {(element + 1):<{index_width}} : {arr[element]:>{num_width}}")
+    if element == (int(len(arr)) - 1):
+        print("\0")
+
+# Note: '<' to pad left, '^' to center pad & '>' to right pad 
 
 #for element in range(0,len(arr)):
 #    if element == 0:
@@ -48,7 +52,5 @@ for element in range(0,len(arr)):
 #        print(f"{arr[element]}", end="")
 #    else:
 #        print(f"{arr[element]} , ", end="")
-
-print("\n")
 
 # END
