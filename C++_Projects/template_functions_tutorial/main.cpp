@@ -1,10 +1,13 @@
 #include<iostream>
 #include<string>
 
-// Function templating exercise
-
+// Function Templating Exercise:
+//
 // By using multiple templating type placeholders,
-// we can mix and match variable types for our functions
+// we can mix and match variable types for our functions.
+//
+// The 'auto' keyword tells the compiler to deduce what
+// return type should the function use.
 template <typename T, typename U>
 auto max(T x, U y){
 	return (x > y)? x : y;
