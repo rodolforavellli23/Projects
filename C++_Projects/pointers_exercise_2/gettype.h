@@ -10,7 +10,12 @@
 #include <cstdlib>  // Required for std::free
 #endif
 
-// Function to get a readable type name (demangled for non-MSVC compilers)
+/* Function to get a readable type name (demangled for non-MSVC compilers).
+ *
+ * The expected usage is "get_type_name(typeid(myVar))", where "myVar" is the
+ * variable you wish to know the type of.
+ */ 
+
 std::string get_type_name(const std::type_info& ti) {
 #ifndef _MSC_VER
 	int status;
@@ -31,7 +36,7 @@ std::string get_type_name(const std::type_info& ti) {
 		full_name = full_name.substr(0, template_pos);
 	}
 
-	// Step 2: Now, find the last occurrence of '::'
+	// Step 2: Find the last occurrence of '::'
 	size_t last_colon_pos = full_name.find_last_of("::");
 	if (last_colon_pos != std::string::npos) {
 		return full_name.substr(last_colon_pos + 1);
