@@ -20,7 +20,7 @@ echo "$all_users" | while read user; do
     echo -e "\t${USER_COLOR}$user${NC}"
 done
 
-echo -e "\n\t${HEADER_COLOR}Currently Logged-In Human Users:${NC}"
+echo -e "\n\tCurrently Logged-In Human Users:"
 echo "$logged_in_users" | while read user; do
     echo -e "\t${LOGGED_COLOR}$user${NC}"
 done
