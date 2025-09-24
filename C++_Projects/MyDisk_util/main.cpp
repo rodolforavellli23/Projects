@@ -73,7 +73,6 @@ int main(void) {
 
 	mem_avail = disk.printHumanReadable(disk.getAvailableSize());
 
-//	mem_percent = std::format("{:.2f}", disk.getUsagePercentage());
 	mem_percent = disk.printHumanReadable(disk.getUsagePercentage());
 	
 	// Text Output
