@@ -50,27 +50,27 @@ public:
     template<typename T>
     auto printHumanReadable(T bytes) const {
         
-	const char* suffixes[] = {"B", "KB", "MB", "GB", "TB", "PB"};
+	    const char* suffixes[] = {"B", "KB", "MB", "GB", "TB", "PB"};
 
-	std::string myType = get_type_name(typeid(bytes));
+	    std::string myType = get_type_name(typeid(bytes));
 
         int suffix_index = 0;
 
-	double mySize = (myType == "double")? bytes : static_cast<double>(bytes);
+	    double mySize = (myType == "double")? bytes : static_cast<double>(bytes);
 	
         while (mySize >= 1024 && suffix_index < 5) {
-                mySize /= 1024;
-                suffix_index++;
+            mySize /= 1024;
+            suffix_index++;
         }
 
         std::string ss;
 
-	if(myType == "double") {
-		ss = std::format("{:.2f}", mySize);
-	} else {
-		ss = std::format("{:.2f} {}", mySize, suffixes[suffix_index]);
-	}
+	    if(myType == "double") {
+	    	ss = std::format("{:.2f}", mySize);
+	    } else {
+	    	ss = std::format("{:.2f} {}", mySize, suffixes[suffix_index]);
+	    }
 
-	return ss;
+	    return ss;
     }
 };

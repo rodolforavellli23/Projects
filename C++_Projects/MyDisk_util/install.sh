@@ -4,7 +4,7 @@
 
 # Parameters
 src="./bin/test_bin"
-dest=$(which mydisk)
+dest="/usr/bin/mydisk"
 
 # Copying to /usr/bin/
 sudo cp $src $dest

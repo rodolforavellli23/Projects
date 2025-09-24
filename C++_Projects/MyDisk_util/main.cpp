@@ -4,13 +4,10 @@
 #include <format>
 #include <chrono>
 #include "getmemsize.hpp"
-#include "gettype.hpp"
 
 // Create a cmd utility that will print, in color format, the total size of disk storage, the amount used & the amount of free disk space available.
 
-// Notes for compilation:
-
-// This executable requires the -std=c++20 flag to work, as it uses features introduced in that release of the C++ standard.
+// The instructions for compiling this program are on the "notes.txt" file, which is to be found within this file's working directory. 
 
 /*Common ANSI Color Codes:
 Text Colors (Foreground):
