@@ -79,9 +79,9 @@ int main(void) {
 	// Time
 	std::cout << "\n";
 	SetColor("1;38;5;208");
-	std::cout << std::setfill(' ') << std::setw(26) <<"Disk status at: ";
+	std::cout << std::setfill(' ') << std::setw(26) << "Disk status at: ";
 	ResetColor();
-	std::cout << std::ctime(&now_time);
+	std::cout << std::setfill(' ') << std::setw(26) << std::ctime(&now_time);
 
 	// Total Disk Size
 	// std::cout << "\n";
