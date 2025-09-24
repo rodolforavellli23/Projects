@@ -4,6 +4,7 @@
 #include <format>
 #include <chrono>
 #include "getmemsize.hpp"
+#include "gettype.hpp"
 
 // Create a cmd utility that will print, in color format, the total size of disk storage, the amount used & the amount of free disk space available.
 
@@ -72,8 +73,9 @@ int main(void) {
 
 	mem_avail = disk.printHumanReadable(disk.getAvailableSize());
 
-	mem_percent = std::format("{:.2f}", disk.getUsagePercentage());
-
+//	mem_percent = std::format("{:.2f}", disk.getUsagePercentage());
+	mem_percent = disk.printHumanReadable(disk.getUsagePercentage());
+	
 	// Text Output
 
 	// Time

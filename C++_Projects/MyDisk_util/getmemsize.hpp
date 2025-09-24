@@ -6,6 +6,7 @@
 #include <format>
 #include <system_error>
 #include <iomanip>
+#include "gettype.hpp"
 
 // Change path to "/" when on the desktop,
 // to "/storage/emulated/" when on Android.
@@ -37,30 +38,39 @@ public:
         return true;
     }
 
-    uintmax_t getTotalSize() const { return total_size_; }
-    uintmax_t getFreeSize() const { return free_size_; }
-    uintmax_t getAvailableSize() const { return available_size_; }
-    uintmax_t getUsedSize() const { return total_size_ - free_size_; }
+    uintmax_t getTotalSize() 	 const { return 	     total_size_; }
+    uintmax_t getFreeSize() 	 const { return 	      free_size_; }
+    uintmax_t getAvailableSize() const { return 	 available_size_; }
+    uintmax_t getUsedSize() 	 const { return total_size_ - free_size_; }
 
-    double getUsagePercentage() const {
+    double getUsagePercentage()  const {
         return (static_cast<double>(getUsedSize()) / total_size_) * 100.0;
     }
 
-    auto printHumanReadable(uintmax_t bytes) const {
-        const char* suffixes[] = {"B", "KB", "MB", "GB", "TB", "PB"};
+    template<typename T>
+    auto printHumanReadable(T bytes) const {
+        
+	const char* suffixes[] = {"B", "KB", "MB", "GB", "TB", "PB"};
+
+	std::string myType = get_type_name(typeid(bytes));
 
         int suffix_index = 0;
 
-	    double size = static_cast<double>(bytes);
-
-        while (size >= 1024 && suffix_index < 5) {
-                size /= 1024;
+	double mySize = (myType == "double")? bytes : static_cast<double>(bytes);
+	
+        while (mySize >= 1024 && suffix_index < 5) {
+                mySize /= 1024;
                 suffix_index++;
         }
 
         std::string ss;
-        ss = std::format("{:.2f} {}", size, suffixes[suffix_index]);
 
-	    return ss;
+	if(myType == "double") {
+		ss = std::format("{:.2f}", mySize);
+	} else {
+		ss = std::format("{:.2f} {}", mySize, suffixes[suffix_index]);
+	}
+
+	return ss;
     }
 };
