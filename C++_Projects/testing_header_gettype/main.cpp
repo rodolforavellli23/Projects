@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <string>
 #include <vector>
-#include "gettype.h"
+#include "gettype.hpp"
 
 int main() {
 	int a = 10;

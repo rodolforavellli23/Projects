@@ -57,7 +57,7 @@ void ResetColor() {
     std::cout << "\033[0m";
 }
 
-void PrintDiskInfo(const std::string& path = "/") {
+void PrintDiskInfo(const std::string& path) {
     // Variable Declaration
     std::string mem_size     = "0";
     std::string mem_used     = "0";

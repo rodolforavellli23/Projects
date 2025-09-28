@@ -8,8 +8,10 @@
 #include <iomanip>
 #include "gettype.hpp"
 
-// Change path to "/" when on the desktop,
-// to "/storage/emulated/" when on Android.
+// Change path to path = "/" when on the desktop,
+// and to "/storage/emulated/" when on Android.
+//
+// This header requires -std=c++20 to compile
 
 class DiskInfo {
 private:
@@ -19,7 +21,7 @@ private:
     uintmax_t available_size_;
 
 public:
-    DiskInfo(const std::string& path = "/") : path_(path) {
+    DiskInfo(const std::string& path) : path_(path) {
         refresh();
     }
 
@@ -38,9 +40,9 @@ public:
         return true;
     }
 
-    uintmax_t getTotalSize() 	 const { return 	         total_size_; }
-    uintmax_t getFreeSize() 	 const { return 	          free_size_; }
-    uintmax_t getAvailableSize() const { return 	     available_size_; }
+    uintmax_t getTotalSize() 	 const { return              total_size_; }
+    uintmax_t getFreeSize() 	 const { return               free_size_; }
+    uintmax_t getAvailableSize() const { return          available_size_; }
     uintmax_t getUsedSize() 	 const { return total_size_ - free_size_; }
 
     double getUsagePercentage()  const {
@@ -50,13 +52,13 @@ public:
     template<typename T>
     auto printHumanReadable(T bytes) const {
 
-	    const char* suffixes[] = {"B", "KB", "MB", "GB", "TB", "PB"};
+        const char* suffixes[] = {"B", "KB", "MB", "GB", "TB", "PB"};
 
-	    std::string myType = get_type_name(typeid(bytes));
+        std::string myType = get_type_name(typeid(bytes));
 
         int suffix_index = 0;
 
-	    double mySize = (myType == "double")? bytes : static_cast<double>(bytes);
+        double mySize = (myType == "double")? bytes : static_cast<double>(bytes);
 
         while (mySize >= 1024 && suffix_index < 5) {
             mySize /= 1024;
@@ -65,12 +67,12 @@ public:
 
         std::string ss;
 
-	    if(myType == "double") {
-	    	ss = std::format("{:.2f}", mySize);
-	    } else {
-	    	ss = std::format("{:.2f} {}", mySize, suffixes[suffix_index]);
-	    }
+        if(myType == "double") {
+            ss = std::format("{:.2f}", mySize);
+        } else {
+            ss = std::format("{:.2f} {}", mySize, suffixes[suffix_index]);
+        }
 
-	    return ss;
+        return ss;
     }
 };

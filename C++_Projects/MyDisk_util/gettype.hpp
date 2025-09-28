@@ -11,6 +11,9 @@
 #endif
 
 // Function to get a readable type name (demangled for non-MSVC compilers)
+// The standard usage is "get_type_name(typeid(myVar))", which returns the 
+// type of the given myVar as a string.
+
 std::string get_type_name(const std::type_info& ti) {
 #ifndef _MSC_VER
 	int status;
