@@ -1,0 +1,1 @@
+This directory contains the old build system I used, and while it's not as powerful (or professional) than cmake, it is still good enough for small projects.

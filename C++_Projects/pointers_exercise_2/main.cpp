@@ -2,7 +2,7 @@
 #include <string>
 #include <iomanip>
 #include <typeinfo> // Required for typeid()
-#include "gettype.h"
+#include "gettype.hpp"
 
 // This version of the printer function will work for all arrays,
 // independently of the array type.
