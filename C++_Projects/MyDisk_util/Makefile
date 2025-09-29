@@ -34,7 +34,11 @@ uninstall:
 
 # Clean build files
 clean:
-	rm -f $(MYLOCAL)/$(TARGET)
+	@if [ -d "$(MYLOCAL)" ]; then \
+		rm -f $(MYLOCAL)/$(TARGET); \
+	else \
+		rm -f ./$(TARGET); \
+	fi
 
 # Test the man page
 man-test:
