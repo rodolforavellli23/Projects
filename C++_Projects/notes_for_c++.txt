@@ -15,5 +15,5 @@ Notes:
 
    To conclude, run your new binary: $ ./APP_NAME
    
-2) The directories marked as 1 and 2 have some resources for building other projects
+2) The numbered directories have some resources for building other projects
 
