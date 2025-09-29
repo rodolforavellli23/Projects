@@ -1,0 +1,53 @@
+.TH MYDISK 1 "September 2025" "mydisk v1.0" "User Commands"
+.SH NAME
+mydisk \- display disk space information in a colorful format
+.SH SYNOPSIS
+.B mydisk
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+.B mydisk
+is a utility that displays disk space information including total size, used space, free space, available space, and usage percentage in a human-readable format with a colorful text output.
+.PP
+The utility uses ANSI color codes to make the output more readable and provides both exact byte counts and human-readable formats (KB, MB, GB, etc.).
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+Display this help message and exit.
+.TP
+.BR \-p " \fIPATH\fR, " \-\-path " \fIPATH\fR"
+Specify the filesystem path to analyze (default: /).
+.TP
+.BR \-\-version
+Display version information and exit.
+.SH EXAMPLES
+.TP
+.B mydisk
+Display disk information for the root filesystem (/).
+.TP
+.B mydisk \-p /home
+Display disk information for the /home directory.
+.TP
+.B mydisk \-\-path /storage/emulated
+Display disk information for Android storage.
+.TP
+.B mydisk \-\-help
+Show the help message.
+.SH EXIT STATUS
+.TP
+.B 0
+Success
+.TP
+.B 1
+Error (invalid options or path)
+.SH FILES
+.TP
+.I /
+Default filesystem path analyzed
+.SH BUGS
+No known bugs. Report any issues to the package maintainer.
+.SH AUTHOR
+Rodolfo Ravelli <38845400+rodolforavellli23@users.noreply.github.com>
+.SH SEE ALSO
+.BR df (1),
+.BR du (1),
+.BR lsblk (1)

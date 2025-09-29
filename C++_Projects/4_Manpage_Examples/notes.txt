@@ -1,0 +1,1 @@
+This directory will store example .1 files, that can be used to create manual pages for man. Copy and modify as needed.

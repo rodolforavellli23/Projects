@@ -1,0 +1,1 @@
+The make files to be stored here are to be reused in other projects, copy and modify as needed.
