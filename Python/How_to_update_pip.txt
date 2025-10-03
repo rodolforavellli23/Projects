@@ -1,0 +1,11 @@
+In python, in order to update pip itself and other python packages:
+
+First, make sure you are inside a python virtual environment
+
+Second, use the command: "pip3 install -U pip"
+
+Third, followed by: "pip3 list -o"
+
+Which will list all oudated packages, then follow with: "pip3 install -U *"
+
+Where the '*' character is to be replaced for all the names of the packages to be updated
