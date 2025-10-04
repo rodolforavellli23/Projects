@@ -25,7 +25,10 @@ int main() {
     std::cin >> size;
     std::cout << "\n";
 
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clears the buffer after reading the size
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+    // Clears the entire input buffer after reading the size, 
+    // and will set it so that it only stops reading either at the maximum input stream buffer size, 
+    // or when the extractor operator finds a new line character
     
     // Array of strings to store multi-character grades
     pGrades = new std::string[size];
@@ -33,7 +36,8 @@ int main() {
     // User input loop
     for(int i = 0; i < size; i++) {
         std::cout << "Enter grade " << (i + 1) << ": ";
-        std::getline(std::cin, pGrades[i]); // Will read entire line as a string
+        // Will read the entire line as a string, until a new line character is found
+        std::getline(std::cin, pGrades[i]);
     }
     
     // Print grades
