@@ -257,5 +257,8 @@ substring3=${my_string: -8}  # Extracts "Splicing!" (negative offset counts from
 
 43) Arch Linux grub update:
 
-I seem to only be able to updae GRUB by using: sudo grub-mkconfig -o /boot/grub/grub.cfg
+I seem to only be able to update GRUB by using: sudo grub-mkconfig -o /boot/grub/grub.cfg
 
+44) how to find the pid of a given process
+
+ps aux | grep -i "waydroid"
