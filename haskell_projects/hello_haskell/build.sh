@@ -8,4 +8,12 @@ MyOutputDir="build"
 
 MyTarget="hello"
 
-ghc $MyProgram -hidir $MyOutputDir/ -odir $MyOutputDir/ -o ./$MyOutputDir/$MyTarget
+MyFlags="-dynamic"
+
+ghc $MyProgram \
+    -hidir $MyOutputDir/ \
+    -odir $MyOutputDir/ \
+    $MyFlags \
+    -o ./$MyOutputDir/$MyTarget
+
+strip ./$MyOutputDir/$MyTarget
