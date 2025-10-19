@@ -4,3 +4,5 @@ Notes for building the executable:
 1) This executable requires the -std=c++20 flag to work, as it uses features introduced in that release of the C++ standard.
 
 2) The header "getmemsize.hpp" depends on the "gettype.hpp" header to be on the same work directory.
+
+3) The header "colortxt.hpp" contains the text color functions and a comment with the most common color codes.
