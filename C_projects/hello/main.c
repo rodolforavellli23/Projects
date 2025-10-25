@@ -2,28 +2,28 @@
 #include <stdlib.h>
 #include <string.h>
 
-void version(char* c, size_t size) { 
+void version(char* c, size_t size) {
     // This version of the function is more verbose, but provides safer explicit
     // buffer handling and also works for any array size.
     const char* ver_string;
 #ifdef __STDC_VERSION__
     switch(__STDC_VERSION__) {
-        case 199409L: 
+        case 199409L:
 			ver_string = "C95";
 			break;
-        case 199901L: 
+        case 199901L:
 			ver_string = "C99";
 			break;
-        case 201112L: 
+        case 201112L:
 			ver_string = "C11";
 			break;
-        case 201710L: 
+        case 201710L:
 			ver_string = "C17";
 			break;
-        case 202311L: 
+        case 202311L:
 			ver_string = "C23";
 			break;
-        default:      
+        default:
 			ver_string = "Unknown C standard";
     }
 #else
@@ -35,7 +35,7 @@ void version(char* c, size_t size) {
 
 int main() {
     char ver[26] = {0};
-    version(ver, sizeof(ver));    
+    version(ver, sizeof(ver));
     printf("\n\tHello World! From C version: %s\n", ver);
 #ifdef __STDC_VERSION__
     printf("\t__STDC_VERSION__ = %ld\n\n", __STDC_VERSION__);
