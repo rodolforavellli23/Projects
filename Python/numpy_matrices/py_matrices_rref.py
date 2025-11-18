@@ -5,9 +5,9 @@ from sympy import Matrix
 
 # --- Matrices ---
 
-A = np.array([[1, 2, 1,  1,  7],
-              [1, 2, 2, -1, 12],
-              [2, 4, 0,  6, 14]])
+A = np.array([[1, 2, 1,  1],
+              [1, 2, 2, -1],
+              [2, 4, 0,  6]])
 
 
 #B = np.array([[7],
