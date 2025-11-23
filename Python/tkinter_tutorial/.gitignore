@@ -1,4 +1,5 @@
-# folders
+# binaries
+build/
+dist/
 src/
-bin/
-venv/
+*.spec
