@@ -7,11 +7,11 @@
 // The array is created whe the function itself is called.
 int* return_int_arr(int size) {
 
-	int *arr = (int *)malloc((size + 1) * sizeof(int)); // Array initialization with type casting and dynamic size
+	int *arr = (int *)malloc(size * sizeof(int)); // Array initialization with type casting and dynamic size
 
 	// Building the array
-	for(int i = 0; i < (size + 1); i++) {
-		arr[i] = i * 2;
+	for(int i = 0; i < size; i++) {
+		arr[i] = (i + 1) * 2;
 	}
 
 	return arr;
@@ -21,8 +21,8 @@ int* return_int_arr(int size) {
 // Not necessary, I just like this honestly.
 void int_arr_printer(int* a, int size){
 
-	for(int i = 0; i < (size + 1); i++) {
-		if(i == size) {
+	for(int i = 0; i < size; i++) {
+		if(i == (size - 1)) {
 			printf("%i", a[i]);
 		} else {
 			printf("%i, ", a[i]);
