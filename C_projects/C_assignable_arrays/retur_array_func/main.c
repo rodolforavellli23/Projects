@@ -61,6 +61,7 @@ int main(int argc, char *argv[]) {
       if (end_ptr == token || *end_ptr != '\0' || errno == ERANGE || size <= 0) {
         printf("%3cSkipping invalid input: '%s'\n", ' ', token);
       } else {
+        // If we get here, all arguments are valid
         my_arr = return_int_arr((int)size);
         printf("%3cArray for size %ld = [", ' ', size);
         int_arr_printer(my_arr, (int)size);
