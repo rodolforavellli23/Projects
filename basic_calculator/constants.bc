@@ -19,10 +19,23 @@ define euler(n) {
     return e
 }
 
+define printer(n) {
+    auto i;
+    if(n > 0) {
+	for(i = 0; i < n; i++) {
+		" "
+	}
+    } else {
+	    ""
+    }
+}
+
 print "\n";
 
-"	Pi: 		"; pi();
+dummy = printer(4); "Pi: "; dummy = printer(12); pi();
 
-"	Euler's number: "; euler(20);
+print "\n";
+
+dummy = printer(4); "Euler's number: "; euler(20);
 
 quit();
