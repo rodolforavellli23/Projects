@@ -6,7 +6,7 @@ set autoindent
 set mouse=a
 " add monokai colorscheme to vim
 syntax enable
-colorscheme monokai
+colorscheme retrobox
 " Set status bar
 set laststatus=2
 " Encoding
