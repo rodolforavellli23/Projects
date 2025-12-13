@@ -262,3 +262,9 @@ I seem to only be able to update GRUB by using: sudo grub-mkconfig -o /boot/grub
 44) how to find the pid of a given process
 
 ps aux | grep -i "waydroid"
+
+45) In order to use Anaconda-Navigator:
+	a) download and execute the shell script;
+	b) put the bin directory from the anaconda3 folder on your ~/.bashrc file
+	c) use conda init; conda activate;
+	d) from inside the conda environment run "anaconda-navigator"
