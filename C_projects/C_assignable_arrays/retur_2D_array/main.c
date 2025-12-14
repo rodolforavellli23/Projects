@@ -29,7 +29,15 @@ int** arr_2D_int(int rows, int cols) {
 void print_2D_arr_int(int **arr, int rows, int cols) {
 	for(int i = 0; i < rows; i++) {
 		for(int j = 0; j < cols; j++) {
-			if(i == (rows - 1) && j == (cols - 1)) {
+			if(arr[i][j] <= 9) {
+				if(i == (rows - 1) && j == (cols - 1)) {
+					printf(" %i", arr[i][j]);
+				} else if(j == (cols - 1)) {
+					printf(" %i\n%14c", arr[i][j], ' ');
+				} else {
+					printf(" %i, ", arr[i][j]);
+				}
+			} else 	if(i == (rows - 1) && j == (cols - 1)) {
 				printf("%i", arr[i][j]);
 			} else if(j == (cols - 1)) {
 				printf("%i\n%14c", arr[i][j], ' ');
@@ -50,8 +58,8 @@ void free_2D_arr_int(int **arr, int rows) {
 int main(void) {
 	
 	// Variable Declaration
-	int rows = 3;
-	int cols = 3;
+	int rows = 5;
+	int cols = 5;
 	int **myarr;
 
 	// Making The Array Object
