@@ -1,12 +1,13 @@
-const button = document.getElementById("myBu");
-const paragraph = document.getElementById("myPa");
-const originalText = paragraph.innerText;
+// Apparently, you can just call a html element by its id in the main.js file. But only if the element id consists of a valid JavaScript
+// variable name
+
+const originalText = myParagraph.innerText;
 const newText = "The Paragraph Has Changed!!!";
 
-button.addEventListener('click', () => {
-    if (paragraph.innerText === originalText) {
-        paragraph.innerText = newText;
+myButton.addEventListener('click', () => {
+    if (myParagraph.innerText === originalText) {
+        myParagraph.innerText = newText;
     } else {
-        paragraph.innerText = originalText;
+        myParagraph.innerText = originalText;
     }
 });

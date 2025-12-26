@@ -1,0 +1,36 @@
+body {
+        /* Make the body a flex container */
+        display: flex;
+            
+        /* Stack elements vertically (button under the text) */
+        flex-direction: column;
+            
+        /* Center horizontally */
+        align-items: center;
+            
+        /* Center vertically */
+        justify-content: center;
+            
+        /* Force the body to take up the full screen height */
+        height: 100vh;
+            
+        /* Remove default browser margins */
+        margin: 0;
+            
+        /* Optional: Add a little space between elements */
+        gap: 10px;
+
+        /* This pushes the content up by "growing" the space at the bottom */
+        padding-bottom: 15vh;
+
+        /* Ensure the padding doesn't make the page scrollable */
+        box-sizing: border-box;
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+p#myParagraph {
+	/* margin-top: 0; */
+}
