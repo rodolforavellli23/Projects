@@ -1,11 +1,11 @@
 #!/usr/bin/ecl -shell
 
-;; Hello World program for Common Embedable LISP
+;; Hello World from LISP!
 
-(defun Hello()
-  (format t "~%~10THello World! From ~a ~a~%"
-	(lisp-implementation-type)
-	(lisp-implementation-version))
+(defun Hello ()
+  (format t "~%~5THello World! From ~a ~a~%" 
+	  (lisp-implementation-type)
+	  (lisp-implementation-version))
   (values)
 )
 
