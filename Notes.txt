@@ -268,3 +268,10 @@ ps aux | grep -i "waydroid"
 	b) put the bin directory from the anaconda3 folder on your ~/.bashrc file
 	c) use conda init; conda activate;
 	d) from inside the conda environment run "anaconda-navigator"
+	
+46) How to toggle uppercase/lowecase in VIM:
+	Enter visual mode; select the character(s) to toggle the case;
+	press ~ + ENTER;
+	
+	Or SHIFT + u for uppercasing the selection made in visual mode;
+	Or u for lowercasing the selection made in visual mode
