@@ -275,3 +275,25 @@ ps aux | grep -i "waydroid"
 	
 	Or SHIFT + u for uppercasing the selection made in visual mode;
 	Or u for lowercasing the selection made in visual mode
+	
+47) Updating the quicklisp package manager inside the ecl REPL:
+	
+	Updating the package manager: (ql:update-client)
+	Updating the package list: (ql:update-dist "quicklisp")
+
+	Obs: Some other useful things for quicklisp:
+	
+	Exiting the ecl REPL: (quit)
+	
+	Uninstalling old packages: (ql:uninstall "package-name")
+	Installing new packages: (ql:quickload "package-name")
+	Searching for packages: (ql:system-apropos "package-name")
+	
+	Getting help: 
+	(HELP "symbol") prints the online documentation 
+	associated with the symbol. For example, (HELP 'CONS) will print the 
+	useful information about the CONS function, the CONS data type, and so 
+	on.
+    (HELP* "symbol") prints the online documentation associated with those
+    symbols whose print-names have the string given as a substring.
+
