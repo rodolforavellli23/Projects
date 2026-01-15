@@ -4,7 +4,7 @@
 (defvar *pi* (acos -1.0l0))
 
 ; e
-(defvar *e* (log (exp (exp 1.0l0))))
+(defvar *e* (exp 1.0l0))
 
 (defun print_out() 
   (
