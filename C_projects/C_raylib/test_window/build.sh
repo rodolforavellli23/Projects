@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-path="./raylib/src"
+path="~/Documentos/third_party/raylib/src"
 src="./main.c"
 target="./bin/test_window"
 libraries="libraylib.a"
