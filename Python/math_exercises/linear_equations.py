@@ -45,9 +45,9 @@ def cramer(matrix, constants):
 # 20*x + 50*y + 80*z = 360
 # 30*x + 60*y + 80*z = 390
 
-# Matrix with the coefficients of the linear equations above
-
 # Note: Cramer's method only works on square matrices
+
+# Matrix with the coefficients of the linear equations above
 matrix = np.array([[10, 40, 70],
                    [20, 50, 80],
                    [30, 60, 80]])
