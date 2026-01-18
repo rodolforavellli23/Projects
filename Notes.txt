@@ -259,9 +259,13 @@ substring3=${my_string: -8}  # Extracts "Splicing!" (negative offset counts from
 
 I seem to only be able to update GRUB by using: sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-44) how to find the pid of a given process
+44) how to find the pid of a given process and kill id
 
-ps aux | grep -i "waydroid"
+ps aux | grep -i [PROGRAM_NAME]
+
+kill [PROGRAM_NAME]
+
+Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
 45) In order to use Anaconda-Navigator:
 	a) download and execute the shell script;
