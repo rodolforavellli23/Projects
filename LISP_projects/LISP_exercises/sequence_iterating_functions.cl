@@ -34,7 +34,7 @@
 ;; TODO
 ;;	IMPLEMENT THE FOLLOWING FUNCTIONS:
 ;;	my-remove
-;;      my-subtitute
+;;	my-substitute
 ;;	my-find
 ;;	my-position
 
