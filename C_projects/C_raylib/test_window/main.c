@@ -1,7 +1,6 @@
 #include<raylib.h>
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h> // Provides strlen()
 
 // My first Raylib window
 
@@ -11,25 +10,22 @@ int main() {
 	// Message to be sent
 	const char *message = "Hello World! From Raylib ";
 
-	// Getting the lengths
-	int len_message = strlen(message);
-	int len_version = strlen(RAYLIB_VERSION);
-	int length_buffer = len_message + len_version + 1;
-
-	// Building the string to be printed
-	char my_str[length_buffer];
-	int chars_written = 0;
-
-	chars_written = snprintf(my_str, sizeof(my_str), "%s%s", message, RAYLIB_VERSION);
-	printf("\n%4cChars printed by snprintf = %i\n", ' ', chars_written);
-	printf("%4cSize of Buffer = %i\n\n", ' ', length_buffer);
-
 	// Building the Window
-	InitWindow(800, 600, my_str);
+	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+	InitWindow(800, 600, TextFormat("%s%s", message, RAYLIB_VERSION));
 	SetTargetFPS(60);
+	SetExitKey(0);
+
+	// Window Loop
 	while(!WindowShouldClose()) {
 		BeginDrawing();
 		ClearBackground(GREEN);
+		if(IsKeyPressed(KEY_SPACE)) {
+			break;
+		}
+		if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
+			break;
+		}
 		EndDrawing();
 	}
 	CloseWindow();
