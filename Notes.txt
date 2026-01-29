@@ -301,3 +301,6 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
     (HELP* "symbol") prints the online documentation associated with those
     symbols whose print-names have the string given as a substring.
 
+48) If the process of unmounting a usb flashdrive is taking too long, 
+	use the 'sync' command to force the system to write to the usb 
+	storage unit. This will allow for the system to unmount the device.
