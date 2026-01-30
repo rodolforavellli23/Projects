@@ -304,3 +304,12 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 48) If the process of unmounting a usb flashdrive is taking too long, 
 	use the 'sync' command to force the system to write to the usb 
 	storage unit. This will allow for the system to unmount the device.
+	
+49) How to make a file immutable:
+	sudo chattr +i /etc/resolv.conf
+	
+	How to remove this attribute:
+	sudo chattr -i /etc/resolv.conf
+	
+	How to check if a file is immutable:
+	lsattr /etc/resolv.conf
