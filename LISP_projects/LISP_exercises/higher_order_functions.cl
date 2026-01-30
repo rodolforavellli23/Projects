@@ -85,7 +85,7 @@
 (my-printer *my-vector-1* +escape+ "*my-vector-1*")
 (my-printer *my-vector-2* +escape+ "*my-vector-2*")
 (my-printer *my-vector-3* +escape+ "*my-vector-3*")
-(my-printer *my-string*   +escape+   "*my-string*  ")
+(my-printer *my-string*   +escape+ "*my-string*  ")
 (out1       *my-vector-1* +escape+ "*my-vector-1*")
 (out2       *my-vector-1* +escape+ "*my-vector-1*")
 (out3       *my-string*   +escape+   "*my-string*")
