@@ -19,6 +19,24 @@ def parse_and_check_type(s):
     except ValueError:
         return "not a number", None
 
+# | 00 01
+# | 10 11
+def det_matrix_2x2(matrix):
+    result = (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0])
+    return result
+
+# | 00 01 02 |
+# | 10 11 12 |
+# | 20 21 22 |
+def det_matrix_3x3(matrix):
+    result = ((matrix[0][0] * matrix[1][1] * matrix[2][2]) + 
+              (matrix[0][1] * matrix[1][2] * matrix[2][0]) + 
+              (matrix[1][0] * matrix[2][1] * matrix[0][2]) - 
+              (matrix[0][2] * matrix[1][1] * matrix[2][0]) - 
+              (matrix[1][2] * matrix[2][1] * matrix[0][0]) - 
+              (matrix[0][1] * matrix[1][0] * matrix[2][2]))
+    return result
+
 # User Input
 print(f"\n{' ':<4}Find the inverse matrix (work in progress):\n"
       f"\n{' ':<4}Please note that the values of each line must be separated by a ', ' separator."
@@ -33,14 +51,14 @@ second_line = np.array(list(map(parse_and_check_type, (b.split(", ")))))
 third_line = np.array(list(map(parse_and_check_type, (c.split(", ")))))
 
 np_input_matrix = np.array([first_line, second_line, third_line])
-sp_input_matrix = sp.Matrix(np_input_matrix).applyfunc(sp.nsimplify)
+# sp_input_matrix = sp.Matrix(np_input_matrix).applyfunc(sp.nsimplify)
 
 # # Test output for the Input matrix
 test_prefix = f"{' ':<4}Input = "
 str_out_1 = np.array2string(np_input_matrix, prefix=test_prefix)
 
 # # Determinant of the Input matrix
-det_input = sp_input_matrix.det()
+det_input = det_matrix_3x3(np_input_matrix)
 
 # # Cofactor matrix
 
@@ -55,72 +73,76 @@ cofactor_prefix = f"{" ":<12}"
 np_a11 = np.array([[np_input_matrix[1][1], np_input_matrix[1][2]], 
                    [np_input_matrix[2][1], np_input_matrix[2][2]]])
 
-det_a11 = sp.Matrix(np_a11).applyfunc(sp.nsimplify).det()
+det_a11 = det_matrix_2x2(np_a11)
 
 # -----------------------------------------------------------------
 np_a12 = np.array([[np_input_matrix[1][0], np_input_matrix[1][2]],
                    [np_input_matrix[2][0], np_input_matrix[2][2]]])
 
-det_a12 = sp.Matrix(np_a12).applyfunc(sp.nsimplify).det()
+det_a12 = det_matrix_2x2(np_a12)
 
 # -----------------------------------------------------------------
 np_a13 = np.array([[np_input_matrix[1][0], np_input_matrix[1][1]], 
                    [np_input_matrix[2][0], np_input_matrix[2][1]]])
 
-det_a13 = sp.Matrix(np_a13).applyfunc(sp.nsimplify).det()
+det_a13 = det_matrix_2x2(np_a13)
 
 # -----------------------------------------------------------------
 np_a21 = np.array([[np_input_matrix[0][1], np_input_matrix[0][2]], 
                    [np_input_matrix[2][1], np_input_matrix[2][2]]])
 
-det_a21 = sp.Matrix(np_a21).applyfunc(sp.nsimplify).det()
+det_a21 = det_matrix_2x2(np_a21)
 
 # -----------------------------------------------------------------
 np_a22 = np.array([[np_input_matrix[0][0], np_input_matrix[0][2]], 
                    [np_input_matrix[2][0], np_input_matrix[2][2]]])
 
-det_a22 = sp.Matrix(np_a22).applyfunc(sp.nsimplify).det()
+det_a22 = det_matrix_2x2(np_a22)
 
 # -----------------------------------------------------------------
 np_a23 = np.array([[np_input_matrix[0][0], np_input_matrix[0][1]], 
                    [np_input_matrix[2][0], np_input_matrix[2][1]]])
 
-det_a23 = sp.Matrix(np_a23).applyfunc(sp.nsimplify).det()
+det_a23 = det_matrix_2x2(np_a23)
 
 # -----------------------------------------------------------------
 np_a31 = np.array([[np_input_matrix[0][1], np_input_matrix[0][2]], 
                    [np_input_matrix[1][1], np_input_matrix[1][2]]])
 
-det_a31 = sp.Matrix(np_a31).applyfunc(sp.nsimplify).det()
+det_a31 = det_matrix_2x2(np_a31)
 
 # -----------------------------------------------------------------
 np_a32 = np.array([[np_input_matrix[0][0], np_input_matrix[0][2]], 
                    [np_input_matrix[1][0], np_input_matrix[1][2]]])
 
-det_a32 = sp.Matrix(np_a32).applyfunc(sp.nsimplify).det()
+det_a32 = det_matrix_2x2(np_a32)
 
 # -----------------------------------------------------------------
 np_a33 = np.array([[np_input_matrix[0][0], np_input_matrix[0][1]],
                    [np_input_matrix[1][0], np_input_matrix[1][1]]])
 
-det_a33 = sp.Matrix(np_a33).applyfunc(sp.nsimplify).det()
+det_a33 = det_matrix_2x2(np_a33)
 
 # -----------------------------------------------------------------
-sp_cofactor_matrix = sp.Matrix([[ det_a11, -det_a12,  det_a13],
-                                [-det_a21,  det_a22, -det_a23],
-                                [ det_a31, -det_a32,  det_a33]])
+np_cofactor_matrix = np.array([[ det_a11, -det_a12,  det_a13],
+                               [-det_a21,  det_a22, -det_a23],
+                               [ det_a31, -det_a32,  det_a33]])
 
-cofactor_line_1 = np.array(list(map(parse_and_check_type, sp_cofactor_matrix[0, :])))
-cofactor_line_2 = np.array(list(map(parse_and_check_type, sp_cofactor_matrix[1, :])))
-cofactor_line_3 = np.array(list(map(parse_and_check_type, sp_cofactor_matrix[2, :])))
+# Commented but didn't delete this commented code because I think
+# maybe I'll need something like this in the future.
 
-np_cofactor_matrix = np.array([cofactor_line_1, cofactor_line_2, cofactor_line_3])
+# cofactor_line_1 = np.array(list(map(parse_and_check_type, cofactor_matrix[0, :])))
+# cofactor_line_2 = np.array(list(map(parse_and_check_type, cofactor_matrix[1, :])))
+# cofactor_line_3 = np.array(list(map(parse_and_check_type, cofactor_matrix[2, :])))
+
+# np_cofactor_matrix = np.array([cofactor_line_1, cofactor_line_2, cofactor_line_3])
 
 str_out_2 = np.array2string(np_cofactor_matrix, prefix=cofactor_prefix,
                                                 formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
                                                            'int_kind': lambda x: f"{x: >4d}"})
 
 # # TODO: Create and print the Transpose matrix of the Cofactor matrix
+# # Transpose of the Cofactor matrix
 
 # Text Output
 print(f"\n{test_prefix}{str_out_1}")
