@@ -4,6 +4,7 @@
 
 import numpy as np
 import sympy as sp
+import textwrap
 
 # Functions
 def parse_and_check_type(s):
@@ -18,6 +19,10 @@ def parse_and_check_type(s):
             return num
     except ValueError:
         return "not a number", None
+
+# Converts a float to a sympy.Rational object via its string representation.
+def float_to_rational(f):
+     return sp.Rational(str(f))
 
 # | 00 01
 # | 10 11
@@ -38,7 +43,7 @@ def det_matrix_3x3(matrix):
     return result
 
 # User Input
-print(f"\n{' ':<4}Find the inverse matrix (work in progress):\n"
+print(f"\n{' ':<4}Find the inverse matrix:\n"
       f"\n{' ':<4}Please note that the values of each line must be separated by a ', ' separator."
       f"\n{' ':<4}Also, each line must only take 3 elements.\n")
 a = input(f"{' ':<4}Please input the first line of the 3x3 matrix  : ")
@@ -51,11 +56,12 @@ second_line = np.array(list(map(parse_and_check_type, (b.split(", ")))))
 third_line = np.array(list(map(parse_and_check_type, (c.split(", ")))))
 
 np_input_matrix = np.array([first_line, second_line, third_line])
-# sp_input_matrix = sp.Matrix(np_input_matrix).applyfunc(sp.nsimplify)
 
 # # Test output for the Input matrix
 test_prefix = f"{' ':<4}Input = "
-str_out_1 = np.array2string(np_input_matrix, prefix=test_prefix)
+str_out_1 = np.array2string(np_input_matrix, prefix=test_prefix, 
+                                             formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                          'int_kind': lambda x: f"{x: >4d}"})
 
 # # Determinant of the Input matrix
 det_input = det_matrix_3x3(np_input_matrix)
@@ -128,21 +134,43 @@ np_cofactor_matrix = np.array([[ det_a11, -det_a12,  det_a13],
                                [-det_a21,  det_a22, -det_a23],
                                [ det_a31, -det_a32,  det_a33]])
 
-# Commented but didn't delete this commented code because I think
-# maybe I'll need something like this in the future.
-
-# cofactor_line_1 = np.array(list(map(parse_and_check_type, cofactor_matrix[0, :])))
-# cofactor_line_2 = np.array(list(map(parse_and_check_type, cofactor_matrix[1, :])))
-# cofactor_line_3 = np.array(list(map(parse_and_check_type, cofactor_matrix[2, :])))
-
-# np_cofactor_matrix = np.array([cofactor_line_1, cofactor_line_2, cofactor_line_3])
-
 str_out_2 = np.array2string(np_cofactor_matrix, prefix=cofactor_prefix,
                                                 formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                           'int_kind': lambda x: f"{x: >4d}"})
+                                                             'int_kind': lambda x: f"{x: >4d}"})
 
-# # TODO: Create and print the Transpose matrix of the Cofactor matrix
 # # Transpose of the Cofactor matrix
+# | 00 01 02 |    | 00 10 20 |
+# | 10 11 12 | -> | 01 11 21 |
+# | 20 21 22 |    | 02 12 22 |
+
+transpose_prefix = f"{' ':<4}Transpose of the above Cofactor matrix: "
+
+np_transpose_of_cofactor_matrix = np.array([[np_cofactor_matrix[0][0], np_cofactor_matrix[1][0], np_cofactor_matrix[2][0]], 
+                                            [np_cofactor_matrix[0][1], np_cofactor_matrix[1][1], np_cofactor_matrix[2][1]],
+                                            [np_cofactor_matrix[0][2], np_cofactor_matrix[1][2], np_cofactor_matrix[2][2]]])
+
+str_out_3 = np.array2string(np_transpose_of_cofactor_matrix, prefix=transpose_prefix, 
+                                                             formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                                          'int_kind': lambda x: f"{x: >4d}"})
+
+# # And finally the Inverse matrix of the input matrix
+
+inverse_prefix = f"{' ':<4}And finally, the Inverse of the Input matrix: "
+
+np_inverse_matrix = np.array([[(np_transpose_of_cofactor_matrix[0][0] / det_input), 
+                               (np_transpose_of_cofactor_matrix[0][1] / det_input), 
+                               (np_transpose_of_cofactor_matrix[0][2] / det_input)], #  End of first line
+                              [(np_transpose_of_cofactor_matrix[1][0] / det_input), 
+                               (np_transpose_of_cofactor_matrix[1][1] / det_input), 
+                               (np_transpose_of_cofactor_matrix[1][2] / det_input)], # End of second line
+                              [(np_transpose_of_cofactor_matrix[2][0] / det_input), 
+                               (np_transpose_of_cofactor_matrix[2][1] / det_input), 
+                               (np_transpose_of_cofactor_matrix[2][2] / det_input)]] #  End of third line
+                             )
+
+# # Convert to a sympy matrix for cleaner representation of floats as ratios
+sp_inverse_matrix = sp.Matrix(np_inverse_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+str_out_4 = textwrap.indent((sp.pretty(sp_inverse_matrix)), (f"{' ':<4}"))
 
 # Text Output
 print(f"\n{test_prefix}{str_out_1}")
@@ -150,4 +178,8 @@ print(f"\n{' ':<4}{'':{'-'}<80}\n")
 print(f"{' ':<4}Determinant of the input matrix: {det_input}")
 print(f"\n{' ':<4}{'':{'-'}<80}\n")
 print(f"{label}\n\n{cofactor_prefix}{str_out_2}")
+print(f"\n{' ':<4}{'':{'-'}<80}\n")
+print(f"{transpose_prefix}{str_out_3}")
+print(f"\n{' ':<4}{'':{'-'}<80}\n")
+print(f"{inverse_prefix}:\n\n{str_out_4}")
 print(f"\n{' ':<4}{'':{'-'}<80}\n")

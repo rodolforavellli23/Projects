@@ -12,9 +12,9 @@ prefix_1 = f"{' ':<4}Matrix A = "
 prefix_2 = f"{' ':<4}Matrix A^-1 = " 
 prefix_3 = f"{' ':<4}A*A^-1 = I; I = "
 
-np_matrix_A = np.array([[1, 2, 3],
-                        [0, 1, 4],
-                        [5, 6, 0]])
+np_matrix_A = np.array([[1,  1,  1],
+                        [0,  2,  5],
+                        [2,  5, -1]])
 
 # Calculating the Inverse matrix
 
