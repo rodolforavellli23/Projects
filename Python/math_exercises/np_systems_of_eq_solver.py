@@ -1,6 +1,9 @@
 #!/home/greenshoots/Documentos/GitHub/Projects/Python/math_exercises/venv/bin/python3
 
-# Python program to solve systems of equations
+# Python program to solve systems of equations: 
+#   such that, if a system of equations is equivalent to A @ X = B;
+#   where A is the coeficients matrix, X is the incognitae matrix and B is the results matrix;
+#   then the incognitae to be found can be calculated by X = A^-1 @ B  
 
 import numpy as np
 import sympy as sp
@@ -48,7 +51,10 @@ if choice == "2x2":
           f"\n{' ':<4}Also, each line must only take 2 elements.\n")
     a = input(f"{' ':<4}Please input the first line coeficients matrix  : ")
     b = input(f"{' ':<4}Please input the second line coeficients matrix : ")
+    print("")
 
+    # Get the B resultants matrix as well
+    
     # Processing User Input
     first_line = np.array(list(map(parse_and_check_type, (a.split(", ")))))
     second_line = np.array(list(map(parse_and_check_type, (b.split(", ")))))
@@ -56,27 +62,57 @@ if choice == "2x2":
     np_input_matrix = np.array([first_line, second_line])
 
     # # Test output for the Input matrix
-    test_prefix = f"{' ':<4}Input = "
+    test_prefix = f"{' ':<4}Input matrix = "
     str_out_1 = np.array2string(np_input_matrix, prefix=test_prefix, 
                                                  formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
                                                               'int_kind': lambda x: f"{x: >4d}"})
+    # # Determinant of the Input matrix
+    determinant_prefix = f"{' ':<4}Determinant of the Input matrix: "
 
-    # # Determinant of the Input matrix (IN PROGRESS)
     det_input = det_matrix_2x2(np_input_matrix)
 
-    # # Inverse matrix of the input matrix (IN PROGRESS)
+    # # Adjugate matrix of the input matrix
+    # # | 00 01 |    |  11 -01 |
+    # # | 10 11 | -> | -10  00 |
 
-    # Text Output (IN PROGRESS)
+    adjugate_prefix = f"{' ':<4}Adjugate matrix: "
+
+    np_adjugate_matrix = np.array([[  np_input_matrix[1][1]  , -(np_input_matrix[0][1])],
+                                   [-(np_input_matrix[1][0]) ,   np_input_matrix[0][0]]])
+
+    str_out_2 = np.array2string(np_adjugate_matrix, prefix=adjugate_prefix,
+                                                    formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                              'int_kind': lambda x: f"{x: >4d}"})
+
+    # # Inverse matrix
+    inverse_prefix = f"{' ':<4}Inverse of the Input matrix: "
+
+    np_inverse_matrix = np.array([[(np_adjugate_matrix[0][0] / det_input), (np_adjugate_matrix[0][1] / det_input)],
+                                  [(np_adjugate_matrix[1][0] / det_input), (np_adjugate_matrix[1][1] / det_input)]])
+
+    # # Convert to a sympy matrix for cleaner representation of floats as ratios
+    sp_inverse_matrix = sp.Matrix(np_inverse_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+    str_out_3 = textwrap.indent((sp.pretty(sp_inverse_matrix)), (f"{' ':<4}"))
+
+    # # Find the result of the Incognitae matrix by multiplying A^-1 @ B
+
+    # Text Output
     print(f"\n{test_prefix}{str_out_1}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    # print(f"{inverse_prefix}:\n\n{str_out_4}")
-    # print(f"\n{' ':<4}{'':{'-'}<80}\n")
+    print(f"{determinant_prefix}{det_input}")
+    print(f"\n{' ':<4}{'':{'-'}<80}\n")
+    print(f"{adjugate_prefix}{str_out_2}")
+    print(f"\n{' ':<4}{'':{'-'}<80}\n")
+    print(f"{inverse_prefix}\n{str_out_3}")
+    print(f"\n{' ':<4}{'':{'-'}<80}\n")
 elif choice == "3x3":
     print(f"\n{' ':<4}Please note that the values of each line must be separated by a ', ' separator."
           f"\n{' ':<4}Also, each line must only take 3 elements.\n")
     a = input(f"{' ':<4}Please input the first line coeficients matrix  : ")
     b = input(f"{' ':<4}Please input the second line coeficients matrix : ")
     c = input(f"{' ':<4}Please input the third line coeficients matrix  : ")
+
+    # Get the B resultants matrix as well
 
     # Processing User Input
     first_line  = np.array(list(map(parse_and_check_type, (a.split(", ")))))
@@ -200,6 +236,8 @@ elif choice == "3x3":
     sp_inverse_matrix = sp.Matrix(np_inverse_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
     str_out_4 = textwrap.indent((sp.pretty(sp_inverse_matrix)), (f"{' ':<4}"))
 
+    # # Find the result of the Incognitae matrix by multiplying A^-1 @ B (IN PROGRESS)
+    
     # Text Output
     print(f"\n{test_prefix}{str_out_1}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
@@ -212,4 +250,4 @@ elif choice == "3x3":
     print(f"{inverse_prefix}:\n\n{str_out_4}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
 else:
-    print(f"Invalid choice, this program can only solve either 2x2 or 3x3 systems of equations")
+    print(f"{' ':<4}Invalid choice, this program can only solve either 2x2 or 3x3 systems of equations")
