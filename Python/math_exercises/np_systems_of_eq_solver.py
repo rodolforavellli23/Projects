@@ -103,7 +103,7 @@ if choice == "2x2":
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{adjugate_prefix}{str_out_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"{inverse_prefix}\n{str_out_3}")
+    print(f"{inverse_prefix}\n\n{str_out_3}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
 elif choice == "3x3":
     print(f"\n{' ':<4}Please note that the values of each line must be separated by a ', ' separator."
