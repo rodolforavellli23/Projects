@@ -41,51 +41,63 @@ def det_matrix_3x3(matrix):
               (matrix[0][1] * matrix[1][0] * matrix[2][2]))
     return result
 
-# User Input
+# User Coefficient
 print(f"\n{' ':<4}Solve systems of equations:"
       f"\n{' ':<4}The Functionality of this script is limited to solving either 2x2 system of equations or 3x3 systems of equations:")
 choice = input(f"\n{' ':<4}Are you going to solve a 2x2 system of equations or a 3x3 system of equations? type either 2x2 or 3x3: ")
 
 if choice == "2x2":
     print(f"\n{' ':<4}Please note that the values of each line must be separated by a ', ' separator."
-          f"\n{' ':<4}Also, each line must only take 2 elements.\n")
-    a = input(f"{' ':<4}Please input the first line coeficients matrix  : ")
-    b = input(f"{' ':<4}Please input the second line coeficients matrix : ")
+          f"\n{' ':<4}Also, each line must take only 2 elements.")
+    coef_line_a = input(f"{' ':<4}Please input the first line of the coeficients matrix  : ")
+    coef_line_b = input(f"{' ':<4}Please input the second line of the coeficients matrix : ")
+    print(f"\n"
+          f"{' ':<4}And for the Resultants matrix, each line must take only 1 element.")
+    res_line_a = input(f"{' ':<4}Please input the first line of the resultants matrix  : ")
+    res_line_b = input(f"{' ':<4}Please input the second line of the resultants matrix  : ")
     print("")
 
-    # Get the B resultants matrix as well
+    # Processing user input
+    coef_first_line = np.array(list(map(parse_and_check_type, (coef_line_a.split(", ")))))
+    coef_second_line = np.array(list(map(parse_and_check_type, (coef_line_b.split(", ")))))
     
-    # Processing User Input
-    first_line = np.array(list(map(parse_and_check_type, (a.split(", ")))))
-    second_line = np.array(list(map(parse_and_check_type, (b.split(", ")))))
+    res_first_line = np.array(list(map(parse_and_check_type, (res_line_a.split(", ")))))
+    res_second_line = np.array(list(map(parse_and_check_type, (res_line_b.split(", ")))))
+    
+    np_coefficients_matrix = np.array([coef_first_line, coef_second_line])
+    np_resultants_matrix = np.array([res_first_line, res_second_line])
+    
+    # # Test output for the Coefficients matrix
+    coef_prefix = f"{' ':<4}Coefficients matrix = "
+    str_out_1_1 = np.array2string(np_coefficients_matrix, prefix=coef_prefix, 
+                                                          formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                                       'int_kind': lambda x: f"{x: >4d}"})
+    # # Test output for the Resultants matrix
+    res_prefix  = f"{' ':<4}Resultants matrix = "
+    str_out_1_2 = np.array2string(np_resultants_matrix, prefix=res_prefix, 
+                                                   formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                                'int_kind': lambda x: f"{x: >4d}"})
+ 
+    # # Determinant of the Coefficients matrix
+    determinant_prefix = f"{' ':<4}Determinant of the Coefficient matrix: "
 
-    np_input_matrix = np.array([first_line, second_line])
+    det_input = det_matrix_2x2(np_coefficients_matrix)
 
-    # # Test output for the Input matrix
-    test_prefix = f"{' ':<4}Input matrix = "
-    str_out_1 = np.array2string(np_input_matrix, prefix=test_prefix, 
-                                                 formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                              'int_kind': lambda x: f"{x: >4d}"})
-    # # Determinant of the Input matrix
-    determinant_prefix = f"{' ':<4}Determinant of the Input matrix: "
-
-    det_input = det_matrix_2x2(np_input_matrix)
-
-    # # Adjugate matrix of the input matrix
+    # # Adjugate matrix of the coefficient matrix
     # # | 00 01 |    |  11 -01 |
     # # | 10 11 | -> | -10  00 |
 
     adjugate_prefix = f"{' ':<4}Adjugate matrix: "
 
-    np_adjugate_matrix = np.array([[  np_input_matrix[1][1]  , -(np_input_matrix[0][1])],
-                                   [-(np_input_matrix[1][0]) ,   np_input_matrix[0][0]]])
+    np_adjugate_matrix = np.array([[  np_coefficients_matrix[1][1]  , -(np_coefficients_matrix[0][1])],
+                                   [-(np_coefficients_matrix[1][0]) ,   np_coefficients_matrix[0][0]]])
 
     str_out_2 = np.array2string(np_adjugate_matrix, prefix=adjugate_prefix,
                                                     formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
                                                               'int_kind': lambda x: f"{x: >4d}"})
 
     # # Inverse matrix
-    inverse_prefix = f"{' ':<4}Inverse of the Input matrix: "
+    inverse_prefix = f"{' ':<4}Inverse of the Coefficient matrix: "
 
     np_inverse_matrix = np.array([[(np_adjugate_matrix[0][0] / det_input), (np_adjugate_matrix[0][1] / det_input)],
                                   [(np_adjugate_matrix[1][0] / det_input), (np_adjugate_matrix[1][1] / det_input)]])
@@ -97,7 +109,9 @@ if choice == "2x2":
     # # Find the result of the Incognitae matrix by multiplying A^-1 @ B
 
     # Text Output
-    print(f"\n{test_prefix}{str_out_1}")
+    print(f"\n{coef_prefix}{str_out_1_1}")
+    print(f"\n{' ':<4}{'':{'-'}<80}\n")
+    print(f"\n{res_prefix}{str_out_1_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{determinant_prefix}{det_input}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
@@ -107,32 +121,46 @@ if choice == "2x2":
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
 elif choice == "3x3":
     print(f"\n{' ':<4}Please note that the values of each line must be separated by a ', ' separator."
-          f"\n{' ':<4}Also, each line must only take 3 elements.\n")
-    a = input(f"{' ':<4}Please input the first line coeficients matrix  : ")
-    b = input(f"{' ':<4}Please input the second line coeficients matrix : ")
-    c = input(f"{' ':<4}Please input the third line coeficients matrix  : ")
+          f"\n{' ':<4}Also, each line in the Coefficients matrix must take only 3 elements.")
+    coef_line_a = input(f"{' ':<4}Please input the first line of the coeficients matrix  : ")
+    coef_line_b = input(f"{' ':<4}Please input the second line of the coeficients matrix : ")
+    coef_line_c = input(f"{' ':<4}Please input the third line of the coeficients matrix  : ")
+    print(f"\n"
+          f"{" ":<4}And for the Resultants matrix, each line must take only 1 element.")
+    res_line_a = input(f"{' ':<4}Please input the first line of the coeficients matrix  : ")
+    res_line_b = input(f"{' ':<4}Please input the second line of the coeficients matrix : ")
+    res_line_c = input(f"{' ':<4}Please input the third line of the coeficients matrix  : ")
+    print("")
 
-    # Get the B resultants matrix as well
+    # Processing User Coefficient
+    coef_first_line = np.array(list(map(parse_and_check_type, (coef_line_a.split(", ")))))
+    coef_second_line = np.array(list(map(parse_and_check_type, (coef_line_b.split(", ")))))
+    coef_third_line = np.array(list(map(parse_and_check_type, (coef_line_c.split(", ")))))
 
-    # Processing User Input
-    first_line  = np.array(list(map(parse_and_check_type, (a.split(", ")))))
-    second_line = np.array(list(map(parse_and_check_type, (b.split(", ")))))
-    third_line  = np.array(list(map(parse_and_check_type, (c.split(", ")))))
+    res_first_line = np.array(list(map(parse_and_check_type, (res_line_a.split(", ")))))
+    res_second_line = np.array(list(map(parse_and_check_type, (res_line_b.split(", ")))))
+    res_third_line = np.array(list(map(parse_and_check_type, (res_line_c.split(", ")))))
 
-    np_input_matrix = np.array([first_line, second_line, third_line])
+    np_coefficients_matrix = np.array([coef_first_line, coef_second_line, coef_third_line])
+    np_resultants_matrix = np.array([res_first_line, res_second_line, res_third_line])
 
-    # # Test output for the Input matrix
-    test_prefix = f"{' ':<4}Input = "
-    str_out_1 = np.array2string(np_input_matrix, prefix=test_prefix, 
-                                                 formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                              'int_kind': lambda x: f"{x: >4d}"})
+    # # Test output for the Coefficient matrix
+    coef_prefix = f"{' ':<4}Coefficient matrix= "
+    str_out_1_1 = np.array2string(np_coefficients_matrix, prefix=coef_prefix, 
+                                                          formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                                       'int_kind': lambda x: f"{x: >4d}"})
 
-    # # Determinant of the Input matrix
-    det_input = det_matrix_3x3(np_input_matrix)
+    # # Test output for the Coefficient matrix
+    res_prefix = f"{' ':<4}Resultants matrix = "
+    str_out_1_2 = np.array2string(np_resultants_matrix, prefix=coef_prefix, 
+                                                        formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
+                                                                     'int_kind': lambda x: f"{x: >4d}"})
+
+    # # Determinant of the Coefficient matrix
+    det_input = det_matrix_3x3(np_coefficients_matrix)
 
     # # Cofactor matrix
-
-    label = f"{' ':<4}Cofactor matrix of the given input matrix: "
+    label = f"{' ':<4}Cofactor matrix of the given coefficient matrix: "
     cofactor_prefix = f"{" ":<12}"
 
     # | 00 01 02 |
@@ -140,56 +168,56 @@ elif choice == "3x3":
     # | 20 21 22 |
 
     # -----------------------------------------------------------------
-    np_a11 = np.array([[np_input_matrix[1][1], np_input_matrix[1][2]], 
-                       [np_input_matrix[2][1], np_input_matrix[2][2]]])
+    np_a11 = np.array([[np_coefficients_matrix[1][1], np_coefficients_matrix[1][2]], 
+                       [np_coefficients_matrix[2][1], np_coefficients_matrix[2][2]]])
 
     det_a11 = det_matrix_2x2(np_a11)
 
     # -----------------------------------------------------------------
-    np_a12 = np.array([[np_input_matrix[1][0], np_input_matrix[1][2]],
-                       [np_input_matrix[2][0], np_input_matrix[2][2]]])
+    np_a12 = np.array([[np_coefficients_matrix[1][0], np_coefficients_matrix[1][2]],
+                       [np_coefficients_matrix[2][0], np_coefficients_matrix[2][2]]])
 
     det_a12 = det_matrix_2x2(np_a12)
 
     # -----------------------------------------------------------------
-    np_a13 = np.array([[np_input_matrix[1][0], np_input_matrix[1][1]], 
-                       [np_input_matrix[2][0], np_input_matrix[2][1]]])
+    np_a13 = np.array([[np_coefficients_matrix[1][0], np_coefficients_matrix[1][1]], 
+                       [np_coefficients_matrix[2][0], np_coefficients_matrix[2][1]]])
 
     det_a13 = det_matrix_2x2(np_a13)
 
     # -----------------------------------------------------------------
-    np_a21 = np.array([[np_input_matrix[0][1], np_input_matrix[0][2]], 
-                       [np_input_matrix[2][1], np_input_matrix[2][2]]])
+    np_a21 = np.array([[np_coefficients_matrix[0][1], np_coefficients_matrix[0][2]], 
+                       [np_coefficients_matrix[2][1], np_coefficients_matrix[2][2]]])
 
     det_a21 = det_matrix_2x2(np_a21)
 
     # -----------------------------------------------------------------
-    np_a22 = np.array([[np_input_matrix[0][0], np_input_matrix[0][2]], 
-                       [np_input_matrix[2][0], np_input_matrix[2][2]]])
+    np_a22 = np.array([[np_coefficients_matrix[0][0], np_coefficients_matrix[0][2]], 
+                       [np_coefficients_matrix[2][0], np_coefficients_matrix[2][2]]])
 
     det_a22 = det_matrix_2x2(np_a22)
 
     # -----------------------------------------------------------------
-    np_a23 = np.array([[np_input_matrix[0][0], np_input_matrix[0][1]], 
-                       [np_input_matrix[2][0], np_input_matrix[2][1]]])
+    np_a23 = np.array([[np_coefficients_matrix[0][0], np_coefficients_matrix[0][1]], 
+                       [np_coefficients_matrix[2][0], np_coefficients_matrix[2][1]]])
 
     det_a23 = det_matrix_2x2(np_a23)
 
     # -----------------------------------------------------------------
-    np_a31 = np.array([[np_input_matrix[0][1], np_input_matrix[0][2]], 
-                       [np_input_matrix[1][1], np_input_matrix[1][2]]])
+    np_a31 = np.array([[np_coefficients_matrix[0][1], np_coefficients_matrix[0][2]], 
+                       [np_coefficients_matrix[1][1], np_coefficients_matrix[1][2]]])
 
     det_a31 = det_matrix_2x2(np_a31)
 
     # -----------------------------------------------------------------
-    np_a32 = np.array([[np_input_matrix[0][0], np_input_matrix[0][2]], 
-                       [np_input_matrix[1][0], np_input_matrix[1][2]]])
+    np_a32 = np.array([[np_coefficients_matrix[0][0], np_coefficients_matrix[0][2]], 
+                       [np_coefficients_matrix[1][0], np_coefficients_matrix[1][2]]])
 
     det_a32 = det_matrix_2x2(np_a32)
 
     # -----------------------------------------------------------------
-    np_a33 = np.array([[np_input_matrix[0][0], np_input_matrix[0][1]],
-                       [np_input_matrix[1][0], np_input_matrix[1][1]]])
+    np_a33 = np.array([[np_coefficients_matrix[0][0], np_coefficients_matrix[0][1]],
+                       [np_coefficients_matrix[1][0], np_coefficients_matrix[1][1]]])
 
     det_a33 = det_matrix_2x2(np_a33)
 
@@ -217,9 +245,9 @@ elif choice == "3x3":
                                                                  formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
                                                                               'int_kind': lambda x: f"{x: >4d}"})
 
-    # # Inverse matrix of the input matrix
+    # # Inverse matrix of the coefficient matrix
 
-    inverse_prefix = f"{' ':<4}Inverse of the Input matrix: "
+    inverse_prefix = f"{' ':<4}Inverse of the Coefficient matrix: "
 
     np_inverse_matrix = np.array([[(np_transpose_of_cofactor_matrix[0][0] / det_input), 
                                    (np_transpose_of_cofactor_matrix[0][1] / det_input), 
@@ -239,9 +267,11 @@ elif choice == "3x3":
     # # Find the result of the Incognitae matrix by multiplying A^-1 @ B (IN PROGRESS)
     
     # Text Output
-    print(f"\n{test_prefix}{str_out_1}")
+    print(f"\n{coef_prefix}{str_out_1_1}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"{' ':<4}Determinant of the input matrix: {det_input}")
+    print(f"\n{res_prefix}{str_out_1_2}")
+    print(f"\n{' ':<4}{'':{'-'}<80}\n")
+    print(f"{' ':<4}Determinant of the coefficient matrix: {det_input}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{label}\n\n{cofactor_prefix}{str_out_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
