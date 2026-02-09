@@ -32,4 +32,4 @@ inver_A = np.linalg.inv(A)
 
 X = inver_A @ B
 
-print(f"\n x = {X[0]}, y = {X[1]}, z = {[2]}\n")
+print(f"\n x = {X[0]}, y = {X[1]}, z = {[2]}\n{X}\n\n")

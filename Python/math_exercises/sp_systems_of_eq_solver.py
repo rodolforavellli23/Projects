@@ -5,6 +5,8 @@
 #   where A is the coeficients matrix, X is the incognitae matrix and B is the results matrix;
 #   then the incognitae to be found can be calculated by X = A^-1 @ B  
 
+# This version will have all the hardcoded math replaced by the functions from the sympy library
+
 import numpy as np
 import sympy as sp
 import textwrap
