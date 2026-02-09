@@ -45,7 +45,7 @@ def det_matrix_3x3(matrix):
 
 # User Coefficient
 print(f"\n{' ':<4}Solve systems of equations:"
-      f"\n{' ':<4}The Functionality of this script is limited to solving either 2x2 system of equations or 3x3 systems of equations:")
+      f"\n{' ':<4}The Functionality of this script is limited to solving either a 2x2 system of equations or a 3x3 system of equations:")
 choice = input(f"\n{' ':<4}Are you going to solve a 2x2 system of equations or a 3x3 system of equations? type either 2x2 or 3x3: ")
 
 if choice == "2x2":
