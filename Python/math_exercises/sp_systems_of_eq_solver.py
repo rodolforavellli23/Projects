@@ -5,8 +5,6 @@
 #   where A is the coeficients matrix, X is the incognitae matrix and B is the results matrix;
 #   then the incognitae to be found can be calculated by X = A^-1 @ B  
 
-# This version will have all the hardcoded math replaced by the functions from the sympy library
-
 import numpy as np
 import sympy as sp
 import textwrap
@@ -45,7 +43,7 @@ def det_matrix_3x3(matrix):
 
 # User Coefficient
 print(f"\n{' ':<4}Solve systems of equations:"
-      f"\n{' ':<4}The Functionality of this script is limited to solving either a 2x2 system of equations or a 3x3 system of equations:")
+      f"\n{' ':<4}The Functionality of this script is limited to solving either 2x2 system of equations or 3x3 systems of equations:")
 choice = input(f"\n{' ':<4}Are you going to solve a 2x2 system of equations or a 3x3 system of equations? type either 2x2 or 3x3: ")
 
 if choice == "2x2":
@@ -69,17 +67,19 @@ if choice == "2x2":
     np_coefficients_matrix = np.array([coef_first_line, coef_second_line])
     np_resultants_matrix = np.array([res_first_line, res_second_line])
     
+    sp_coefficients_matrix = sp.Matrix(np_coefficients_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+    sp_resultants_matrix = sp.Matrix(np_resultants_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+
     # # Test output for the Coefficients matrix
     coef_prefix = f"{' ':<4}Coefficients matrix = "
-    str_out_1_1 = np.array2string(np_coefficients_matrix, prefix=coef_prefix, 
-                                                          formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                                       'int_kind': lambda x: f"{x: >4d}"})
+
+    str_out_1_1 = textwrap.indent((sp.pretty(sp_coefficients_matrix)), (f"{' ':<4}"))
+
     # # Test output for the Resultants matrix
     res_prefix  = f"{' ':<4}Resultants matrix = "
-    str_out_1_2 = np.array2string(np_resultants_matrix, prefix=res_prefix, 
-                                                   formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                                'int_kind': lambda x: f"{x: >4d}"})
- 
+     
+    str_out_1_2 = textwrap.indent((sp.pretty(sp_resultants_matrix)), (f"{' ':<4}"))
+
     # # Determinant of the Coefficients matrix
     determinant_prefix = f"{' ':<4}Determinant of the Coefficient matrix: "
 
@@ -94,9 +94,9 @@ if choice == "2x2":
     np_adjugate_matrix = np.array([[  np_coefficients_matrix[1][1]  , -(np_coefficients_matrix[0][1])],
                                    [-(np_coefficients_matrix[1][0]) ,   np_coefficients_matrix[0][0]]])
 
-    str_out_2 = np.array2string(np_adjugate_matrix, prefix=adjugate_prefix,
-                                                    formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                              'int_kind': lambda x: f"{x: >4d}"})
+    sp_adjugate_matrix = sp.Matrix(np_adjugate_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+
+    str_out_2 = textwrap.indent((sp.pretty(sp_adjugate_matrix)), (f"{' ':<4}"))
 
     # # Inverse matrix
     inverse_prefix = f"{' ':<4}Inverse of the Coefficient matrix: "
@@ -113,18 +113,18 @@ if choice == "2x2":
     sp_incognitae_matrix = sp.Matrix(np_incognitae_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
 
     # Text Output
-    print(f"\n{coef_prefix}{str_out_1_1}")
+    print(f"\n{coef_prefix}\n\n{str_out_1_1}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"\n{res_prefix}{str_out_1_2}")
+    print(f"{res_prefix}\n\n{str_out_1_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{determinant_prefix}{det_input}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"{adjugate_prefix}{str_out_2}")
+    print(f"{adjugate_prefix}\n\n{str_out_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{inverse_prefix}\n\n{str_out_3}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{' ':<4}"
-          f"x = {sp_incognitae_matrix[0, 0]}, "
+          f"x = {sp_incognitae_matrix[0, 0]} , "
           f"y = {sp_incognitae_matrix[1, 0]}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
 elif choice == "3x3":
@@ -152,24 +152,24 @@ elif choice == "3x3":
     np_coefficients_matrix = np.array([coef_first_line, coef_second_line, coef_third_line])
     np_resultants_matrix = np.array([res_first_line, res_second_line, res_third_line])
 
+    sp_coefficients_matrix = sp.Matrix(np_coefficients_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+    sp_resultants_matrix = sp.Matrix(np_resultants_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+    
     # # Test output for the Coefficient matrix
-    coef_prefix = f"{' ':<4}Coefficient matrix= "
-    str_out_1_1 = np.array2string(np_coefficients_matrix, prefix=coef_prefix, 
-                                                          formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                                       'int_kind': lambda x: f"{x: >4d}"})
+    coef_prefix = f"{' ':<4}Coefficients matrix = "
+
+    str_out_1_1 = textwrap.indent((sp.pretty(sp_coefficients_matrix)), (f"{' ':<4}")) 
 
     # # Test output for the Coefficient matrix
     res_prefix = f"{' ':<4}Resultants matrix = "
-    str_out_1_2 = np.array2string(np_resultants_matrix, prefix=coef_prefix, 
-                                                        formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                                     'int_kind': lambda x: f"{x: >4d}"})
+    
+    str_out_1_2 = textwrap.indent((sp.pretty(sp_resultants_matrix)), (f"{' ':<4}"))
 
     # # Determinant of the Coefficient matrix
     det_input = det_matrix_3x3(np_coefficients_matrix)
 
     # # Cofactor matrix
-    label = f"{' ':<4}Cofactor matrix of the given coefficient matrix: "
-    cofactor_prefix = f"{" ":<12}"
+    cofactor_prefix = f"{' ':<4}Cofactor matrix of the given coefficient matrix: "
 
     # | 00 01 02 |
     # | 10 11 12 |
@@ -234,9 +234,9 @@ elif choice == "3x3":
                                    [-det_a21,  det_a22, -det_a23],
                                    [ det_a31, -det_a32,  det_a33]])
 
-    str_out_2 = np.array2string(np_cofactor_matrix, prefix=cofactor_prefix,
-                                                    formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                                 'int_kind': lambda x: f"{x: >4d}"})
+    sp_cofactor_matrix = sp.Matrix(np_cofactor_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+
+    str_out_2 = textwrap.indent((sp.pretty(sp_cofactor_matrix)), (f"{' ':<4}")) 
 
     # # Transpose of the Cofactor matrix
     # | 00 01 02 |    | 00 10 20 |
@@ -249,9 +249,9 @@ elif choice == "3x3":
                                                 [np_cofactor_matrix[0][1], np_cofactor_matrix[1][1], np_cofactor_matrix[2][1]],
                                                 [np_cofactor_matrix[0][2], np_cofactor_matrix[1][2], np_cofactor_matrix[2][2]]])
 
-    str_out_3 = np.array2string(np_transpose_of_cofactor_matrix, prefix=transpose_prefix, 
-                                                                 formatter={'float_kind': lambda x: f"{x: >6.1f}", # ' >' forces alignment and sign space
-                                                                              'int_kind': lambda x: f"{x: >4d}"})
+    sp_transpose_of_cofactor_matrix = sp.Matrix(np_transpose_of_cofactor_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
+
+    str_out_3 = textwrap.indent((sp.pretty(sp_transpose_of_cofactor_matrix)), (f"{' ':<4}"))
 
     # # Inverse matrix of the coefficient matrix
 
@@ -277,21 +277,21 @@ elif choice == "3x3":
     sp_incognitae_matrix = sp.Matrix(np_incognitae_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
 
     # Text Output
-    print(f"\n{coef_prefix}{str_out_1_1}")
+    print(f"\n{coef_prefix}\n\n{str_out_1_1}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"\n{res_prefix}{str_out_1_2}")
+    print(f"{res_prefix}\n\n{str_out_1_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{' ':<4}Determinant of the coefficient matrix: {det_input}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"{label}\n\n{cofactor_prefix}{str_out_2}")
+    print(f"{cofactor_prefix}\n\n{str_out_2}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
-    print(f"{transpose_prefix}{str_out_3}")
+    print(f"{transpose_prefix}\n\n{str_out_3}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{inverse_prefix}:\n\n{str_out_4}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
     print(f"{' ':<4}"
-          f"x = {sp_incognitae_matrix[0, 0]}, "
-          f"y = {sp_incognitae_matrix[1, 0]}, "
+          f"x = {sp_incognitae_matrix[0, 0]} , "
+          f"y = {sp_incognitae_matrix[1, 0]} , "
           f"z = {sp_incognitae_matrix[2, 0]}")
     print(f"\n{' ':<4}{'':{'-'}<80}\n")
 else:

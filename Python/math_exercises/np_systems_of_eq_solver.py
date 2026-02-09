@@ -156,7 +156,7 @@ elif choice == "3x3":
     sp_resultants_matrix = sp.Matrix(np_resultants_matrix).applyfunc(lambda x: sp.nsimplify(x, rational=True))
     
     # # Test output for the Coefficient matrix
-    coef_prefix = f"{' ':<4}Coefficient matrix = "
+    coef_prefix = f"{' ':<4}Coefficients matrix = "
 
     str_out_1_1 = textwrap.indent((sp.pretty(sp_coefficients_matrix)), (f"{' ':<4}")) 
 
