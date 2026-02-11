@@ -48,11 +48,10 @@
   (values)
 )
 
-(defun display-merge(pad n m op fun e s1 s2 s3 s4) 
+(defun display-merge(pad n m ret comp-fun e s1 s2 s3 s4) 
   (format t "~%~aDisplaying ~C\[1;38;5;208m~a~C\[0m and ~C\[1;38;5;208m~a~C\[0m ~
-	  merged, with the result type being ~C\[1;38;5;208m~a~C\[0m ~
-	  and the comparison function being ~C\[1;38;5;208m~a~C\[0m ~
-	  = ~%~a~a~%" 
+	  merged, with the result type being ~C\[1;38;5;208m~a~C\[0m and the ~
+	  comparison function being ~C\[1;38;5;208m~a~C\[0m = ~%~a~a~%" 
 	  pad 
 	  e 
 	  s1 
@@ -67,7 +66,7 @@
 	  s4
 	  e
 	  pad
-	  (merge op (copy-seq n) (copy-seq m) fun)
+	  (merge ret (copy-seq n) (copy-seq m) comp-fun)
   )
   (values)
 )
