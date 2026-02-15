@@ -154,6 +154,9 @@ Ctrl + Alt + F1, to enter the text mode user 1
 
 then: $ sudo telinit 5 , this will restart the graphical user mode.
 
+The systems native  equivalent command is:
+sudo systemctl isolate graphical.target
+
 25) Should the Gnome Store update manager fail, use Synaptic to update your system.
 
 26) Using Python as a calculator:
