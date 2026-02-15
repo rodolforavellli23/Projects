@@ -157,6 +157,9 @@ then: $ sudo telinit 5 , this will restart the graphical user mode.
 The systems native  equivalent command is:
 sudo systemctl isolate graphical.target
 
+Or to restart the desktop:
+sudo systemctl restart lightdm
+
 25) Should the Gnome Store update manager fail, use Synaptic to update your system.
 
 26) Using Python as a calculator:
