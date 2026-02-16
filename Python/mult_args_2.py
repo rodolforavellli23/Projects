@@ -22,11 +22,16 @@ def return_items(*args):
             yield f"{item}, "
 
 def my_print_kwargs(**kwargs):
-    for i, (key, value) in enumerate(kwargs.items()):
-        if (i == (len(kwargs.items()) - 1)):
-            yield f"{key}: {value}"
-        else:
-            yield f"{key}: {value}, "
+    return ", ".join(f"{key}: {value}" for key, value in kwargs.items())
+
+def my_kwargs_list(keys: list, items: list)->str:
+    # Zip keys with each individual sub-list (record)
+    data = [dict(zip(keys, record)) for record in values]
+    # Use join to handle the semicolon separator between records
+    results = [my_print_kwargs(**item) for item in data]
+    my_string = "; ".join(results)
+
+    return my_string
 
 def shipping_label(*args, **kwargs):
     # Processings *args
@@ -43,12 +48,14 @@ def shipping_label(*args, **kwargs):
             yield f"{value} "
 
 # Example dictionaries
-args_1 = {"name": "Robert", "age": 32}
-args_2 = {"name": "John", "age": 18}
+keys = ["name", "age"]
+values = [["Robert", 32], ["John", 18]]
+
+str_1 = my_kwargs_list(keys, values)
 
 print(f"\n{' ':<4}my_add = {my_add(4, 5, 6)}")
 print(f"\n{' ':<4}my_print_kwargs = {''.join(my_print_kwargs(name='Robert', age=32))}")
-print(f"\n{' ':<4}return_items = {''.join(return_items(args_1, args_2))}")
+print(f"\n{' ':<4}return_items = {str_1}")
 print(f"\n{' ':<4}shipping_label = {''.join(shipping_label('Dr.', 'Spongebob', 'Squerpants', 'III', \
                                                             street='123 Fake St.', \
                                                             apt='100', \
