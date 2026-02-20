@@ -24,7 +24,9 @@ void PrintHelp() {
 }
 
 void PrintVersion() {
-    std::cout << "\nDisk Information Utility v1.0\n";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(34) << "Disk Information Utility v1.1";
+    std::cout << "\n";
 }
 
 void PrintDiskInfo(const std::string& path) {
@@ -58,47 +60,47 @@ void PrintDiskInfo(const std::string& path) {
     // Time
     std::cout << "\n";
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Disk status at: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Disk status at: ";
     ResetColor();
     std::cout << std::setfill(' ') << std::setw(26) << std::ctime(&now_time);
 
     // Path being analyzed
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Analyzing path: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Analyzing path: ";
     ResetColor();
     std::cout << std::setw(str_leng) << std::right << path << "\n";
 
     // Total Disk Size
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Total Disk Space: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Total Disk Space: ";
     ResetColor();
     std::cout << std::setw(10) << std::right << mem_size;
 
     // Disk Storage Used
     std::cout << "\n";
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Disk Storage Used: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Disk Storage Used: ";
     ResetColor();
     std::cout << std::setw(10) << std::right << mem_used;
 
     // Disk Storage Free
     std::cout << "\n";
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Disk Storage Free: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Disk Storage Free: ";
     ResetColor();
     std::cout << std::setw(10) << std::right << mem_free;
 
     // Available Disk Storage
     std::cout << "\n";
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Available Disk Storage: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Available Disk Storage: ";
     ResetColor();
     std::cout << std::setw(10) << std::right << mem_avail;
 
     // Percentage of Disk Used
     std::cout << "\n";
     SetColor("1;38;5;208");
-    std::cout << std::setfill(' ') << std::setw(26) << "Percentage of Disk Used: ";
+    std::cout << std::setfill(' ') << std::setw(30) << "Percentage of Disk Used: ";
     ResetColor();
     std::cout << std::setw(7) << std::right << mem_percent;
     std::cout << std::setw(3) << std::right << "%";
@@ -120,7 +122,7 @@ int main(int argc, char* argv[]) {
             PrintHelp();
             return 0;
         }
-        else if (arg == "--version") {
+        else if (arg == "-v"|| arg == "--version") {
             PrintVersion();
             return 0;
         }
