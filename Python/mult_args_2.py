@@ -56,7 +56,7 @@ str_1 = my_kwargs_list(keys, values)
 print(f"\n{' ':<4}my_add = {my_add(4, 5, 6)}")
 print(f"\n{' ':<4}my_print_kwargs = {''.join(my_print_kwargs(name='Robert', age=32))}")
 print(f"\n{' ':<4}return_items = {str_1}")
-print(f"\n{' ':<4}shipping_label = {''.join(shipping_label('Dr.', 'Spongebob', 'Squerpants', 'III', \
+print(f"\n{' ':<4}shipping_label = {''.join(shipping_label('Dr.', 'Spongebob', 'Squarepants', 'III', \
                                                             street='123 Fake St.', \
                                                             apt='100', \
                                                             city='Detroit', \
