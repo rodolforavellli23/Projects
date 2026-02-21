@@ -11,16 +11,27 @@
 // The instructions for compiling this program are on the "notes.txt" file, which is to be found within this file's working directory.
 
 void PrintHelp() {
-    std::cout << "Disk Information Utility\n";
-    std::cout << "Usage: mydisk [OPTIONS]\n\n";
-    std::cout << "Options:\n";
-    std::cout << "  -h, --help     Show this help message\n";
-    std::cout << "  -p, --path     Specify filesystem path to analyze (default: /)\n";
-    std::cout << "  --version      Show version information\n";
-    std::cout << "\nExamples:\n";
-    std::cout << "  mydisk                    # Show disk info for root path\n";
-    std::cout << "  mydisk -p /home           # Show disk info for /home\n";
-    std::cout << "  mydisk --help             # Show this help\n";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(29) << "Disk Information Utility";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(28) << "Usage: mydisk [OPTIONS]";
+    std::cout << "\n\n";
+    std::cout << std::setfill(' ') << std::setw(13) << "Options:";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(53) << "-h, --help         Show this help message";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(78) << "-p, --path         Specify filesystem path to analyze (default: /)";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(55) << "-v, --version      Show version information";
+    std::cout << "\n\n";
+    std::cout << std::setfill(' ') << std::setw(14) << "Examples:";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(68) << "mydisk                    # Show disk info for root path";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(64) << "mydisk -p /home           # Show disk info for /home";
+    std::cout << "\n";
+    std::cout << std::setfill(' ') << std::setw(54) << "mydisk --help             # Show this help";
+    std::cout << "\n";
 }
 
 void PrintVersion() {
