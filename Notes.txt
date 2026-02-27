@@ -319,3 +319,6 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 	
 	How to check if a file is immutable:
 	lsattr /etc/resolv.conf
+
+50) How to replace strings inside vim:
+	:%s/foo/bar/gic
