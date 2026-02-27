@@ -4,7 +4,7 @@
 (defvar *my-sequence-1* #(1 2 3 4 5)); n
 (defvar *my-sequence-2* #(1 2 3 4)); n
 (defvar *my-sequence-3* #(5 4 3 2)); n
-(defvar *my-pad* (format NIL "~3T")); pad
+(defvar *my-pad* (format NIL "~4T")); pad
 (defvar *my-str* (format NIL "-")); str
 (defvar *my-num* 45); num
 (defconstant +escape+ #\Escape); e
