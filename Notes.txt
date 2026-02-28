@@ -325,3 +325,6 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
 51) OS release information file
 	cat /etc/os-release
+
+	This will provide the information on the base ubuntu codename that I will have to upgrade 
+	my /etc/apt/sources.list.d/official-package-repositories.list extra repos to
