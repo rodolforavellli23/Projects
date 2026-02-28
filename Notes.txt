@@ -322,3 +322,6 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
 50) How to replace strings inside vim:
 	:%s/foo/bar/gic
+
+51) OS release information file
+	cat /etc/os-release
