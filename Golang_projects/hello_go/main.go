@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-	var  g = string(runtime.Version())
-	fmt.Println("\n\tHello World! From Go version:", g,"\n")
+	var   g = string(runtime.Version())
+	var pad = fmt.Sprintf("%2s","")
+	fmt.Println("\n",pad,"Hello World! From Go version:",g,"\n")
 }
