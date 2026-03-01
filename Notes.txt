@@ -328,3 +328,18 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
 	This will provide the information on the base ubuntu codename that I will have to upgrade 
 	my /etc/apt/sources.list.d/official-package-repositories.list extra repos to
+
+52) .deb file which does not install for the same reason - probaly Linux Mint does not have required library 
+	(or it does have similar library with newer version in its name).
+
+	I investigated and found solution that worked for me - to repackage the deb changing required lib to what's available on system.
+
+	the commands to do it are:
+
+	dpkg-deb -R yourpackage.deb somefolder to unpack (folder will be created)
+
+	edit file somefolder/DEBIAN/control to change libs (you can see whats available using "apt list partial-lib-name*" command)
+
+	dpkg-deb --build somefolder newpackagename.deb to rebuild your package
+
+	sudo dpkg -i newpackagename.deb to install rebuilt package
