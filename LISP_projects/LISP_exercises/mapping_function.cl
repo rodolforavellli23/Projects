@@ -15,7 +15,7 @@
 ;       * is put as placeholder for a given value.
 ; Argument Notes:
 ;       s-*   = string containing the name of the variableto to be displayed.
-;	      func  = function to by applied to the map generated.
+;       func  = function to by applied to the map generated.
 
 (defun my-spacer(pad str num)
   (format t "~%~a" pad)
@@ -90,28 +90,28 @@
              *my-vector-1*
              +escape+
              #'*
-	           "*my-vector-1*"
-	           "multiply"
-	           'vector
-	           "vector"
-	           *my-vector-2*
-	           "*my-vector-2*")
+             "*my-vector-1*"
+             "multiply"
+             'vector
+             "vector"
+             *my-vector-2*
+             "*my-vector-2*")
 (my-spacer *my-pad* *my-str* *my-num*)
 (display-map *my-pad*
              *my-vector-1*
              +escape+
              #'(lambda (thing) (digit-char thing)) ; Only works for sequences where each element is only one digit/char in length.
-	           "*my-vector-1*"
-	           "lambda"
-	           'string
-	           "string")
+             "*my-vector-1*"
+             "lambda"
+             'string
+             "string")
 (my-spacer *my-pad* *my-str* *my-num*)
 (display-map *my-pad*
              *my-vector-2*
              +escape+
              #'(lambda (thing) (format NIL "~a" thing))
-	           "*my-vector-2*"
-	           "format"
-	           'list
-	           "list")
+             "*my-vector-2*"
+             "format"
+             'list
+             "list")
 (my-spacer *my-pad* *my-str* *my-num*)
