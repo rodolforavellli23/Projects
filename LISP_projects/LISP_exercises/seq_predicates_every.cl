@@ -1,5 +1,11 @@
 #!/usr/bin/ecl -shell
 
+#|
+
+Multiline Comment
+
+|#
+
 ; Variable Declaration
 (defvar *my-sequence-1* #(1 2 3 4 5)); n
 (defvar *my-sequence-2* #(1 2 3 4)); n
