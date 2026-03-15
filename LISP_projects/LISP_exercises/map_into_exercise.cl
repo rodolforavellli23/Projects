@@ -8,7 +8,8 @@ Note-1: MAP-INTO can extend adjustable vectors that are declared with :fill-poin
 	But only up to the size the result vector has been set to.
 
 Note-2: MAP-INTO is a desctructive function, that is, it'll alter the 
-	internal values of the first sequence that is given to it.
+	internal values of the first sequence that is given to it. This effect carries
+	over into the rest of the program afterwards.
 
 Note-3: The first sequence given to MAP-INTO must have at least as 
 	many elements as the other sequences being mapped in order for
