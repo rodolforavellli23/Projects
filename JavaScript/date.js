@@ -1,1 +1,3 @@
-console.log(new Date().toString())
+#!/usr/bin/node
+
+console.log(`\n\t${new Date().toString()}`)
