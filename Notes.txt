@@ -343,3 +343,12 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 	dpkg-deb --build somefolder newpackagename.deb to rebuild your package
 
 	sudo dpkg -i newpackagename.deb to install rebuilt package
+	
+53) Reducing the size of jpgs:
+
+	find . -iname "*.jpg" | while read f; do convert "$f" -sampling-factor 4:2:0 -strip -quality 85 -interlace Plane "${f%.*}.jpg"; done
+	
+	if there are spaces in the filenames use:
+
+	find . -iname "*.jpg" -print0 | while IFS= read -r -d '' f; do convert "$f" -sampling-factor 4:2:0 -strip -quality 85 -interlace Plane "${f%.*}.jpg"; done
+
