@@ -3,7 +3,7 @@
 echo "Please identify yourself:  "
 read text
 
-case ${text} in 
+case ${text} in
 	rodolfo | root)
 	echo "Hello User!"
 	;;

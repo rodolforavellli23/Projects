@@ -4,9 +4,9 @@ declare -a array;
 declare -a sub_arr; # Declare the array variables to make sure that they will be trated by bash as such
 declare -i i;
 
-i=0; 
-array=({0..32});
-	
+i=0;
+array=({0..64});
+
 # The binary form of odd numbers always ends in 1
 
 for n in "${array[@]}"; do

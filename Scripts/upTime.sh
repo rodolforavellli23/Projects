@@ -1,7 +1,7 @@
 #!/bin/bash
 
 showUptime(){
-	up=$(uptime -p | cut -c4-) 
+	up=$(uptime -p | cut -c4-)
 	since=$(uptime -s)
 	cat << EOF
 
@@ -12,4 +12,4 @@ It has been running since ${since}
 EOF
 }
 
-showUptime 
+showUptime

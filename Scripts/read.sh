@@ -2,4 +2,4 @@
 
 echo "What is your name? "
 read TEXT
-echo "Username: "$TEXT 
+echo "Username: "$TEXT
