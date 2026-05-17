@@ -1,4 +1,4 @@
-#!/home/rodolfo/Documents/Github/Projects/Python/math_exercises/venv/bin/python3
+#!/home/greenshoots/Documentos/GitHub/Projects/Python/math_exercises/venv/bin/python3
 
 """
 Solving systems of non-linear equations
@@ -66,7 +66,7 @@ plt.contour(x, y, f2, [0])
 plt.title("My Plot")
 
 ## Save plot to image
-plt.savefig("./graphs/my_plot.jpg", 
+plt.savefig("./graphs/my_plot.jpg",
             bbox_inches='tight',
             dpi=100
             )
@@ -84,7 +84,7 @@ print(f"\n{' ':<4}From fsolve: x = {z[0]:.5f}, y = {z[1]:.5f}")
 # ==========================================================================
 # Solving using GEKKO
 
-# Set remote as false, so that the local solver will be used to solve the 
+# Set remote as false, so that the local solver will be used to solve the
 # system of equations.
 m = GEKKO(remote=False)
 
@@ -119,7 +119,7 @@ sp_result = sp.solve([f,g], (x_sp, y_sp))
 
 # Convert each value to its pretty string form upfront
 pretty_roots = [
-    (sp.pretty(root[0], use_unicode=True), 
+    (sp.pretty(root[0], use_unicode=True),
      sp.pretty(root[1], use_unicode=True))
     for root in sp_result
 ]
@@ -132,7 +132,7 @@ print(f"{' ':<4}All roots from sympy: ", end="")
 
 # Print each root with right-aligned elements inside the parentheses
 for index, (x_str, y_str) in enumerate(pretty_roots):
-	if index == (len(pretty_roots) - 1): 
+	if index == (len(pretty_roots) - 1):
 		print(f"root {index + 1} = ({x_str:>{max_x_len}}, {y_str:>{max_y_len}}) ", end="")
 	else:
 		print(f"root {index + 1} = ({x_str:>{max_x_len}}, {y_str:>{max_y_len}}), ", end="")
