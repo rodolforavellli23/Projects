@@ -5,6 +5,6 @@ class Program
 {
     static void Main()
     {
-        Console.Write($"\n\tHello World! From C# {Info.Version}\n");
+        Console.Write($"\n{' ',-4}Hello World! From C# {Info.Version}\n\n");
     }
 }
