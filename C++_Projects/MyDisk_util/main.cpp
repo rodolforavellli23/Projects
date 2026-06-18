@@ -117,7 +117,7 @@ void PrintDiskInfo(const std::string& path) {
     std::cout << std::setw(3) << std::right << "%";
 
     // End
-    std::cout << "\n";
+    std::cout << "\n\n";
 }
 
 int main(int argc, char* argv[]) {
