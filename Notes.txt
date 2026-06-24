@@ -352,3 +352,11 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
 	find . -iname "*.jpg" -print0 | while IFS= read -r -d '' f; do convert "$f" -sampling-factor 4:2:0 -strip -quality 85 -interlace Plane "${f%.*}.jpg"; done
 
+54) Reducing the size of pdfs:
+
+    Use one of the commands below to convert large pdf objects into smaller ones:
+
+    convert -limit memory 2GiB -limit map 4GiB -density 150 ./INPUT_FILE.pdf -resize 50% -quality 85 -compress jpeg ./OUTPUT_FILE.pdf
+
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -sOutputFile=./OUTPUT_PDF ./INPUT_PDF
+
