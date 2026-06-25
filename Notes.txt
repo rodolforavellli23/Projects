@@ -360,3 +360,5 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -sOutputFile=./OUTPUT_PDF ./INPUT_PDF
 
+    Prefer using the ghostscript tool, and remember to append a sufix to the name of the OUTPUT_FILE.
+
