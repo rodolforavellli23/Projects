@@ -360,5 +360,13 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
 
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -sOutputFile=./OUTPUT_PDF ./INPUT_PDF
 
-    Prefer using the ghostscript tool, and remember to append a sufix to the name of the OUTPUT_FILE.
+    Prefer using the ghostscript tool, and remember to append a sufix to the name of the OUTPUT_FILE. 
+    
+    In case the quality of the final output is too low, use this command:
+    
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -sOutputFile=./OUTPUT_PDF -c "userdict /ColorImgDict << /QFactor 0.4 /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> put" -f ./INPUT_PDF
+    
+    And if even that doesn't work, use this:
+
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -dPDFFitPage -dFIXEDMEDIA -sPAPERSIZE=a4 -sOutputFile=./OUTPUT_PDF -c "userdict begin /ColorImgDict << /QFactor 0.15 >> def /GrayImgDict << /QFactor 0.15 >> def end" -f ./INPUT_PDF
 
