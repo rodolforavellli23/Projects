@@ -1,5 +1,5 @@
 namespace CompilerInfo {
     public static class Info {
-        public const string Version = "8.0.128";
+        public const string Version = "10.0.109";
     }
 }
