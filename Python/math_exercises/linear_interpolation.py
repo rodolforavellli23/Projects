@@ -8,6 +8,9 @@ slope: m = (y2 - y1)/(x2 - x1)
 
 linear function: (y(x) - y1) = (x - x1)*m
 
+notes: numpy.interp clamps to the boundaries by default (it returns the closest edge value).
+       You can change this using the left and right arguments (e.g.: np.interp(5.0, x, y, left=0, right=50)). 
+
 """
 
 import numpy as np
