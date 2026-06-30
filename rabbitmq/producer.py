@@ -14,6 +14,8 @@ channel = connection.channel()
 # Declare a durable exchange of type 'direct'
 EXCHANGE_NAME = 'db_migration_exchange'
 channel.exchange_declare(exchange=EXCHANGE_NAME, exchange_type='direct', durable=True)
+channel.queue_declare(queue='target_db_queue', durable=True)
+channel.queue_bind(exchange='db_migration_exchange', queue='target_db_queue', routing_key='migration_routing_key')
 
 # 2. Extract Data from Source Database
 db_connection = sqlite3.connect('banco1.db')
