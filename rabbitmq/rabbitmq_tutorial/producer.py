@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 
-# TODO: Make this script accept command line args
-
 import sqlite3
 import pika
 import json
-# import argparse
 
 # 1. Connect to RabbitMQ
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
