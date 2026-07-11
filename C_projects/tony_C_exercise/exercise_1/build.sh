@@ -18,5 +18,9 @@ gcc $SRC \
 	$FLAGS \
 	-o $TARGET 
 
+if [ -f "./$OUTPUT_DIR/$TARGET" ]; then
+	rm ./"$OUTPUT_DIR"/"$TARGET"
+fi
+
 # Move Program
 mv ./"$TARGET" ./"$OUTPUT_DIR"/"$TARGET"
