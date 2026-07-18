@@ -1,20 +1,26 @@
 #!/usr/bin/ecl -shell
 
-#|
-
-Fibonacci calculator - 1 initiated sequence
-
-|#
-
 ; Variables
 
 (defvar *my-pad* (format NIL "~4T"))
 (defvar *my-line-char* #\-)
 (defvar *my-num* 40)
-(defvar *my-phy* (/ (1+ (sqrt 5)) 2))
-(defvar *my-psy* (/ (1- (sqrt 5)) 2))
 
 ; Functions
+
+(defun fact(n) 
+  (loop 
+  	for i from 1 to n 
+	for result = 1 
+	then (* result i)
+	finally (return result)
+  )
+)
+
+(defun display(m) 
+  (format t "~4T~a~%" m)
+  (values)
+)
 
 (defun my-spacer(pad str num)
   (format t "~%~a" pad)
@@ -26,28 +32,23 @@ Fibonacci calculator - 1 initiated sequence
 )
 
 (defun get-user-input(pad)
-  (format t "~%~aPrint which fibonacci number? " pad)
+  (format t "~%~aPrint factorial to which number? " pad)
   (finish-output)
   (let ( (input (read-line)) )
     (parse-integer input :junk-allowed t)
   )
 )
 
-;; Binet's Formula for finding fib at the nth position
-(defun my-fib(&key (num 0)) 
-  (/ (- (expt *my-phy* num) (expt *my-psy* num)) (sqrt 5))
-)
-
 (defun my-output(pad)
   (let ( (user-num (get-user-input pad)) )
     (if (and user-num (>= user-num 0))
-      (format t "~%~aResult: ~d~%" pad (round (my-fib :num user-num)))
+      (format t "~%~aResult: ~d~%" pad (fact user-num))
       (format t "~%~aInvalid input (please input a non-negative integer)~%" pad)
     )
   )
 )
 
-; Program Output
+; Text Output
 (my-spacer *my-pad* *my-line-char* *my-num*)
 (my-output *my-pad*)
 (my-spacer *my-pad* *my-line-char* *my-num*)
