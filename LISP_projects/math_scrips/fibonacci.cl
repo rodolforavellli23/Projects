@@ -2,7 +2,7 @@
 
 #|
 
-Fibonacci calculator - 1 initiated sequence
+Fibonacci calculator - Sequence starting in 1
 
 |#
 

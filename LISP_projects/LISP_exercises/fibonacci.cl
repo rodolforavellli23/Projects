@@ -2,11 +2,9 @@
 
 #|
 
-Fibonacci calculator - 0 initiated sequence
+Fibonacci calculator - Sequence starting in 0
 
 |#
-
-(defconstant *my-pad* (format NIL "~4T"))
 
 ;(defun fib (n)
 ;  "Return the nth Fibonacci number."
@@ -18,8 +16,12 @@ Fibonacci calculator - 0 initiated sequence
 ;  )
 ;)
 
+; Variables
+(defvar *my-pad* (format NIL "~4T"))
+
+; Functions
 (defun fib(n) 
-  (let ( (result 1) (acc 0) (temp)) 
+  (let ((result 1) (acc 0) (temp)) 
     (loop for i from 2 to n
 	do (progn
 	     (setf temp result)
@@ -48,5 +50,5 @@ Fibonacci calculator - 0 initiated sequence
   )
 )
 
-"Text Output"
+; Text Output
 (my-output *my-pad*)
