@@ -9,3 +9,6 @@ INSERT INTO users (name, email) VALUES
 	('Bob', 'bob@example.com'), 
 	('Charlie', 'charlie@example.com'),
 	('John', 'john@example.com');
+
+/* To delete all rows */
+/* DELETE FROM users */
