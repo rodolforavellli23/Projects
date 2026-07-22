@@ -14,7 +14,7 @@ window.geometry("480x470")
 window.title("Hello World!")
 # Window title
 
-icon = PhotoImage(file='./src/apu.png') 
+icon = PhotoImage(file='./src/fren.png') 
 # This will create an icon object that can be displayed on the taskbar
 
 window.iconphoto(True, icon)
