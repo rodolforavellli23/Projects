@@ -12,10 +12,6 @@ channel = connection.channel()
 EXCHANGE_NAME = 'db_migration_exchange'
 QUEUE_NAME = 'target_db_queue'
 
-# # Declare the queue and bind it to the exchange using the routing key
-# channel.queue_declare(queue=QUEUE_NAME, durable=True)
-# channel.queue_bind(exchange=EXCHANGE_NAME, queue=QUEUE_NAME, routing_key='migration_routing_key')
-
 print(' [*] Consumer active. Waiting for replication payloads. To exit press CTRL+C')
 
 # 2. Define how to process received messages
