@@ -17,10 +17,10 @@ USSAGE+="\n${PAD}and a OUTPUT_PDF name for ghostscript to write to, like so:\n"
 USSAGE+="\n${PAD}this_script.sh /PATH/TO/INPUT_PDF /PATH/TO/OUTPUT_PDF\n"
 
 # Check to see if INPUT_PDF and OUTPUT_PDF arguments have been provided
-if [[ $# -lt 2 ]]; then
+if [[ "$#" -lt 2 ]]; then
 	echo -e "\n\n${PAD}This script requires both INPUT_PDF and OUTPUT_PDF arguments\n${USSAGE}"
 	exit 1
-elif [[ $# -gt 2  ]]; then
+elif [[ "$#" -gt 2  ]]; then
 	echo -e "\n\n${PAD}Only give two arguments to this script, an INPUT_PDF, and a OUTPUT_PDF\n${USSAGE}"
 	exit 1
 elif [[ ! -f "$1" ]]; then

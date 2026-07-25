@@ -1,4 +1,4 @@
-#! /usr/bin/awk
+#!/usr/bin/awk -f
 
 # beer.awk --- print the lyrics to the famous travelling song
 # Arnold Robbins
