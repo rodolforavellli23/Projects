@@ -7,6 +7,9 @@ set autoindent
 " Enable mouse support
 set mouse=a
 
+" Enable relative numbers
+set relativenumber
+
 syntax enable
 
 colorscheme retrobox
