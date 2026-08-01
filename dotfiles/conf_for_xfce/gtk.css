@@ -1,0 +1,5 @@
+/* Adjust padding around the taskbar window buttons */
+.tasklist button {
+    margin-left: 2px;
+    margin-right: 2px;
+}
