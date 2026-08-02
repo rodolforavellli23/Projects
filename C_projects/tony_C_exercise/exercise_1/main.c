@@ -1,12 +1,13 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<sys/types.h>
-#include<dirent.h>
-#include<errno.h>
-#include<string.h>
-#include<unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
+#include     <stdio.h>
+#include    <stdlib.h>
+#include <sys/types.h>
+#include    <dirent.h>
+#include     <errno.h>
+#include    <string.h>
+#include    <unistd.h>
+#include     <fcntl.h>
+#include  <sys/stat.h>
+#include    <getopt.h>
 
 // tony C tutorial - How ls works?
 
@@ -39,9 +40,14 @@ int main(int argc, char *argv[]) {
 	size_t pad_t = sizeof(pad)/sizeof(pad[0]);
 	int pad_count = snprintf(pad, pad_t, "%4s", " ");
 
+	// Long options struct
+	static struct option long_options[] = {
+		{"help", no_argument, NULL, 'h'}
+	};
+
 	// Options
 	int opt;
-	while((opt = getopt(argc, argv, "ah")) != -1) {
+	while((opt = getopt_long(argc, argv, "ah", long_options, NULL)) != -1) {
 		switch(opt) {
 			case 'a':
 				show_all = 1;
@@ -79,7 +85,7 @@ int main(int argc, char *argv[]) {
 	
 	// Text Output
 	printf("\n");
-	if (show_all == 1 ) {
+	if (show_all == 1) {
 		while ((entry = readdir(dir)) != NULL) {
 			printf("%s%s\n", pad, entry->d_name);
 		}
