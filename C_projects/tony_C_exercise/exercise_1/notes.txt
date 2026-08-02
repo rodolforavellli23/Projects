@@ -1,7 +1,11 @@
 
 Notes for the C project:
-	* Finish the replacement of the "if" conditional for the getopt logic
-	
+
+==
+
+TODO:
+	* Implement the -l option
+
 ==
 
 Some notes for reference
