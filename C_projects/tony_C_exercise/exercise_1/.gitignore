@@ -1,2 +1,5 @@
-# bin/
+# ignore swap files
+*.swp
+
+# Ignore the bin directory
 bin/

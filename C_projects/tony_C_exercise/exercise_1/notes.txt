@@ -1,0 +1,35 @@
+
+Notes for the C project:
+	* Finish the replacement of the "if" conditional for the getopt logic
+	
+==
+
+Some notes for reference
+
+* opendir
+
+	Purpose: Opens a directory stream for reading.
+
+	Header: <dirent.h>
+
+	Description: Takes a directory path (e.g., "/path/to/dir") and opens a stream pointing to it. On success, it returns a pointer to a DIR 
+	structure used to iterate over the directory's contents. If it fails, it returns NULL.
+
+* readdir
+
+	Purpose: Reads the next entry in an open directory.
+
+	Header: <dirent.h>
+
+	Description: Reads the next file or folder inside the DIR stream provided by opendir(). It returns a pointer to a struct dirent containing 
+	details about the item (such as its filename in d_name). Successive calls step through each entry until reaching the end, where it returns NULL.
+
+* getopt
+
+	Purpose: Parses command-line arguments and options.
+
+	Header: <unistd.h>
+
+	Description: Processes argc and argv passed to main(). It scans for single-character options (e.g., -v, -f filename) defined in an option string.
+	It automatically handles flags, option arguments (stored in optarg), and invalid flags, returning the option character found or -1 when options 
+	are exhausted.
