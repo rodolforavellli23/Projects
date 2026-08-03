@@ -24,13 +24,15 @@ char* version(long int c) {
 			break;
 		default:
 			ver_string = "C89/C90 (or non-compliant)";
+			break;
 	}
+	
 	return ver_string;
 }
 
-int main() {
+int main(void) {
   
-    printf("\n%4cHello World! From C version: %s\n", ' ', version(__STDC_VERSION__) );
+    printf("\n%4cHello World! From C version: %s\n\n", ' ', version(__STDC_VERSION__));
     
     //This Checks what number the macro is actually returning to the program
     //printf("%4c%ld\n", ' ', __STDC_VERSION__);
