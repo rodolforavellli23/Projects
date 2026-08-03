@@ -7,6 +7,7 @@ SRC="./main.c"
 OUTPUT_DIR="bin"
 TARGET="test"
 FLAGS="-Wall -Wextra"
+LINKING="-lm"
 
 # Create the output directory if it doesn't already exist
 if [ ! -d "$OUTPUT_DIR" ]; then
@@ -16,8 +17,10 @@ fi
 # Compile Program
 gcc $SRC \
 	$FLAGS \
-	-o $TARGET 
+	-o $TARGET \
+	$LINKING
 
+# Clean-up of older binary build
 if [ -f "./$OUTPUT_DIR/$TARGET" ]; then
 	rm ./"$OUTPUT_DIR"/"$TARGET"
 fi
