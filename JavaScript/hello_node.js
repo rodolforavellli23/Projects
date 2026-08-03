@@ -13,7 +13,7 @@ function padding(size) {
 	return pad;
 }
 
-function captalize_first_char(my_string) {
+function capitalize_first_char(my_string) {
 	let first_char  = my_string.slice(0, 1);
 	let rest_string = my_string.slice(1);
 
@@ -26,4 +26,4 @@ var my_pad = padding(4);
 
 // Text Output
 console.log(`\n${my_pad}Hello World! From Node ${process.version} at ` +
-	    `${captalize_first_char(process.platform)}!\n`);
+	    `${capitalize_first_char(process.platform)}!\n`);
