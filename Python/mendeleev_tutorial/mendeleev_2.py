@@ -32,6 +32,7 @@ new_header = ["Name",
               "Atomic Radius (ρm)", 
               "Density (g/cm³)"]
 
+# Getting the dataframe as a string
 raw_str = elements_df[cols].head(25).to_string(index=False, 
                                                header=new_header,
                                                col_space=widths)

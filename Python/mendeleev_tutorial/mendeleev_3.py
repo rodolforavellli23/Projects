@@ -33,5 +33,3 @@ format_str = "\n".join(f"{' ':<4}{line}" for line in l_str)
 # Text Output ========================================================
 
 print(f"\n{format_str}\n")
-
-
