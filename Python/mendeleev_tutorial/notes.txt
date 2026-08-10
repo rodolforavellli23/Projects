@@ -1,2 +1,5 @@
 # Command used to create the required_dependencies.txt document
 pip list --format=freeze | cut -d = -f 1 > required_dependencies.txt
+
+#To update all dependencies at once use: 
+cat required_dependencies.txt | xargs pip install -U
