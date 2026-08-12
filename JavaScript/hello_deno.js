@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env deno
 
 // Notes:
 //
@@ -25,5 +25,5 @@ function capitalize_first_char(my_string) {
 var my_pad = padding(4);
 
 // Text Output
-console.log(`\n${my_pad}Hello World! From Node ${process.version} on ` +
+console.log(`\n${my_pad}Hello World! From deno ${Deno.version.deno} on ` +
 	    `${capitalize_first_char(process.platform)}!\n`);
