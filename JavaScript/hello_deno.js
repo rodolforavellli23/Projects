@@ -5,10 +5,10 @@
 // JavaScript slices are 'end exclusive'
 
 // Functions
-function padding(size) {
+function padding(size, my_char) {
 	let pad = "";
 	for(let i = 0; i < size; i++) {
-		pad+=" ";
+		pad+=`${my_char}`;
 	}
 	return pad;
 }
@@ -22,8 +22,9 @@ function capitalize_first_char(my_string) {
 }
 
 // Variables
-var my_pad = padding(4);
+var pad_start = padding(4, '*') + padding(1, ' ');
+var pad_end   = padding(1, ' ') + padding(4, '*');
 
 // Text Output
-console.log(`\n${my_pad}Hello World! From deno ${Deno.version.deno} on ` +
-	    `${capitalize_first_char(process.platform)}!\n`);
+console.log(`\n${pad_start}Hello World! From deno ${Deno.version.deno} on ` +
+	    `${capitalize_first_char(process.platform)}!${pad_end}\n`);
