@@ -1,0 +1,13 @@
+# To compile a .erl source into beam bytecode
+
+erlc source.erl
+
+# To run the compiled bytecode:
+
+erl -noshell -s source <function> <args> -s init stop
+
+or
+
+escript source.erl
+
+# note that args is optional
