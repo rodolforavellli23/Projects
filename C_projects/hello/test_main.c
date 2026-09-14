@@ -62,11 +62,11 @@ int main(void) {
 	(void)snprintf(start_pad   , sizeof(start_pad), "%s%s", pad_star , pad_space);
 	(void)snprintf(end_pad     , sizeof(end_pad)  , "%s%s", pad_space, pad_star );
 	(void)snprintf(f_message   , sizeof(f_message), \
-			"\n%s%s%s%s%s\n\n",                     \
-			newl_pad,                               \
-			start_pad,                              \
-			message,                                \
-			version(__STDC_VERSION__),              \
+			"\n%s%s%s%s%s\n\n",             \
+			newl_pad,                       \
+			start_pad,                      \
+			message,                        \
+			version(__STDC_VERSION__),      \
 			end_pad);
 
 	// Text Output
