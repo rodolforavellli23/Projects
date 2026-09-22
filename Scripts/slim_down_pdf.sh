@@ -8,7 +8,7 @@ USERDICT="userdict begin \
 	/GrayImgDict << /QFactor 0.15 >> def \
 end"
 
-PAD=$(printf "%4c" " ")
+PAD=$(printf "%4s" " ")
 
 USSAGE=""
 USSAGE+="\n${PAD}!!! USAGE OF THIS SCRIPT !!!\n"
