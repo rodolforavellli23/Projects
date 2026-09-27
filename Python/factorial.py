@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Factorial fucntion in python
 
 def factorial(var):
