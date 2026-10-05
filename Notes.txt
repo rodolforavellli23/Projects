@@ -378,3 +378,9 @@ Note: replace [PROGRAM_NAME] with the name of the program runtime to be killed.
     The dashboard can be accessed by:
     http://localhost:15672
 
+56) Aligning code indentation with VIM:
+
+    =% to indent everything inside () or {} when the cursor is on top on the ( or { character
+    == at the start of a line to indent that line
+
+
