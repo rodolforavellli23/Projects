@@ -68,7 +68,7 @@ int main(void) {
 	// Printing Result
 	printf("\n%2cMy Array: [ ", ' ');
 	print_2D_arr_int(myarr, rows, cols);
-	printf(" ]\n");
+	printf(" ]\n\n");
 
 	// End of Program, freeing pointers
 	free_2D_arr_int(myarr, rows);
