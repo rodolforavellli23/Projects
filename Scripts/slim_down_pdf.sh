@@ -50,7 +50,7 @@ gs \
 	-c "${USERDICT}" \
 	-f "${INPUT_PDF}"
 
-# Ghostscript has its own error messaging system, but I put like to put this at the end anyway
+# Ghostscript has its own error messaging system, but I like to put this at the end anyway
 if [[ "$?" -eq 0 ]]; then
 	echo -e "\n\n${PAD}Success!\n\n"
 else
