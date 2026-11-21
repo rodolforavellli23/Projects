@@ -3,14 +3,16 @@ call plug#begin('~/.vim/plugged')
 " Fugitive vim Github Wrapper
 Plug 'tpope/vim-fugitive'
 
-" Elixir language highlighting for VIM
-Plug 'elixir-editors/vim-elixir'
-
 " Monokai theme for Vim
 Plug 'sickill/vim-monokai'
 
-" Comment out code
+" Add the ability to comment things on visual mode"
 Plug 'tpope/vim-commentary'
 
-call plug#end()
+" Tealscript syntax highlighting
+Plug 'teal-language/vim-teal'
 
+" Elixir syntax highlighting
+Plug 'elixir-editors/vim-elixir'
+
+call plug#end()
