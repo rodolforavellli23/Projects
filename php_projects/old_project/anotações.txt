@@ -1,0 +1,7 @@
+Notas da ferramenta mysql:
+
+* Substitua o que está entr <> por um valor adequado.
+
+1) Crie seu banco de dados com: CREATE DATABASE <name_db>
+
+2) Importe seu arquivo sql para popular o banco de dados com: sudo mysql -u root <name_db> < <source_file_name>.sql
